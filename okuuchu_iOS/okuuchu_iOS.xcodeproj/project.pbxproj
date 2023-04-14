@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D550CFA5299A74E100CBD84F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D550CFA4299A74E100CBD84F /* AppDelegate.swift */; };
+		D550CFAE299A74E200CBD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAD299A74E200CBD84F /* Assets.xcassets */; };
+		D550CFB1299A74E200CBD84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAF299A74E200CBD84F /* LaunchScreen.storyboard */; };
+		D567813129E985F90035EB11 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D567813029E985F90035EB11 /* Swinject */; };
+		D567813429E9861D0035EB11 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D567813329E9861D0035EB11 /* SnapKit */; };
+		D567813729E986510035EB11 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D567813629E986510035EB11 /* SwinjectAutoregistration */; };
+		D567813B29E994DC0035EB11 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567813A29E994DC0035EB11 /* MainViewController.swift */; };
+		D567813E29E995A00035EB11 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567813D29E995A00035EB11 /* BaseView.swift */; };
+		D567814029E995AB0035EB11 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567813F29E995AB0035EB11 /* BaseController.swift */; };
+		D567814229E995B30035EB11 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567814129E995B30035EB11 /* BaseViewModel.swift */; };
+		D567814829E998D70035EB11 /* Swinjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567814729E998D70035EB11 /* Swinjectable.swift */; };
+		D567814A29E999DA0035EB11 /* AuthModulesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567814929E999DA0035EB11 /* AuthModulesAssembly.swift */; };
+		D567814C29E99A5A0035EB11 /* ModulesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567814B29E99A5A0035EB11 /* ModulesAssembly.swift */; };
+		D567814E29E99AB90035EB11 /* SwinjectServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567814D29E99AB90035EB11 /* SwinjectServices.swift */; };
+		D567815429E99C6C0035EB11 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567815329E99C6C0035EB11 /* AppCoordinator.swift */; };
+		D567815629E99E010035EB11 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567815529E99E010035EB11 /* MainCoordinator.swift */; };
+		D567815829E99E110035EB11 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567815729E99E110035EB11 /* Coordinator.swift */; };
+		D567815B29E99EA90035EB11 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567815A29E99EA90035EB11 /* TabBarController.swift */; };
+		D567815F29E9A00E0035EB11 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567815E29E9A00E0035EB11 /* LoginCoordinator.swift */; };
+		D567816129E9A01B0035EB11 /* LoginPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816029E9A01B0035EB11 /* LoginPresentable.swift */; };
+		D567816329E9A0260035EB11 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816229E9A0260035EB11 /* LoginController.swift */; };
+		D567816529E9A02F0035EB11 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816429E9A02F0035EB11 /* LoginViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D550CFA1299A74E100CBD84F /* okuuchu_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = okuuchu_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D550CFA4299A74E100CBD84F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D550CFAD299A74E200CBD84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D550CFB0299A74E200CBD84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D550CFB2299A74E200CBD84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D567813A29E994DC0035EB11 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D567813D29E995A00035EB11 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D567813F29E995AB0035EB11 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		D567814129E995B30035EB11 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		D567814729E998D70035EB11 /* Swinjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swinjectable.swift; sourceTree = "<group>"; };
+		D567814929E999DA0035EB11 /* AuthModulesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthModulesAssembly.swift; path = okuuchu_iOS/DI/Swinject/AuthModulesAssembly.swift; sourceTree = SOURCE_ROOT; };
+		D567814B29E99A5A0035EB11 /* ModulesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesAssembly.swift; sourceTree = "<group>"; };
+		D567814D29E99AB90035EB11 /* SwinjectServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectServices.swift; sourceTree = "<group>"; };
+		D567815329E99C6C0035EB11 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D567815529E99E010035EB11 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		D567815729E99E110035EB11 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D567815A29E99EA90035EB11 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D567815E29E9A00E0035EB11 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		D567816029E9A01B0035EB11 /* LoginPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentable.swift; sourceTree = "<group>"; };
+		D567816229E9A0260035EB11 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D567816429E9A02F0035EB11 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D550CF9E299A74E100CBD84F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D567813129E985F90035EB11 /* Swinject in Frameworks */,
+				D567813429E9861D0035EB11 /* SnapKit in Frameworks */,
+				D567813729E986510035EB11 /* SwinjectAutoregistration in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D550CF98299A74E000CBD84F = {
+			isa = PBXGroup;
+			children = (
+				D550CFA3299A74E100CBD84F /* okuuchu_iOS */,
+				D550CFA2299A74E100CBD84F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D550CFA2299A74E100CBD84F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D550CFA1299A74E100CBD84F /* okuuchu_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D550CFA3299A74E100CBD84F /* okuuchu_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D567813829E986C40035EB11 /* Application */,
+				D567814329E998440035EB11 /* DI */,
+				D567813C29E995850035EB11 /* Base */,
+				D567814F29E99BD60035EB11 /* Coordinators */,
+				D567815929E99E8F0035EB11 /* TabBar */,
+				D567815C29E99FEE0035EB11 /* Login */,
+				D550CFAD299A74E200CBD84F /* Assets.xcassets */,
+				D550CFAF299A74E200CBD84F /* LaunchScreen.storyboard */,
+				D550CFB2299A74E200CBD84F /* Info.plist */,
+			);
+			path = okuuchu_iOS;
+			sourceTree = "<group>";
+		};
+		D567813829E986C40035EB11 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D550CFA4299A74E100CBD84F /* AppDelegate.swift */,
+				D567813A29E994DC0035EB11 /* MainViewController.swift */,
+				D567813929E986CB0035EB11 /* Services */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D567813929E986CB0035EB11 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D567814D29E99AB90035EB11 /* SwinjectServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D567813C29E995850035EB11 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D567813D29E995A00035EB11 /* BaseView.swift */,
+				D567813F29E995AB0035EB11 /* BaseController.swift */,
+				D567814129E995B30035EB11 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D567814329E998440035EB11 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				D567814429E998550035EB11 /* ModulesSwinject */,
+				D567814629E9987E0035EB11 /* Swinject */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		D567814429E998550035EB11 /* ModulesSwinject */ = {
+			isa = PBXGroup;
+			children = (
+				D567814529E9986E0035EB11 /* AuthSwinject */,
+				D567814B29E99A5A0035EB11 /* ModulesAssembly.swift */,
+			);
+			path = ModulesSwinject;
+			sourceTree = "<group>";
+		};
+		D567814529E9986E0035EB11 /* AuthSwinject */ = {
+			isa = PBXGroup;
+			children = (
+				D567814929E999DA0035EB11 /* AuthModulesAssembly.swift */,
+			);
+			path = AuthSwinject;
+			sourceTree = "<group>";
+		};
+		D567814629E9987E0035EB11 /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+				D567814729E998D70035EB11 /* Swinjectable.swift */,
+			);
+			path = Swinject;
+			sourceTree = "<group>";
+		};
+		D567814F29E99BD60035EB11 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D567815729E99E110035EB11 /* Coordinator.swift */,
+				D567815329E99C6C0035EB11 /* AppCoordinator.swift */,
+				D567815529E99E010035EB11 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		D567815929E99E8F0035EB11 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D567815A29E99EA90035EB11 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D567815C29E99FEE0035EB11 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D567815D29E99FFF0035EB11 /* Coordinator */,
+				D567816029E9A01B0035EB11 /* LoginPresentable.swift */,
+				D567816229E9A0260035EB11 /* LoginController.swift */,
+				D567816429E9A02F0035EB11 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D567815D29E99FFF0035EB11 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D567815E29E9A00E0035EB11 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D550CFA0299A74E100CBD84F /* okuuchu_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D550CFB5299A74E200CBD84F /* Build configuration list for PBXNativeTarget "okuuchu_iOS" */;
+			buildPhases = (
+				D550CF9D299A74E100CBD84F /* Sources */,
+				D550CF9E299A74E100CBD84F /* Frameworks */,
+				D550CF9F299A74E100CBD84F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = okuuchu_iOS;
+			packageProductDependencies = (
+				D567813029E985F90035EB11 /* Swinject */,
+				D567813329E9861D0035EB11 /* SnapKit */,
+				D567813629E986510035EB11 /* SwinjectAutoregistration */,
+			);
+			productName = okuuchu_iOS;
+			productReference = D550CFA1299A74E100CBD84F /* okuuchu_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D550CF99299A74E000CBD84F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					D550CFA0299A74E100CBD84F = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = D550CF9C299A74E000CBD84F /* Build configuration list for PBXProject "okuuchu_iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D550CF98299A74E000CBD84F;
+			packageReferences = (
+				D567812F29E985F90035EB11 /* XCRemoteSwiftPackageReference "Swinject" */,
+				D567813229E9861D0035EB11 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D567813529E986510035EB11 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+			);
+			productRefGroup = D550CFA2299A74E100CBD84F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D550CFA0299A74E100CBD84F /* okuuchu_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D550CF9F299A74E100CBD84F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D550CFB1299A74E200CBD84F /* LaunchScreen.storyboard in Resources */,
+				D550CFAE299A74E200CBD84F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D550CF9D299A74E100CBD84F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D567814829E998D70035EB11 /* Swinjectable.swift in Sources */,
+				D567815B29E99EA90035EB11 /* TabBarController.swift in Sources */,
+				D567815F29E9A00E0035EB11 /* LoginCoordinator.swift in Sources */,
+				D567816129E9A01B0035EB11 /* LoginPresentable.swift in Sources */,
+				D567814C29E99A5A0035EB11 /* ModulesAssembly.swift in Sources */,
+				D567815429E99C6C0035EB11 /* AppCoordinator.swift in Sources */,
+				D567813E29E995A00035EB11 /* BaseView.swift in Sources */,
+				D567814229E995B30035EB11 /* BaseViewModel.swift in Sources */,
+				D567815629E99E010035EB11 /* MainCoordinator.swift in Sources */,
+				D567813B29E994DC0035EB11 /* MainViewController.swift in Sources */,
+				D567816529E9A02F0035EB11 /* LoginViewModel.swift in Sources */,
+				D567814A29E999DA0035EB11 /* AuthModulesAssembly.swift in Sources */,
+				D567815829E99E110035EB11 /* Coordinator.swift in Sources */,
+				D567814029E995AB0035EB11 /* BaseController.swift in Sources */,
+				D567816329E9A0260035EB11 /* LoginController.swift in Sources */,
+				D550CFA5299A74E100CBD84F /* AppDelegate.swift in Sources */,
+				D567814E29E99AB90035EB11 /* SwinjectServices.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D550CFAF299A74E200CBD84F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D550CFB0299A74E200CBD84F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D550CFB3299A74E200CBD84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D550CFB4299A74E200CBD84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D550CFB6299A74E200CBD84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CRTQ48V5PT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = okuuchu_iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "comm.learning.okuuchu-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D550CFB7299A74E200CBD84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CRTQ48V5PT;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = okuuchu_iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "comm.learning.okuuchu-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D550CF9C299A74E000CBD84F /* Build configuration list for PBXProject "okuuchu_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D550CFB3299A74E200CBD84F /* Debug */,
+				D550CFB4299A74E200CBD84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D550CFB5299A74E200CBD84F /* Build configuration list for PBXNativeTarget "okuuchu_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D550CFB6299A74E200CBD84F /* Debug */,
+				D550CFB7299A74E200CBD84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D567812F29E985F90035EB11 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		D567813229E9861D0035EB11 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D567813529E986510035EB11 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D567813029E985F90035EB11 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D567812F29E985F90035EB11 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		D567813329E9861D0035EB11 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D567813229E9861D0035EB11 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		D567813629E986510035EB11 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D567813529E986510035EB11 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D550CF99299A74E000CBD84F /* Project object */;
+}
