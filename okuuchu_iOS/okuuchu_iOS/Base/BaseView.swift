@@ -6,6 +6,8 @@ open class BaseView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
+        backgroundColor = Asset.secondaryBlueBackground.color
+        
         onAddSubviews()
         onConfigureView()
         onSetupTargets()

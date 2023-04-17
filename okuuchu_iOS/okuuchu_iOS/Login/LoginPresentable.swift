@@ -9,7 +9,7 @@ class LoginPresentable: BaseView {
     
     //MARK: - Override methods
     override func onConfigureView() {
-        backgroundColor = .gray
+
     }
     
     override func onAddSubviews() {
