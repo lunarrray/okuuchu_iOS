@@ -29,6 +29,7 @@
 		D567816129E9A01B0035EB11 /* LoginPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816029E9A01B0035EB11 /* LoginPresentable.swift */; };
 		D567816329E9A0260035EB11 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816229E9A0260035EB11 /* LoginController.swift */; };
 		D567816529E9A02F0035EB11 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816429E9A02F0035EB11 /* LoginViewModel.swift */; };
+		D595C57B29ED907D00CED84D /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595C57A29ED907D00CED84D /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		D567816029E9A01B0035EB11 /* LoginPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentable.swift; sourceTree = "<group>"; };
 		D567816229E9A0260035EB11 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D567816429E9A02F0035EB11 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D595C57829ED8F7D00CED84D /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		D595C57A29ED907D00CED84D /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 		D550CF98299A74E000CBD84F = {
 			isa = PBXGroup;
 			children = (
+				D595C57829ED8F7D00CED84D /* swiftgen.yml */,
 				D550CFA3299A74E100CBD84F /* okuuchu_iOS */,
 				D550CFA2299A74E100CBD84F /* Products */,
 			);
@@ -94,7 +98,7 @@
 				D567814F29E99BD60035EB11 /* Coordinators */,
 				D567815929E99E8F0035EB11 /* TabBar */,
 				D567815C29E99FEE0035EB11 /* Login */,
-				D550CFAD299A74E200CBD84F /* Assets.xcassets */,
+				D595C57529ED8EF000CED84D /* Resources */,
 				D550CFAF299A74E200CBD84F /* LaunchScreen.storyboard */,
 				D550CFB2299A74E200CBD84F /* Info.plist */,
 			);
@@ -200,6 +204,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		D595C57529ED8EF000CED84D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D595C57A29ED907D00CED84D /* Assets.swift */,
+				D550CFAD299A74E200CBD84F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,6 +223,7 @@
 				D550CF9D299A74E100CBD84F /* Sources */,
 				D550CF9E299A74E100CBD84F /* Frameworks */,
 				D550CF9F299A74E100CBD84F /* Resources */,
+				D595C57929ED8F9000CED84D /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -275,6 +289,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D595C57929ED8F9000CED84D /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/swiftgen/bin/swiftgen\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D550CF9D299A74E100CBD84F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -288,6 +323,7 @@
 				D567815429E99C6C0035EB11 /* AppCoordinator.swift in Sources */,
 				D567813E29E995A00035EB11 /* BaseView.swift in Sources */,
 				D567814229E995B30035EB11 /* BaseViewModel.swift in Sources */,
+				D595C57B29ED907D00CED84D /* Assets.swift in Sources */,
 				D567815629E99E010035EB11 /* MainCoordinator.swift in Sources */,
 				D567813B29E994DC0035EB11 /* MainViewController.swift in Sources */,
 				D567816529E9A02F0035EB11 /* LoginViewModel.swift in Sources */,
