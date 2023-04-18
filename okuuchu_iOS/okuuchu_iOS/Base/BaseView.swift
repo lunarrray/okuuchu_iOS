@@ -3,11 +3,12 @@
 import UIKit
 
 open class BaseView: UIView {
+    
+    
     public override init(frame: CGRect) {
+        
         super.init(frame: frame)
-        
-        backgroundColor = Asset.secondaryBlueBackground.color
-        
+                
         onAddSubviews()
         onConfigureView()
         onSetupTargets()
@@ -19,13 +20,15 @@ open class BaseView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func onConfigureView(){ }
+    func onConfigureView(){}
     
     func onAddSubviews(){ }
     
     func onSetupConstraints(){ }
     
     func onSetupTargets(){ }
+    
+    
     
 }
 
