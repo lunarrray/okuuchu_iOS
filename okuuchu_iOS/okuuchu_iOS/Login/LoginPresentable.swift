@@ -2,10 +2,9 @@
 import UIKit
 import SnapKit
 
-class LoginPresentable: BaseView {
+class LoginPresentable: PrimaryView {
     
     //MARK: - Properties
-    private let leftBall: UIImageView = .init()
     private let mainLabel: UILabel = .init()
     private let presentingImage: UIImageView = .init()
     private let stackView: UIStackView = .init()
@@ -21,10 +20,9 @@ class LoginPresentable: BaseView {
     
     //MARK: - Override methods
     override func onConfigureView() {
+        super.onConfigureView()
         
-        backgroundColor = Asset.primaryGrayBackground.color
-        
-        leftBall.image = Asset.leftBlueBalls.image
+        super.setGrayWithLeftTopBalls()
         
         mainLabel.textAlignment = .center
         mainLabel.font = .boldSystemFont(ofSize: 22)
@@ -70,8 +68,8 @@ class LoginPresentable: BaseView {
     }
     
     override func onAddSubviews() {
+        super.onAddSubviews()
         addSubviews(
-            leftBall,
             mainLabel,
             presentingImage,
             stackView
@@ -94,14 +92,11 @@ class LoginPresentable: BaseView {
     }
     
     override func onSetupConstraints() {
-        leftBall.snp.makeConstraints { maker in
-            maker.left.equalToSuperview()
-            maker.top.equalToSuperview()
-        }
+        super.onSetupConstraints()
         
         mainLabel.snp.makeConstraints{ maker in
             maker.centerX.equalToSuperview()
-            maker.top.equalTo(leftBall.snp.bottom).offset(20)
+            maker.top.equalToSuperview().inset(200)
         }
         
         presentingImage.snp.makeConstraints{ maker in
