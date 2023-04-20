@@ -17,6 +17,11 @@ class LoginCoordinator: Coordinator {
         appDelegate?.window?.rootViewController = navigationController
         appDelegate?.window?.makeKeyAndVisible()
     }
+    
+    func openRegistrationScreen(){
+        let coordinator: RegistrationCoordinator = .init(navigationController: navigationController)
+        coordinator.start()
+    }
 }
 
 

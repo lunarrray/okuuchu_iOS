@@ -31,9 +31,18 @@
 		D567816129E9A01B0035EB11 /* LoginPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816029E9A01B0035EB11 /* LoginPresentable.swift */; };
 		D567816329E9A0260035EB11 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816229E9A0260035EB11 /* LoginController.swift */; };
 		D567816529E9A02F0035EB11 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567816429E9A02F0035EB11 /* LoginViewModel.swift */; };
+		D56A756F29EE907D0072BB29 /* RegistrationTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A756E29EE907D0072BB29 /* RegistrationTwoController.swift */; };
+		D56A757229EE92CD0072BB29 /* RegistrationTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56A757129EE92CD0072BB29 /* RegistrationTwoViewModel.swift */; };
+		D58EA56E29EE86F900D8F0B0 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA56D29EE86F900D8F0B0 /* RegistrationCoordinator.swift */; };
+		D58EA57029EE877400D8F0B0 /* RegistrationOnePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA56F29EE877400D8F0B0 /* RegistrationOnePresentable.swift */; };
+		D58EA57229EE87B900D8F0B0 /* RegistrationTwoPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA57129EE87B900D8F0B0 /* RegistrationTwoPresentable.swift */; };
+		D58EA57429EE87DC00D8F0B0 /* RegistrationOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA57329EE87DC00D8F0B0 /* RegistrationOneController.swift */; };
+		D58EA57629EE881900D8F0B0 /* RegistrationOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA57529EE881900D8F0B0 /* RegistrationOneViewModel.swift */; };
+		D58EA57929EE8A0100D8F0B0 /* PrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA57829EE8A0100D8F0B0 /* PrimaryView.swift */; };
 		D595C57B29ED907D00CED84D /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595C57A29ED907D00CED84D /* Assets.swift */; };
 		D595C57E29ED940B00CED84D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595C57D29ED940B00CED84D /* UIView+Extension.swift */; };
 		D595C58129ED9E1600CED84D /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595C58029ED9E1600CED84D /* MainTextField.swift */; };
+		D5BE1D9B29EEA4E3008CB17F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,10 +69,19 @@
 		D567816029E9A01B0035EB11 /* LoginPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentable.swift; sourceTree = "<group>"; };
 		D567816229E9A0260035EB11 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D567816429E9A02F0035EB11 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D56A756E29EE907D0072BB29 /* RegistrationTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTwoController.swift; sourceTree = "<group>"; };
+		D56A757129EE92CD0072BB29 /* RegistrationTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTwoViewModel.swift; sourceTree = "<group>"; };
+		D58EA56D29EE86F900D8F0B0 /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		D58EA56F29EE877400D8F0B0 /* RegistrationOnePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnePresentable.swift; sourceTree = "<group>"; };
+		D58EA57129EE87B900D8F0B0 /* RegistrationTwoPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTwoPresentable.swift; sourceTree = "<group>"; };
+		D58EA57329EE87DC00D8F0B0 /* RegistrationOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOneController.swift; sourceTree = "<group>"; };
+		D58EA57529EE881900D8F0B0 /* RegistrationOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOneViewModel.swift; sourceTree = "<group>"; };
+		D58EA57829EE8A0100D8F0B0 /* PrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryView.swift; sourceTree = "<group>"; };
 		D595C57829ED8F7D00CED84D /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		D595C57A29ED907D00CED84D /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		D595C57D29ED940B00CED84D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		D595C58029ED9E1600CED84D /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
+		D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +140,7 @@
 				D55A65B029EE85A9001BBDAC /* Coordinator */,
 				D55A65B129EE85B2001BBDAC /* Presentables */,
 				D55A65B229EE85C6001BBDAC /* Controllers */,
-				D55A65B329EE85ED001BBDAC /* ViewModels */,
+				D56A757029EE92AB0072BB29 /* ViewModels */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -130,6 +148,7 @@
 		D55A65B029EE85A9001BBDAC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				D58EA56D29EE86F900D8F0B0 /* RegistrationCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -137,6 +156,8 @@
 		D55A65B129EE85B2001BBDAC /* Presentables */ = {
 			isa = PBXGroup;
 			children = (
+				D58EA56F29EE877400D8F0B0 /* RegistrationOnePresentable.swift */,
+				D58EA57129EE87B900D8F0B0 /* RegistrationTwoPresentable.swift */,
 			);
 			path = Presentables;
 			sourceTree = "<group>";
@@ -144,15 +165,10 @@
 		D55A65B229EE85C6001BBDAC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D58EA57329EE87DC00D8F0B0 /* RegistrationOneController.swift */,
+				D56A756E29EE907D0072BB29 /* RegistrationTwoController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		D55A65B329EE85ED001BBDAC /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D567813829E986C40035EB11 /* Application */ = {
@@ -179,6 +195,7 @@
 				D567813D29E995A00035EB11 /* BaseView.swift */,
 				D567813F29E995AB0035EB11 /* BaseController.swift */,
 				D567814129E995B30035EB11 /* BaseViewModel.swift */,
+				D58EA57729EE89D500D8F0B0 /* PrimaryView */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -254,6 +271,23 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		D56A757029EE92AB0072BB29 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D58EA57529EE881900D8F0B0 /* RegistrationOneViewModel.swift */,
+				D56A757129EE92CD0072BB29 /* RegistrationTwoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D58EA57729EE89D500D8F0B0 /* PrimaryView */ = {
+			isa = PBXGroup;
+			children = (
+				D58EA57829EE8A0100D8F0B0 /* PrimaryView.swift */,
+			);
+			path = PrimaryView;
+			sourceTree = "<group>";
+		};
 		D595C57529ED8EF000CED84D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +311,7 @@
 			children = (
 				D595C58029ED9E1600CED84D /* MainTextField.swift */,
 				D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */,
+				D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -383,14 +418,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58EA57029EE877400D8F0B0 /* RegistrationOnePresentable.swift in Sources */,
 				D567814829E998D70035EB11 /* Swinjectable.swift in Sources */,
+				D58EA57229EE87B900D8F0B0 /* RegistrationTwoPresentable.swift in Sources */,
 				D567815B29E99EA90035EB11 /* TabBarController.swift in Sources */,
 				D567815F29E9A00E0035EB11 /* LoginCoordinator.swift in Sources */,
+				D58EA56E29EE86F900D8F0B0 /* RegistrationCoordinator.swift in Sources */,
 				D567816129E9A01B0035EB11 /* LoginPresentable.swift in Sources */,
 				D567814C29E99A5A0035EB11 /* ModulesAssembly.swift in Sources */,
+				D56A757229EE92CD0072BB29 /* RegistrationTwoViewModel.swift in Sources */,
 				D567815429E99C6C0035EB11 /* AppCoordinator.swift in Sources */,
 				D567813E29E995A00035EB11 /* BaseView.swift in Sources */,
+				D58EA57629EE881900D8F0B0 /* RegistrationOneViewModel.swift in Sources */,
+				D58EA57929EE8A0100D8F0B0 /* PrimaryView.swift in Sources */,
 				D567814229E995B30035EB11 /* BaseViewModel.swift in Sources */,
+				D56A756F29EE907D0072BB29 /* RegistrationTwoController.swift in Sources */,
+				D58EA57429EE87DC00D8F0B0 /* RegistrationOneController.swift in Sources */,
 				D55A65AC29EDA267001BBDAC /* UIStackView+Extension.swift in Sources */,
 				D595C57B29ED907D00CED84D /* Assets.swift in Sources */,
 				D567815629E99E010035EB11 /* MainCoordinator.swift in Sources */,
@@ -402,6 +445,7 @@
 				D567815829E99E110035EB11 /* Coordinator.swift in Sources */,
 				D567814029E995AB0035EB11 /* BaseController.swift in Sources */,
 				D595C58129ED9E1600CED84D /* MainTextField.swift in Sources */,
+				D5BE1D9B29EEA4E3008CB17F /* RoundedImageView.swift in Sources */,
 				D567816329E9A0260035EB11 /* LoginController.swift in Sources */,
 				D550CFA5299A74E100CBD84F /* AppDelegate.swift in Sources */,
 				D567814E29E99AB90035EB11 /* SwinjectServices.swift in Sources */,

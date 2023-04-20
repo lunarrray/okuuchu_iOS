@@ -10,7 +10,6 @@ open class BaseController<View: UIView>: UIViewController{
         super.loadView()
         
         view = View()
-//        view.backgroundColor = .yellow
         
         onConfigureController()
         onConfigureViewModel()
