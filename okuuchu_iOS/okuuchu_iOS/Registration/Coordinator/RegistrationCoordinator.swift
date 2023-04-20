@@ -10,6 +10,19 @@ class RegistrationCoordinator: Coordinator {
     }
     
     func start() {
-        
+        let controller: RegistrationOneController = .init()
+        controller.viewModel.coordinator = self
+        navigationController.setViewControllers([controller], animated: true)
+    }
+    
+    func continueRegistration () {
+        let controller:  RegistrationTwoController = .init()
+        controller.viewModel.coordinator = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func openLoginScreen() {
+        let coordinator: LoginCoordinator = .init(navigationController: navigationController)
+        coordinator.start()
     }
 }

@@ -17,11 +17,12 @@ class LoginPresentable: PrimaryView {
     private let registerButton: UIButton = .init()
     private let dismissKeyboard: UITapGestureRecognizer = .init()
     
+    var registerTapAction: (() -> Void)?
+    
     
     //MARK: - Override methods
     override func onConfigureView() {
         super.onConfigureView()
-        
         super.setGrayWithLeftTopBalls()
         
         mainLabel.textAlignment = .center
@@ -132,11 +133,16 @@ class LoginPresentable: PrimaryView {
     
     override func onSetupTargets() {
         dismissKeyboard.addTarget(self, action: #selector(viewTapped))
+        registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
     }
 }
 
 extension LoginPresentable {
     @objc private func viewTapped(_ recognizer: UITapGestureRecognizer){
         endEditing(true)
+    }
+    
+    @objc func registerButtonTapped(){
+        registerTapAction?()
     }
 }
