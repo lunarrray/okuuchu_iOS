@@ -18,6 +18,7 @@ class LoginPresentable: PrimaryView {
     private let dismissKeyboard: UITapGestureRecognizer = .init()
     
     var registerTapAction: (() -> Void)?
+    var loginTapAction: (() -> Void)?
     
     
     //MARK: - Override methods
@@ -134,6 +135,7 @@ class LoginPresentable: PrimaryView {
     override func onSetupTargets() {
         dismissKeyboard.addTarget(self, action: #selector(viewTapped))
         registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
 }
 
@@ -144,5 +146,9 @@ extension LoginPresentable {
     
     @objc func registerButtonTapped(){
         registerTapAction?()
+    }
+    
+    @objc func loginButtonTapped(){
+        loginTapAction?()
     }
 }

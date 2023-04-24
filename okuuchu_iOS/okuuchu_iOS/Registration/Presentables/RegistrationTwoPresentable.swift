@@ -31,10 +31,8 @@ class RegistrationTwoPresentable: PrimaryView{
         
         
         avatarImageView.imageView.image = Asset.avatarImg.image
-//        avatarImageView.image = Asset.avatarImg.image
-//        avatarImageView.activateCamera()
+        avatarImageView.activateCameraButton()
         avatarImageView.imageView.clipsToBounds = true
-//        avatarImageView.backgroundColor = Asset.secondaryBlueBackground.color
         
         stackView.axis = .vertical
         stackView.alignment = .center
