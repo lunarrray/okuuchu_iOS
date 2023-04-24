@@ -16,6 +16,10 @@ public final class AuthModulesAssembly: Assembly {
         container.autoregister(
             RegistrationTwoViewModelInput.self,
             initializer: RegistrationTwoViewModel.init)
+        
+        container.autoregister(
+            TeacherProfileViewModelInput.self,
+            initializer: TeacherProfileViewModel.init)
     }
     
     

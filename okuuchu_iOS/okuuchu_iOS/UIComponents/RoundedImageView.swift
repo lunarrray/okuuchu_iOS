@@ -21,6 +21,7 @@ class RoundedImageView: UIView {
         addSubview(imageView)
         
         button.setImage(Asset.cameraIcon.image, for: .normal)
+        button.isHidden = true
         addSubview(button)
     }
     
@@ -39,28 +40,8 @@ class RoundedImageView: UIView {
             maker.height.equalTo(size)
         }
     }
-    
-//    private let cameraButton: UIButton = .init(type: .custom)
-//
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        layer.cornerRadius = min(bounds.width, bounds.height) / 2.0
-//        layer.masksToBounds = true
-//
-//        cameraButton.setImage(Asset.cameraIcon.image, for: .normal)
-//        cameraButton.frame = CGRect(x: bounds.width, y: bounds.height, width: 40, height: 40)
-//        addSubview(cameraButton)
-//        bringSubviewToFront(cameraButton)
-//
-////        cameraButton.snp.makeConstraints{ maker in
-////            maker.right.equalToSuperview()
-////            maker.bottom.equalToSuperview()
-////        }
-////        cameraButton.isHidden = true
-//    }
-//
-//
-//    func activateCamera(){
-//        cameraButton.isHidden = false
-//    }
+
+    func activateCameraButton(){
+        button.isHidden = false
+    }
 }
