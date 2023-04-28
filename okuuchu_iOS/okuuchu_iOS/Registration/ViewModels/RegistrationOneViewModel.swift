@@ -22,6 +22,6 @@ extension RegistrationOneViewModel: RegistrationOneViewModelInput {
     }
     
     func openLoginScreen() {
-        coordinator?.openLoginScreen()
+        coordinator?.startLogin()
     }
 }

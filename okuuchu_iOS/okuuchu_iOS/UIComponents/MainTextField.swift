@@ -27,10 +27,6 @@ class MainTextField: UITextField {
         datePickerView.preferredDatePickerStyle = .wheels
         datePickerView.datePickerMode = .date
         datePickerView.backgroundColor = Asset.white.color
-//        datePickerView.heightAnchor.constraint(equalToConstant: 216.0).isActive = true
-//        datePickerView.autoresizingMask = [.flexibleWidth]
-//        datePickerView.center = CGPoint(x: bounds.midX, y: bounds.midY)
-
     }
     
     override init(frame: CGRect) {
@@ -43,6 +39,8 @@ class MainTextField: UITextField {
     }
     
 }
+
+//MARK: - Extension
 
 extension MainTextField {
     @objc func eyeIconTapped(tapGestureRecognizer: UITapGestureRecognizer){

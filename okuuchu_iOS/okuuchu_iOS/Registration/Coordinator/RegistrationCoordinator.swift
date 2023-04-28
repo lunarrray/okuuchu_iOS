@@ -21,7 +21,7 @@ class RegistrationCoordinator: Coordinator {
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func openLoginScreen() {
+    func startLogin() {
         let coordinator: LoginCoordinator = .init(navigationController: navigationController)
         coordinator.start()
     }

@@ -18,6 +18,6 @@ class RegistrationTwoViewModel {
 
 extension RegistrationTwoViewModel: RegistrationTwoViewModelInput {
     func openLoginScreen() {
-        coordinator?.openLoginScreen()
+        coordinator?.startLogin()
     }
 }

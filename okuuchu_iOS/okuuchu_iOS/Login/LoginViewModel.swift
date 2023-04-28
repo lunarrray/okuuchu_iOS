@@ -25,10 +25,10 @@ class LoginViewModel {
 
 extension LoginViewModel: LoginViewModelInput {
     func openRegistration() {
-        coordinator?.openRegistrationScreen()
+        coordinator?.startRegistration()
     }
     
     func goToProfile() {
-        coordinator?.openTeacherProfile()
+        coordinator?.startTeacherProfile()
     }
 }

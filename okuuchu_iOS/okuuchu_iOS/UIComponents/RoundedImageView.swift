@@ -16,12 +16,18 @@ class RoundedImageView: UIView {
     }
     
     func onSetupSubviews(){
+        imageView.image = Asset.neutralAvatarIcon.image.withTintColor(Asset.white.color, renderingMode: .alwaysOriginal)
+        imageView.backgroundColor = Asset.primaryGrayBackground.color
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.borderWidth = 1.0
         imageView.layer.cornerRadius = min(bounds.width, bounds.height) / 2.0
         imageView.layer.masksToBounds = true
         addSubview(imageView)
         
         button.setImage(Asset.cameraIcon.image, for: .normal)
         button.isHidden = true
+        button.addShadow()
+
         addSubview(button)
     }
     
@@ -43,5 +49,11 @@ class RoundedImageView: UIView {
 
     func activateCameraButton(){
         button.isHidden = false
+    }
+    
+    func configureWith(_ image: UIImage) {
+        imageView.image = image
+        imageView.layer.borderWidth = 0
+        imageView.backgroundColor = .clear
     }
 }

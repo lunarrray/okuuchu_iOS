@@ -8,11 +8,7 @@ class PrimaryButton: UIButton {
         setTitleColor(Asset.white.color, for: .normal)
         titleLabel?.font = .boldSystemFont(ofSize: 20)
         layer.cornerRadius = 10
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.3
-        layer.shadowOffset = CGSize(width: 0, height: 5)
-        layer.shadowRadius = 4
-        
+        addShadow()
     }
     
     required init?(coder: NSCoder) {

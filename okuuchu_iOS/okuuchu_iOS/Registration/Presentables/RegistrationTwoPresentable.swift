@@ -29,10 +29,8 @@ class RegistrationTwoPresentable: PrimaryView{
         mainLabel.numberOfLines = 2
         mainLabel.text = "Нам необходимо немного узнать о вас!"
         
-        
-        avatarImageView.imageView.image = Asset.avatarImg.image
-        avatarImageView.activateCameraButton()
         avatarImageView.imageView.clipsToBounds = true
+        avatarImageView.activateCameraButton()
         
         stackView.axis = .vertical
         stackView.alignment = .center

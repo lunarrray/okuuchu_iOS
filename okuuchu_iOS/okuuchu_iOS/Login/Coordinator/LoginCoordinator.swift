@@ -18,12 +18,12 @@ class LoginCoordinator: Coordinator {
         appDelegate?.window?.makeKeyAndVisible()
     }
     
-    func openRegistrationScreen(){
+    func startRegistration(){
         let coordinator: RegistrationCoordinator = .init(navigationController: navigationController)
         coordinator.start()
     }
     
-    func openTeacherProfile(){
+    func startTeacherProfile(){
         var profileCoordinator: TeacherProfileCoordinator = .init(navigationController: navigationController)
         profileCoordinator.start()
     }
