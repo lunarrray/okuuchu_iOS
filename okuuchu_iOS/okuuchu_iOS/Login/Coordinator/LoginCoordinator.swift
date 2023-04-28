@@ -24,7 +24,7 @@ class LoginCoordinator: Coordinator {
     }
     
     func startTeacherProfile(){
-        var profileCoordinator: TeacherProfileCoordinator = .init(navigationController: navigationController)
+        let profileCoordinator: TeacherProfileCoordinator = .init(navigationController: navigationController)
         profileCoordinator.start()
     }
 }

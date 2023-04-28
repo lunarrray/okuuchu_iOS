@@ -17,6 +17,10 @@ class UpdateTeacherInfoController: VMController<UpdateTeacherInfoPresentable, Up
         tableViewManager.delegate = self
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        viewModel.viewDidDisappear()
+    }
+    
     //MARK: - Override methods
     
     override func onConfigureViewModel() {

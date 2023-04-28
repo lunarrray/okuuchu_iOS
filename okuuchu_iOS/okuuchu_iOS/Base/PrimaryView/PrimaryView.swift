@@ -10,6 +10,8 @@ class PrimaryView: BaseView {
     private let bottomRightBlueBall: UIImageView = .init()
     private let topLeftWhiteBall: UIImageView = .init()
     
+    private let informationScreenImage: UIImageView = .init()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -24,12 +26,16 @@ class PrimaryView: BaseView {
         bottomLeftBlueBall.image = Asset.leftBottomBalls.image
         bottomRightBlueBall.image = Asset.rightBottomBalls.image
         topLeftWhiteBall.image = Asset.leftWhiteBalls.image
+        
+        informationScreenImage.image = Asset.informationScreenImage.image
     
         topLeftBlueBall.isHidden = true
         topRightBlueBall.isHidden = true
         bottomLeftBlueBall.isHidden = true
         bottomRightBlueBall.isHidden = true
         topLeftWhiteBall.isHidden = true
+        
+        informationScreenImage.isHidden = true
     }
     
     override func onAddSubviews() {
@@ -38,8 +44,8 @@ class PrimaryView: BaseView {
         topRightBlueBall,
         bottomLeftBlueBall,
         bottomRightBlueBall,
-        topLeftWhiteBall
-        )
+        topLeftWhiteBall,
+        informationScreenImage)
     }
     
     override func onSetupConstraints() {
@@ -67,6 +73,13 @@ class PrimaryView: BaseView {
             maker.right.equalToSuperview()
             maker.bottom.equalToSuperview()
         }
+        
+        informationScreenImage.snp.makeConstraints{ maker in
+            maker.centerX.equalToSuperview()
+            maker.centerY.equalToSuperview().offset(10)
+        }
+        
+
     }
 }
 
@@ -100,4 +113,9 @@ extension PrimaryView {
         topLeftWhiteBall.isHidden = false
 
     }
+    
+    func addInformationScreenImage(){
+        informationScreenImage.isHidden = false
+    }
+    
 }

@@ -17,7 +17,7 @@ final class TeacherProfileController: VMController<TeacherProfilePresentable, Te
         content.tableView.delegate = tableviewManager
         content.tableView.dataSource = tableviewManager
         
-        viewModel.getTableViewDataFromModel()
+//        viewModel.getDataFromModel()
         tableviewManager?.delegate = self
         
     }
@@ -36,13 +36,13 @@ final class TeacherProfileController: VMController<TeacherProfilePresentable, Te
 //MARK: - Extension
 
 extension TeacherProfileController: TeacherProfileTableViewDelegate {
-    func selectedCell() {
-        viewModel.cellTapped()
+    func selectedMenuItem(_ menuItem: Menu) {
+        viewModel.menuItemTapped(menuItem)
     }
 }
 
 extension TeacherProfileController: TeacherProfileViewModelOutput{
-    func customizeOutput(with cellData: [CellData]) {
-        tableviewManager?.setData(cellData, tableView: content.tableView)
+    func customizeOutput(with data: [TitleSubtitleViewModel]) {
+//        tableviewManager?.setData(data, tableView: content.tableView)
     }
 }

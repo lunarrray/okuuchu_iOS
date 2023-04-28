@@ -2,29 +2,24 @@
 import UIKit
 
 protocol TeacherProfileTableViewDelegate: AnyObject {
-    func selectedCell()
+    func selectedMenuItem(_ menuItem: Menu)
 }
 
 class TeacherProfileTableViewManager: NSObject {
     weak var delegate: TeacherProfileTableViewDelegate?
-    private var tableViewData: [CellData] = []
-    
-    
-    func setData(_ cellData: [CellData], tableView: RoundedTableView){
-        self.tableViewData = cellData
-        tableView.reloadData()
-    }
+    private var menuData: [Menu] = [.schedule, .recordedLessons, .updatePersonalInfo, .ads, .reviews, .information]
 }
 
 extension TeacherProfileTableViewManager: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewData.count
+        return menuData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TitleCell.self), for: indexPath) as? TitleCell else { return TitleCell() }
-
-        cell.configureCell(with: tableViewData[indexPath.row])
+        let menuItem = menuData[indexPath.row]
+        let cellData = TitleSubtitleViewModel(title: menuItem.title)
+        cell.configureCell(with: cellData)
         cell.accessoryType = .disclosureIndicator
         return cell
     }
@@ -34,12 +29,7 @@ extension TeacherProfileTableViewManager: UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            delegate?.selectedCell()
-        default:
-            break
-        }
+        delegate?.selectedMenuItem(menuData[indexPath.row])
         
         tableView.deselectRow(at: indexPath, animated: true)
     }

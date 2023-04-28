@@ -6,13 +6,13 @@ protocol TeacherProfileViewModelInput {
     var coordinator: TeacherProfileCoordinator? { get set }
     var output: TeacherProfileViewModelOutput? { get set }
     
-    func getTableViewDataFromModel()
-    func cellTapped()
+    func getDataFromModel()
+    func menuItemTapped(_ item: Menu)
     
 }
 
 protocol TeacherProfileViewModelOutput: AnyObject {
-    func customizeOutput(with cellData: [CellData])
+    func customizeOutput(with data: [TitleSubtitleViewModel])
 }
 
 //MARK: - Class
@@ -21,39 +21,33 @@ final class TeacherProfileViewModel {
     var coordinator: TeacherProfileCoordinator?
     weak var output: TeacherProfileViewModelOutput? {
         didSet {
-            output?.customizeOutput(with: tableViewData)
+            output?.customizeOutput(with: teacherData)
         }
     }
     
-    private var tableViewData: [CellData] = []
-//    [
-//        CellData(title: "График"),
-//        CellData(title: "Записанные уроки"),
-//        CellData(title: "Обновить информацию о себе"),
-//        CellData(title: "Обьявления"),
-//        CellData(title: "Отзывы"),
-//        CellData(title: "Информация")
-//    ]
+    private var teacherData: [TitleSubtitleViewModel] = []
+
 }
 
 //MARK: - Extension
 
 extension TeacherProfileViewModel: TeacherProfileViewModelInput {
-    func getTableViewDataFromModel() {
-        //asking for tableviewdata to model
-        tableViewData =  [
-            CellData(title: "График"),
-            CellData(title: "Записанные уроки"),
-            CellData(title: "Обновить информацию о себе"),
-            CellData(title: "Обьявления"),
-            CellData(title: "Отзывы"),
-            CellData(title: "Информация")
-        ]
-        
-        output?.customizeOutput(with: tableViewData)
+    func getDataFromModel() {
+        // getting data from model
+        output?.customizeOutput(with: teacherData)
     }
     
-    func cellTapped() {
-        coordinator?.startUpdateTeacherInfo()
+    func menuItemTapped(_ item: Menu) {
+        switch item {
+        case .updatePersonalInfo:
+            coordinator?.startUpdateTeacherInfo()
+        case .information:
+            coordinator?.startInformationScreen()
+        default: break
+        }
     }
 }
+
+//extension TeacherProfileViewModel {
+//
+//}

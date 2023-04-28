@@ -15,5 +15,9 @@ class UpdateTeacherInfoCoordinator: Coordinator {
         updateTeacherInfoController.viewModel.coordinator = self
         navigationController.pushViewController(updateTeacherInfoController, animated: true)
     }
+    
+    func didFinish(){
+        parentCoordinator?.childDidFinish(self)
+    }
 }
 

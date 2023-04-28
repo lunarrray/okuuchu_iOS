@@ -22,5 +22,21 @@ class TeacherProfileCoordinator: Coordinator{
         updateTeacherInfoCoordinator.start()
     }
     
+    func startInformationScreen(){
+        let informationCoordinator = InformationCoordinator(navigationController: navigationController)
+        informationCoordinator.parentCoordinator = self
+        childCoordinators.append(informationCoordinator)
+        informationCoordinator.start()
+    }
+    
+    func childDidFinish(_ childCoordinator: Coordinator) {
+        if let index = childCoordinators.firstIndex(where: { coordinator -> Bool
+            in
+            return childCoordinator === coordinator
+        }){
+            childCoordinators.remove(at: index)
+        }
+    }
+    
  
 }

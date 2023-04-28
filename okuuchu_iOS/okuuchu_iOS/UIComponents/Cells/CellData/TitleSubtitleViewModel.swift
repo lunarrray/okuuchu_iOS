@@ -1,7 +1,7 @@
 
 import UIKit
 
-class CellData{
+class TitleSubtitleViewModel{
     let title: String?
     private(set) var subtitle: String
     private(set) var image: UIImage?
