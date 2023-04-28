@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ImageCell: BaseCell<CellData> {
+class ImageCell: BaseCell<TitleSubtitleViewModel> {
     
     //MARK: - Properties
     var roundedImageView: RoundedImageView = .init(frame: CGRect(x: 0, y: 0, width: 90, height: 90))
@@ -30,7 +30,7 @@ class ImageCell: BaseCell<CellData> {
 //        roundedImageView.isHidden = true
     }
     
-    override func configureCell(with model: CellData) {
+    override func configureCell(with model: TitleSubtitleViewModel) {
         if let image = model.image {
             roundedImageView.configureWith(image)
         }

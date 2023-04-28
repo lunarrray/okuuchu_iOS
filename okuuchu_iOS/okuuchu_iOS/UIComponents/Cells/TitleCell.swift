@@ -1,7 +1,7 @@
 
 import UIKit
 
-class TitleCell: BaseCell<CellData> {
+class TitleCell: BaseCell<TitleSubtitleViewModel> {
     
     //MARK: - Properties
     
@@ -10,7 +10,7 @@ class TitleCell: BaseCell<CellData> {
     //MARK: - Methods
     
     override func onConfigureView(){
-        titleLabel.font = .systemFont(ofSize: 16)
+        titleLabel.font = .systemFont(ofSize: 18)
     }
     
     override func onAddSubviews(){
@@ -24,7 +24,7 @@ class TitleCell: BaseCell<CellData> {
         }
     }
     
-    override func configureCell(with cellData: CellData){
+    override func configureCell(with cellData: TitleSubtitleViewModel){
         titleLabel.text = cellData.title
     }
     

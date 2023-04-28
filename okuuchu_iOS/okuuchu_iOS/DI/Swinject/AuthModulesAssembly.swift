@@ -24,6 +24,14 @@ public final class AuthModulesAssembly: Assembly {
         container.autoregister(
             UpdateTeacherInfoViewModelInput.self,
             initializer: UpdateTeacherInfoViewModel.init)
+        
+        container.autoregister(
+            InformationViewModelInput.self,
+            initializer: InformationViewModel.init)
+        
+        container.autoregister(
+            AboutAppViewModelInput.self,
+            initializer: AboutAppViewModel.init)
     }
     
     

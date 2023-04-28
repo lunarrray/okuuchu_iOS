@@ -3,7 +3,7 @@ import UIKit
 import Foundation
 import SnapKit
 
-class LabeledTextViewCell: BaseCell<CellData> {
+class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
     
     //MARK: - Properties
     
@@ -25,7 +25,7 @@ class LabeledTextViewCell: BaseCell<CellData> {
     lazy var doneButton: UIBarButtonItem = {
         UIBarButtonItem(image: Asset.doneIcon.image.withTintColor(Asset.normalTextColor.color, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(doneButtonTapped))
     }()
-    private var viewModel: CellData?
+    private var viewModel: TitleSubtitleViewModel?
     
     //MARK: - Methods
     override func onConfigureView() {
@@ -79,7 +79,7 @@ class LabeledTextViewCell: BaseCell<CellData> {
         contentView.backgroundColor = .clear
     }
     
-    override func configureCell(with cellData: CellData) {
+    override func configureCell(with cellData: TitleSubtitleViewModel) {
         self.viewModel = cellData
         
         switch cellData.subTextType {

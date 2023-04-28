@@ -54,7 +54,7 @@ class LabeledTextView: UIView {
         }
     }
     
-    func configureWith(_ data: CellData, textBackgroundColor: UIColor = Asset.white.color){
+    func configureWith(_ data: TitleSubtitleViewModel, textBackgroundColor: UIColor = Asset.white.color){
         
         titleLabel.text = data.title
         textView.text = data.subtitle

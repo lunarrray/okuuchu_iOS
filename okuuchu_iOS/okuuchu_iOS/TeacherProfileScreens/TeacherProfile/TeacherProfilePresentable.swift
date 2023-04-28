@@ -29,12 +29,12 @@ final class TeacherProfilePresentable: PrimaryView{
 //        avatarImageView.activateCameraButton()
         
         ratingView.configureWith(rating: 3.5, spacing: 25, starColor: Asset.normalTextColor.color)
-        let aboutTeacherData = CellData(title: "Немного о себе", subtitle: "Дорогие друзья, выбранный нами инновационный путь способствует повышению актуальности модели развития. Соображения высшего порядка!")
+        let aboutTeacherData = TitleSubtitleViewModel(title: "Немного о себе", subtitle: "Дорогие друзья, выбранный нами инновационный путь способствует повышению актуальности модели развития. Соображения высшего порядка!")
         
         aboutTeacherView.configureWith(aboutTeacherData, textBackgroundColor: Asset.textViewBackground.color)
         aboutTeacherView.nonEditableTextView()
         
-        let lessonsData = CellData(title: "Предметы", subtitle: "Математика, Программирование")
+        let lessonsData = TitleSubtitleViewModel(title: "Предметы", subtitle: "Математика, Программирование")
         lessonsView.configureWith(lessonsData, textBackgroundColor: Asset.textViewBackground.color)
         lessonsView.nonEditableTextView()
         
