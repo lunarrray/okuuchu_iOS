@@ -15,5 +15,12 @@ class TeacherProfileCoordinator: Coordinator{
         navigationController.viewControllers = [teacherProfileController]
     }
     
+    func startUpdateTeacherInfo(){
+        let updateTeacherInfoCoordinator = UpdateTeacherInfoCoordinator(navigationController: navigationController)
+        updateTeacherInfoCoordinator.parentCoordinator = self
+        childCoordinators.append(updateTeacherInfoCoordinator)
+        updateTeacherInfoCoordinator.start()
+    }
+    
  
 }

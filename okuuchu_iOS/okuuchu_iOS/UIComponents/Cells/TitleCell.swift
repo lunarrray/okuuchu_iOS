@@ -5,7 +5,7 @@ class TitleCell: BaseCell<CellData> {
     
     //MARK: - Properties
     
-    private var titleLabel: UILabel = .init()
+    var titleLabel: UILabel = .init()
     
     //MARK: - Methods
     

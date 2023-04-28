@@ -11,10 +11,8 @@ final class TeacherProfilePresentable: PrimaryView{
     private var aboutTeacherView: LabeledTextView = .init()
     private var lessonsView: LabeledTextView = .init()
     
-    private let tableView: RoundedTableView = .init()
+    var tableView: RoundedTableView = .init()
     private let whiteView: UIView = .init()
-    
-    private var tableDataCurrent = ["График", "Записанные уроки", "Обновить информацию о себе", "Обьявления", "Отзывы", "Информация", ]
     
     //MARK: - Methods
     
@@ -27,22 +25,21 @@ final class TeacherProfilePresentable: PrimaryView{
         nameLabel.textAlignment = .left
         nameLabel.textColor = Asset.normalTextColor.color
         
-        avatarImageView.imageView.image = Asset.avatarImg.image
         avatarImageView.imageView.clipsToBounds = true
-        avatarImageView.activateCameraButton()
+//        avatarImageView.activateCameraButton()
         
         ratingView.configureWith(rating: 3.5, spacing: 25, starColor: Asset.normalTextColor.color)
-        let aboutTeacherData = LabelAndTextData(title: "Немного о себе", text: "Дорогие друзья, выбранный нами инновационный путь способствует повышению актуальности модели развития. Соображения высшего порядка!", type: .usual)
+        let aboutTeacherData = CellData(title: "Немного о себе", subtitle: "Дорогие друзья, выбранный нами инновационный путь способствует повышению актуальности модели развития. Соображения высшего порядка!")
         
         aboutTeacherView.configureWith(aboutTeacherData, textBackgroundColor: Asset.textViewBackground.color)
+        aboutTeacherView.nonEditableTextView()
         
-        let lessonsData = LabelAndTextData(title: "Предметы", text: "Математика, Программирование", type: .usual)
+        let lessonsData = CellData(title: "Предметы", subtitle: "Математика, Программирование")
         lessonsView.configureWith(lessonsData, textBackgroundColor: Asset.textViewBackground.color)
+        lessonsView.nonEditableTextView()
         
         tableView.register(TitleCell.self, forCellReuseIdentifier: String(describing: TitleCell.self))
-        tableView.dataSource = self
-        tableView.delegate = self
-        
+
         whiteView.backgroundColor = Asset.white.color
     }
     
@@ -85,19 +82,17 @@ final class TeacherProfilePresentable: PrimaryView{
         aboutTeacherView.snp.makeConstraints{ maker in
             maker.top.equalTo(ratingView.snp.bottom).offset(20)
             maker.left.right.equalToSuperview().inset(20)
-            maker.width.equalTo(90)
         }
         
         lessonsView.snp.makeConstraints{ maker in
             maker.top.equalTo(aboutTeacherView.snp.bottom).offset(10)
             maker.left.right.equalToSuperview().inset(20)
-            maker.width.equalTo(50)
         }
         
         tableView.snp.makeConstraints{ maker in
             maker.width.equalToSuperview()
             maker.height.equalTo(250)
-            maker.top.equalTo(lessonsView.snp.bottom).offset(30)
+            maker.top.equalTo(lessonsView.snp.bottom).offset(25)
         }
         
         whiteView.snp.makeConstraints{ maker in
@@ -110,29 +105,4 @@ final class TeacherProfilePresentable: PrimaryView{
     override func onSetupTargets() {
         super.onSetupTargets()
     }
-}
-
-
-extension TeacherProfilePresentable: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableDataCurrent.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TitleCell.self), for: indexPath) as? TitleCell else { return TitleCell() }
-        var titleData = CellData(title: tableDataCurrent[indexPath.row])
-        cell.configureCell(with: titleData)
-        cell.accessoryType = .disclosureIndicator
-//        let cell = UITableViewCell(style: .default, reuseIdentifier: "MyCell")
-//        cell.textLabel?.text = tableDataCurrent[indexPath.row]
-//        cell.textLabel?.font = .systemFont(ofSize: 16)
-//        cell.accessoryType = .disclosureIndicator
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    
-    
 }
