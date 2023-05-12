@@ -1,20 +1,19 @@
 
 import UIKit
 
-class AboutAppCoordinator: Coordinator{
-    
+class ScheduleCoordinator: Coordinator {
     private(set) var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
-    var parentCoordinator: InformationCoordinator?
+    var parentCoordinator: TeacherProfileCoordinator?
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController){
         self.navigationController = navigationController
     }
     
     func start() {
-        let controller: AboutAppController = .init()
+        let controller: ScheduleController = .init()
         controller.viewModel.coordinator = self
-        navigationController.present(controller, animated: true)
+        navigationController.pushViewController(controller, animated: true)
     }
     
     func didFinish(){

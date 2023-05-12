@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let coordinator: AppCoordinator = AppCoordinator(navigationController: .init())
+        coordinator.navigationController.navigationBar.titleTextAttributes = [
+            .foregroundColor: Asset.normalTextColor.color
+        ]
         window = UIWindow(frame: UIScreen.main.bounds)
         coordinator.start()
         return true
@@ -26,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         let coordinator: AppCoordinator = AppCoordinator(navigationController: .init())
         coordinator.start()
-
     }
 
 
