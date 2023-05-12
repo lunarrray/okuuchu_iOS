@@ -5,7 +5,7 @@ import UIKit
 class UpdateTeacherInfoPresentable: PrimaryView {
     //MARK: - Properties
     
-    var tableView: UITableView = .init()
+    lazy var tableView: UITableView = .init()
     private let dismissKeyboard: UITapGestureRecognizer = .init()
 
     

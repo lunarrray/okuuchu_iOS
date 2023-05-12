@@ -29,6 +29,13 @@ class TeacherProfileCoordinator: Coordinator{
         informationCoordinator.start()
     }
     
+    func startSchedule(){
+        let scheduleCoordinator = ScheduleCoordinator(navigationController: navigationController)
+        scheduleCoordinator.parentCoordinator = self
+        childCoordinators.append(scheduleCoordinator)
+        scheduleCoordinator.start()
+    }
+    
     func childDidFinish(_ childCoordinator: Coordinator) {
         if let index = childCoordinators.firstIndex(where: { coordinator -> Bool
             in

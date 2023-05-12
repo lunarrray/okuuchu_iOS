@@ -43,6 +43,8 @@ extension TeacherProfileViewModel: TeacherProfileViewModelInput {
             coordinator?.startUpdateTeacherInfo()
         case .information:
             coordinator?.startInformationScreen()
+        case .schedule:
+            coordinator?.startSchedule()
         default: break
         }
     }
