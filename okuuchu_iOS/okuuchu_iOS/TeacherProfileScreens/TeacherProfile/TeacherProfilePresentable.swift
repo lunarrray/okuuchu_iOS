@@ -26,9 +26,8 @@ final class TeacherProfilePresentable: PrimaryView{
         nameLabel.textColor = Asset.normalTextColor.color
         
         avatarImageView.imageView.clipsToBounds = true
-//        avatarImageView.activateCameraButton()
         
-        ratingView.configureWith(rating: 3.5, spacing: 25, starColor: Asset.normalTextColor.color)
+        ratingView.configureWith(rating: 3.4, spacing: 25, starColor: Asset.normalTextColor.color)
         let aboutTeacherData = TitleSubtitleViewModel(title: "Немного о себе", subtitle: "Дорогие друзья, выбранный нами инновационный путь способствует повышению актуальности модели развития. Соображения высшего порядка!")
         
         aboutTeacherView.configureWith(aboutTeacherData, textBackgroundColor: Asset.textViewBackground.color)

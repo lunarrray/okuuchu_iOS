@@ -36,6 +36,10 @@ public final class AuthModulesAssembly: Assembly {
         container.autoregister(
             ScheduleViewModelInput.self,
             initializer: ScheduleViewModel.init)
+        
+        container.autoregister(
+            ReviewsViewModelInput.self,
+            initializer: ReviewsViewModel.init)
     }
     
     

@@ -1,10 +1,14 @@
 
 import UIKit
 
+//MARK: - Protocols
+
 protocol ScheduleTableViewDelegate: AnyObject {
     func selectedCell(at indexPath: IndexPath)
     func deselectedCell(at indexPath: IndexPath)
 }
+
+//MARK: - Class
 
 final class ScheduleTableViewManager: NSObject {
     weak var delegate: ScheduleTableViewDelegate?
@@ -17,6 +21,8 @@ final class ScheduleTableViewManager: NSObject {
         tableView.reloadData()
     }
 }
+
+//MARK: - Extension
 
 extension ScheduleTableViewManager: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
