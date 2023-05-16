@@ -10,8 +10,8 @@ class SchedulePresentable: BaseView {
         
     }
     var navigation: Navigation = .init()
-    var segmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс", ])
+    var segmentedControl: CustomSegmentedControl = {
+        let segmentedControl = CustomSegmentedControl(items: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс", ])
         segmentedControl.contentVerticalAlignment = .center
         segmentedControl.selectedSegmentIndex = 0
         return segmentedControl
@@ -39,11 +39,8 @@ class SchedulePresentable: BaseView {
         navigation.deleteButton.title = "Удалить"
         navigation.deleteButton.setTitleTextAttributes([.font: UIFont(descriptor: fontDescriptor, size: font.pointSize)], for: .normal)
         navigation.deleteButton.tintColor = Asset.redButton.color
-        
-        segmentedControl.layer.backgroundColor = Asset.white.color.cgColor
+
         segmentedControl.selectedSegmentTintColor = Asset.darkBlue.color
-        segmentedControl.clipsToBounds = false
-        segmentedControl.addShadow()
         fixBackgroundSegmentControl(segmentedControl)
 
         for _ in 0..<segmentedControl.numberOfSegments {
@@ -120,26 +117,16 @@ extension SchedulePresentable {
         handleSegmentedControlValueChanged?(sender.selectedSegmentIndex)
     }
     
-    @objc func deleteButtonTapAction(){
+    @objc private func deleteButtonTapAction(){
         handleDeleteButtonTapAction?()
     }
     
-    @objc func addButtonTapAction(){
+    @objc private func addButtonTapAction(){
         handleAddButtonTapAction?()
     }
     
-    @objc func saveButtonTapAction(){
+    @objc private func saveButtonTapAction(){
         handleSaveButtonAction?()
     }
     
-    func fixBackgroundSegmentControl( _ segmentControl: UISegmentedControl){
-        if #available(iOS 13.0, *) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                for i in 0...(segmentControl.numberOfSegments-1)  {
-                    let backgroundSegmentView = segmentControl.subviews[i]
-                    backgroundSegmentView.isHidden = true
-                }
-            }
-        }
-    }
 }

@@ -90,6 +90,16 @@
 		D5B7D0AF29F7CD80000FB288 /* LabeledTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7D0AE29F7CD80000FB288 /* LabeledTextViewCell.swift */; };
 		D5B7D0B229FA6041000FB288 /* TeacherProfileTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7D0B129FA6041000FB288 /* TeacherProfileTableViewManager.swift */; };
 		D5BE1D9B29EEA4E3008CB17F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */; };
+		D5F626162A0F5EE6005746D0 /* PersonalAdsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F626152A0F5EE6005746D0 /* PersonalAdsCoordinator.swift */; };
+		D5F626182A0F5FCF005746D0 /* PersonalAdsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F626172A0F5FCF005746D0 /* PersonalAdsPresentable.swift */; };
+		D5F6261A2A0F5FDA005746D0 /* PersonalAdsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F626192A0F5FDA005746D0 /* PersonalAdsController.swift */; };
+		D5F6261C2A0F625A005746D0 /* PersonalAdsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6261B2A0F625A005746D0 /* PersonalAdsViewModel.swift */; };
+		D5F6261E2A10A5E6005746D0 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6261D2A10A5E6005746D0 /* CustomSegmentedControl.swift */; };
+		D5F626222A10AA7A005746D0 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F626212A10AA7A005746D0 /* ImageCollectionViewCell.swift */; };
+		D5F626252A10AE68005746D0 /* PersonalAdsCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F626242A10AE68005746D0 /* PersonalAdsCollectionViewManager.swift */; };
+		D5F626282A138E95005746D0 /* AdvertisementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F626272A138E95005746D0 /* AdvertisementData.swift */; };
+		D5F6262C2A139153005746D0 /* TeachingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6262B2A139153005746D0 /* TeachingDetails.swift */; };
+		D5F6262E2A13952C005746D0 /* TutorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F6262D2A13952C005746D0 /* TutorData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +186,16 @@
 		D5B7D0AE29F7CD80000FB288 /* LabeledTextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextViewCell.swift; sourceTree = "<group>"; };
 		D5B7D0B129FA6041000FB288 /* TeacherProfileTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileTableViewManager.swift; sourceTree = "<group>"; };
 		D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		D5F626152A0F5EE6005746D0 /* PersonalAdsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAdsCoordinator.swift; sourceTree = "<group>"; };
+		D5F626172A0F5FCF005746D0 /* PersonalAdsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAdsPresentable.swift; sourceTree = "<group>"; };
+		D5F626192A0F5FDA005746D0 /* PersonalAdsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAdsController.swift; sourceTree = "<group>"; };
+		D5F6261B2A0F625A005746D0 /* PersonalAdsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAdsViewModel.swift; sourceTree = "<group>"; };
+		D5F6261D2A10A5E6005746D0 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		D5F626212A10AA7A005746D0 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5F626242A10AE68005746D0 /* PersonalAdsCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAdsCollectionViewManager.swift; sourceTree = "<group>"; };
+		D5F626272A138E95005746D0 /* AdvertisementData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementData.swift; sourceTree = "<group>"; };
+		D5F6262B2A139153005746D0 /* TeachingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingDetails.swift; sourceTree = "<group>"; };
+		D5F6262D2A13952C005746D0 /* TutorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +244,7 @@
 				D52488D729FB96AA0069A4C8 /* Information */,
 				D562180529FC10C200BCD1A1 /* Schedule */,
 				D54372BE2A0E50B5005EFC2A /* Reviews */,
+				D5F626132A0F5E83005746D0 /* PersonalAds */,
 			);
 			path = TeacherProfileScreens;
 			sourceTree = "<group>";
@@ -327,6 +348,7 @@
 				D55A65AF29EE858F001BBDAC /* Registration */,
 				D52488D629FB964B0069A4C8 /* TeacherProfileScreens */,
 				D51E306829FAC91A0047B6B2 /* SectionsForManager */,
+				D5F626262A138E73005746D0 /* Data */,
 				D595C57F29ED9C2C00CED84D /* UIComponents */,
 				D595C57C29ED93DC00CED84D /* Extensions */,
 				D595C57529ED8EF000CED84D /* Resources */,
@@ -574,14 +596,10 @@
 		D595C57F29ED9C2C00CED84D /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				D595C58029ED9E1600CED84D /* MainTextField.swift */,
-				D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */,
-				D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */,
-				D5294A8A29F1629400CEDA54 /* RoundedTableView.swift */,
-				D5294A8529F1557800CEDA54 /* LabeledTextView.swift */,
-				D562180329FC098B00BCD1A1 /* TextViewWithSepators.swift */,
-				D549082E29F12C34007CA37A /* RatingView.swift */,
-				D5B7D0AB29F7C01F000FB288 /* Cells */,
+				D5F6261F2A10A8F4005746D0 /* Views */,
+				D5B7D0AB29F7C01F000FB288 /* TableViewCells */,
+				D5F626202A10A921005746D0 /* CollectionViewCells */,
+				D5294A9029F6DC6F00CEDA54 /* CellData */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -626,7 +644,7 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		D5B7D0AB29F7C01F000FB288 /* Cells */ = {
+		D5B7D0AB29F7C01F000FB288 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
 				D5294A8C29F6A1EE00CEDA54 /* TitleCell.swift */,
@@ -636,9 +654,8 @@
 				D52488D429FACEFB0069A4C8 /* PrimaryButtonCell.swift */,
 				D54D2C4529FBD5D600ACE864 /* TitleImageCell.swift */,
 				D5632C502A0E63A200A9302F /* ReviewCell.swift */,
-				D5294A9029F6DC6F00CEDA54 /* CellData */,
 			);
-			path = Cells;
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		D5B7D0B029FA601F000FB288 /* Manager */ = {
@@ -655,6 +672,67 @@
 				D51E306429FA6D820047B6B2 /* UpdateTeacherInfoTableViewManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		D5F626132A0F5E83005746D0 /* PersonalAds */ = {
+			isa = PBXGroup;
+			children = (
+				D5F626142A0F5EC9005746D0 /* Coordinator */,
+				D5F626172A0F5FCF005746D0 /* PersonalAdsPresentable.swift */,
+				D5F626192A0F5FDA005746D0 /* PersonalAdsController.swift */,
+				D5F6261B2A0F625A005746D0 /* PersonalAdsViewModel.swift */,
+				D5F626232A10AE4E005746D0 /* Manager */,
+			);
+			path = PersonalAds;
+			sourceTree = "<group>";
+		};
+		D5F626142A0F5EC9005746D0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D5F626152A0F5EE6005746D0 /* PersonalAdsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D5F6261F2A10A8F4005746D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D595C58029ED9E1600CED84D /* MainTextField.swift */,
+				D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */,
+				D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */,
+				D5294A8A29F1629400CEDA54 /* RoundedTableView.swift */,
+				D5294A8529F1557800CEDA54 /* LabeledTextView.swift */,
+				D562180329FC098B00BCD1A1 /* TextViewWithSepators.swift */,
+				D549082E29F12C34007CA37A /* RatingView.swift */,
+				D5F6261D2A10A5E6005746D0 /* CustomSegmentedControl.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5F626202A10A921005746D0 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D5F626212A10AA7A005746D0 /* ImageCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D5F626232A10AE4E005746D0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D5F626242A10AE68005746D0 /* PersonalAdsCollectionViewManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D5F626262A138E73005746D0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D5F626272A138E95005746D0 /* AdvertisementData.swift */,
+				D5F6262D2A13952C005746D0 /* TutorData.swift */,
+				D5F6262B2A139153005746D0 /* TeachingDetails.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -760,9 +838,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D52488D329FAC9FE0069A4C8 /* Sections.swift in Sources */,
+				D5F6261C2A0F625A005746D0 /* PersonalAdsViewModel.swift in Sources */,
 				D58EA57029EE877400D8F0B0 /* RegistrationOnePresentable.swift in Sources */,
 				D567814829E998D70035EB11 /* Swinjectable.swift in Sources */,
 				D51529052A0E516500BA2AA8 /* ReviewsTableViewManager.swift in Sources */,
+				D5F626252A10AE68005746D0 /* PersonalAdsCollectionViewManager.swift in Sources */,
+				D5F626182A0F5FCF005746D0 /* PersonalAdsPresentable.swift in Sources */,
 				D58EA57229EE87B900D8F0B0 /* RegistrationTwoPresentable.swift in Sources */,
 				D5B7D0B229FA6041000FB288 /* TeacherProfileTableViewManager.swift in Sources */,
 				D5B7D0A329F7AAC2000FB288 /* UpdateTeacherInfoPresentable.swift in Sources */,
@@ -777,16 +858,21 @@
 				D59AF72F29F1277F004FA0A7 /* TeacherProfileViewModel.swift in Sources */,
 				D567814C29E99A5A0035EB11 /* ModulesAssembly.swift in Sources */,
 				D562180C29FC118F00BCD1A1 /* ScheduleController.swift in Sources */,
+				D5F6261E2A10A5E6005746D0 /* CustomSegmentedControl.swift in Sources */,
 				D569F7B929FB980400B86598 /* InformationController.swift in Sources */,
+				D5F6262C2A139153005746D0 /* TeachingDetails.swift in Sources */,
 				D5B7D0AA29F7AC19000FB288 /* UpdateTeacherInfoCoordinator.swift in Sources */,
 				D56A757229EE92CD0072BB29 /* RegistrationTwoViewModel.swift in Sources */,
+				D5F6262E2A13952C005746D0 /* TutorData.swift in Sources */,
 				D567815429E99C6C0035EB11 /* AppCoordinator.swift in Sources */,
 				D567813E29E995A00035EB11 /* BaseView.swift in Sources */,
+				D5F626282A138E95005746D0 /* AdvertisementData.swift in Sources */,
 				D588E8082A0BBBB70039D9C8 /* LessonsScheduleData.swift in Sources */,
 				D59AF72929F12713004FA0A7 /* TeacherProfileCoordinator.swift in Sources */,
 				D51529082A0E53E800BA2AA8 /* ReviewsCoordinator.swift in Sources */,
 				D5632C572A0EA7D200A9302F /* User.swift in Sources */,
 				D58EA57629EE881900D8F0B0 /* RegistrationOneViewModel.swift in Sources */,
+				D5F626162A0F5EE6005746D0 /* PersonalAdsCoordinator.swift in Sources */,
 				D5294A8F29F6DA8600CEDA54 /* BaseCell.swift in Sources */,
 				D5B7D0AD29F7C04F000FB288 /* ImageCell.swift in Sources */,
 				D58EA57929EE8A0100D8F0B0 /* PrimaryView.swift in Sources */,
@@ -807,6 +893,7 @@
 				D5B7D0AF29F7CD80000FB288 /* LabeledTextViewCell.swift in Sources */,
 				D567815629E99E010035EB11 /* MainCoordinator.swift in Sources */,
 				D562180829FC111C00BCD1A1 /* ScheduleCoordinator.swift in Sources */,
+				D5F6261A2A0F5FDA005746D0 /* PersonalAdsController.swift in Sources */,
 				D567813B29E994DC0035EB11 /* MainViewController.swift in Sources */,
 				D569F7B529FB97EA00B86598 /* InformationCoordinator.swift in Sources */,
 				D55A65AE29EDA80E001BBDAC /* PrimaryButton.swift in Sources */,
@@ -817,6 +904,7 @@
 				D51529022A0E515000BA2AA8 /* ReviewsViewModel.swift in Sources */,
 				D54D2C5229FBF75F00ACE864 /* AboutAppController.swift in Sources */,
 				D54D2C4929FBDA8000ACE864 /* InformationTableViewManager.swift in Sources */,
+				D5F626222A10AA7A005746D0 /* ImageCollectionViewCell.swift in Sources */,
 				D567814A29E999DA0035EB11 /* AuthModulesAssembly.swift in Sources */,
 				D5294A8629F1557800CEDA54 /* LabeledTextView.swift in Sources */,
 				D51E306529FA6D820047B6B2 /* UpdateTeacherInfoTableViewManager.swift in Sources */,

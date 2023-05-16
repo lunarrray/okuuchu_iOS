@@ -47,6 +47,8 @@ extension TeacherProfileViewModel: TeacherProfileViewModelInput {
             coordinator?.startSchedule()
         case .reviews:
             coordinator?.startReviews()
+        case .ads:
+            coordinator?.startPersonalAds()
         default: break
         }
     }

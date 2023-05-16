@@ -40,6 +40,11 @@ public final class AuthModulesAssembly: Assembly {
         container.autoregister(
             ReviewsViewModelInput.self,
             initializer: ReviewsViewModel.init)
+        
+        container.autoregister(
+            PersonalAdsViewModelInput.self,
+            initializer: PersonalAdsViewModel.init)
+    
     }
     
     

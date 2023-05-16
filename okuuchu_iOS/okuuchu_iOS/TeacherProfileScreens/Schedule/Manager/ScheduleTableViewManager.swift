@@ -48,6 +48,7 @@ extension ScheduleTableViewManager: UITableViewDataSource, UITableViewDelegate {
             cell.accessoryView = nil
         }
         
+        cell.selectionStyle = .none
         return cell
     }
     
