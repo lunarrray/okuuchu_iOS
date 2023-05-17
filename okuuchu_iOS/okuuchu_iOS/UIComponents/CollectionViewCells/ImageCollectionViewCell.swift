@@ -2,17 +2,19 @@
 import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
-    private var imageView: UIImageView = .init()
-    private var stackView: UIStackView = .init()
-    private var titleLabel: UILabel = .init()
-    private var subtitleLabel: UILabel = .init()
-    private var subsubtitleLabel: UILabel = .init()
+    private let imageView: UIImageView = .init()
+    private let stackView: UIStackView = .init()
+    private let titleLabel: UILabel = .init()
+    private let subtitleLabel: UILabel = .init()
+    private let subsubtitleLabel: UILabel = .init()
     
-    private var activatingStatusButton: UIButton = .init()
-    private var deleteButton: UIButton = .init()
+    private let activatingStatusButton: UIButton = .init()
+    private let deleteButton: UIButton = .init()
     
-    var handleActivatingStatusTapAction: (() -> Void)?
-    var handleDeleteButtonTapAction: (() -> Void)?
+    private var viewModel: SubsubtitleViewModel?
+    
+//    var handleActivatingStatusTapAction: (() -> Void)?
+//    var handleDeleteButtonTapAction: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,6 +22,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
         onConfigureView()
         onAddSubviews()
         onSetupConstraints()
+        onSetupTargets()
     }
     
     required init?(coder: NSCoder) {
@@ -130,11 +133,13 @@ class ImageCollectionViewCell: UICollectionViewCell {
         deleteButton.isHidden = true
     }
     
-    func configureCell(with data: TitleSubtitleViewModel){
-        imageView.image = data.image
-        titleLabel.text = data.title
-        subtitleLabel.text = data.subtitle
-        subsubtitleLabel.text = data.subsubtitle
+    func configureCell(with viewModel: SubsubtitleViewModel){
+        self.viewModel = viewModel
+        
+        imageView.image = viewModel.image
+        titleLabel.text = viewModel.title
+        subtitleLabel.text = viewModel.subtitle
+        subsubtitleLabel.text = viewModel.subsubtitle
     }
     
     func onSetupTargets(){
@@ -154,10 +159,10 @@ extension ImageCollectionViewCell {
     }
     
     @objc func activatingStatusButtonTapAction(){
-        handleActivatingStatusTapAction?()
+        viewModel?.activateStatusButtonTap()
     }
     
     @objc func deleteButtonTapAction(){
-        handleDeleteButtonTapAction?()
+        viewModel?.deleteButtonTap()
     }
 }

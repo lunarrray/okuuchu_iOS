@@ -31,6 +31,7 @@
 		D550CFA5299A74E100CBD84F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D550CFA4299A74E100CBD84F /* AppDelegate.swift */; };
 		D550CFAE299A74E200CBD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAD299A74E200CBD84F /* Assets.xcassets */; };
 		D550CFB1299A74E200CBD84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAF299A74E200CBD84F /* LaunchScreen.storyboard */; };
+		D551485A2A14E70F009374F3 /* SubsubtitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55148592A14E70F009374F3 /* SubsubtitleViewModel.swift */; };
 		D55A65AC29EDA267001BBDAC /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */; };
 		D55A65AE29EDA80E001BBDAC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */; };
 		D562180429FC098B00BCD1A1 /* TextViewWithSepators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562180329FC098B00BCD1A1 /* TextViewWithSepators.swift */; };
@@ -129,6 +130,7 @@
 		D550CFAD299A74E200CBD84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D550CFB0299A74E200CBD84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D550CFB2299A74E200CBD84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55148592A14E70F009374F3 /* SubsubtitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsubtitleViewModel.swift; sourceTree = "<group>"; };
 		D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		D562180329FC098B00BCD1A1 /* TextViewWithSepators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithSepators.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				D5294A9129F6DC7900CEDA54 /* TitleSubtitleViewModel.swift */,
+				D55148592A14E70F009374F3 /* SubsubtitleViewModel.swift */,
 			);
 			path = CellData;
 			sourceTree = "<group>";
@@ -912,6 +915,7 @@
 				D567815829E99E110035EB11 /* Coordinator.swift in Sources */,
 				D569F7B729FB97FB00B86598 /* InformationPresentable.swift in Sources */,
 				D567814029E995AB0035EB11 /* BaseController.swift in Sources */,
+				D551485A2A14E70F009374F3 /* SubsubtitleViewModel.swift in Sources */,
 				D5B7D0A529F7ABB5000FB288 /* UpdateTeacherInfoController.swift in Sources */,
 				D595C58129ED9E1600CED84D /* MainTextField.swift in Sources */,
 				D54D2C5429FBF76A00ACE864 /* AboutAppViewModel.swift in Sources */,

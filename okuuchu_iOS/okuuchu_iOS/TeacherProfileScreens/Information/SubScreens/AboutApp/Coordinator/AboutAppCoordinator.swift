@@ -14,7 +14,7 @@ class AboutAppCoordinator: Coordinator{
     func start() {
         let controller: AboutAppController = .init()
         controller.viewModel.coordinator = self
-        navigationController.present(controller, animated: true)
+        navigationController.pushViewController(controller, animated: true)
     }
     
     func didFinish(){

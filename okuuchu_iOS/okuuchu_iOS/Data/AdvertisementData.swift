@@ -2,6 +2,7 @@
 import UIKit
 
 class AdvertisementData {
+    var id: Int?
     var tutor: TutorData?
     var lessons: [Lesson]?
     var teachingLanguages: [TeachingLanguage]?
@@ -14,7 +15,8 @@ class AdvertisementData {
     var price: Int?
     var status: ActiveStatus?
     
-    init(tutor: TutorData? = nil, lessons: [Lesson]? = nil, teachingLanguages: [TeachingLanguage]? = nil, teachingTypes: [TeachingType]? = nil, location: Location? = nil, description: String? = nil, image: UIImage? = nil, whatsappNumber: String? = nil, telegramNumber: String? = nil, price: Int? = nil, status: ActiveStatus? = nil) {
+    init(id: Int? = nil, tutor: TutorData? = nil, lessons: [Lesson]? = nil, teachingLanguages: [TeachingLanguage]? = nil, teachingTypes: [TeachingType]? = nil, location: Location? = nil, description: String? = nil, image: UIImage? = nil, whatsappNumber: String? = nil, telegramNumber: String? = nil, price: Int? = nil, status: ActiveStatus? = nil) {
+        self.id = id
         self.tutor = tutor
         self.lessons = lessons
         self.teachingLanguages = teachingLanguages

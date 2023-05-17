@@ -12,8 +12,8 @@ final class PersonalAdsCollectionViewManager: NSObject {
     
     weak var delegate: PersonalAdsCollectionViewDelegate?
     
-    private var adsData: [AdvertisementData] = []
-    func setCollectionViewData(_ adsData: [AdvertisementData], collectionView: UICollectionView) {
+    private var adsData: [SubsubtitleViewModel] = []
+    func setCollectionViewData(_ adsData: [SubsubtitleViewModel], collectionView: UICollectionView) {
         self.adsData = adsData
         collectionView.reloadData()
     }
@@ -34,10 +34,8 @@ extension PersonalAdsCollectionViewManager: UICollectionViewDataSource, UICollec
         }
         
         let advertisement = adsData[indexPath.row]
-        
-        let titleSubtitleData = getTitleSubtitleViewModelData(advertisement)
-        
-        cell.configureCell(with: titleSubtitleData)
+                
+        cell.configureCell(with: advertisement)
         
         if let adStatus = advertisement.status {
             if adStatus == .active {
@@ -65,26 +63,26 @@ extension PersonalAdsCollectionViewManager: UICollectionViewDataSource, UICollec
     }
 }
 
-extension PersonalAdsCollectionViewManager {
-    private func getTitleSubtitleViewModelData(_ advertisement: AdvertisementData) -> TitleSubtitleViewModel {
-        
-        guard let price = advertisement.price.self, let lessonsData = advertisement.lessons, let teachingTypesData = advertisement.teachingTypes, let image = advertisement.image else { return TitleSubtitleViewModel() }
-        var lessons = ""
-        let spacing = ", "
-        for (i, item) in lessonsData.enumerated() {
-            lessons += item.title
-            if i != lessonsData.count - 1 {
-                lessons += spacing
-            }
-        }
-        var teachingTypes = ""
-        for (i, item) in teachingTypesData.enumerated() {
-            teachingTypes += item.title
-            if i != teachingTypesData.count - 1 {
-                teachingTypes += spacing
-            }
-        }
-        let titleSubtitleData = TitleSubtitleViewModel(title: String(describing: price) + " сом", subtitle:  lessons, subsubtitle: teachingTypes, image: image)
-        return titleSubtitleData
-    }
-}
+//extension PersonalAdsCollectionViewManager {
+//    private func getTitleSubtitleViewModelData(_ advertisement: AdvertisementData) -> TitleSubtitleViewModel {
+//        
+//        guard let price = advertisement.price.self, let lessonsData = advertisement.lessons, let teachingTypesData = advertisement.teachingTypes, let image = advertisement.image else { return TitleSubtitleViewModel() }
+//        var lessons = ""
+//        let spacing = ", "
+//        for (i, item) in lessonsData.enumerated() {
+//            lessons += item.title
+//            if i != lessonsData.count - 1 {
+//                lessons += spacing
+//            }
+//        }
+//        var teachingTypes = ""
+//        for (i, item) in teachingTypesData.enumerated() {
+//            teachingTypes += item.title
+//            if i != teachingTypesData.count - 1 {
+//                teachingTypes += spacing
+//            }
+//        }
+//        let titleSubtitleData = TitleSubtitleViewModel(title: String(describing: price) + " сом", subtitle:  lessons, subsubtitle: teachingTypes, image: image)
+//        return titleSubtitleData
+//    }
+//}

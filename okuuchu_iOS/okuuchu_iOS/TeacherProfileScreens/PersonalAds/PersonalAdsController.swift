@@ -20,6 +20,12 @@ class PersonalAdsController: VMController<PersonalAdsPresentable, PersonalAdsVie
         
         viewModel.getActiveAdsDataFromModel()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if isMovingFromParent{
+            viewModel.viewDidDisappear()
+        }
+    }
 
     //MARK: - Override Methods
     
@@ -39,7 +45,7 @@ class PersonalAdsController: VMController<PersonalAdsPresentable, PersonalAdsVie
 //MARK: - Extension
 
 extension PersonalAdsController: PersonalAdsViewModelOutput {
-    func customizeOutput(with data: [AdvertisementData]) {
+    func customizeOutput(with data: [SubsubtitleViewModel]) {
         collectionViewManager?.setCollectionViewData(data, collectionView: content.collectionView)
     }
 }
