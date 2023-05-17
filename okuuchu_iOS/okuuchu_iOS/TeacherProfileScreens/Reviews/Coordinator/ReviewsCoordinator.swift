@@ -1,18 +1,18 @@
 
+
 import UIKit
 
-class AboutAppCoordinator: Coordinator{
-    
+class ReviewsCoordinator: Coordinator {
     private(set) var childCoordinators: [Coordinator] = []
+    var parentCoordinator: TeacherProfileCoordinator?
     var navigationController: UINavigationController
-    var parentCoordinator: InformationCoordinator?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        let controller: AboutAppController = .init()
+        let controller: ReviewsController = .init()
         controller.viewModel.coordinator = self
         navigationController.pushViewController(controller, animated: true)
     }

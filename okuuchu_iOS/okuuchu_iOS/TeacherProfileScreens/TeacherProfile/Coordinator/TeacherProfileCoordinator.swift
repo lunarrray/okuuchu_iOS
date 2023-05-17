@@ -36,6 +36,20 @@ class TeacherProfileCoordinator: Coordinator{
         scheduleCoordinator.start()
     }
     
+    func startReviews(){
+        let reviewsCoordinator = ReviewsCoordinator(navigationController: navigationController)
+        reviewsCoordinator.parentCoordinator = self
+        childCoordinators.append(reviewsCoordinator)
+        reviewsCoordinator.start()
+    }
+    
+    func startPersonalAds(){
+        let adsCoordinator = PersonalAdsCoordinator(navigationController: navigationController)
+        adsCoordinator.parentCoordinator = self
+        childCoordinators.append(adsCoordinator)
+        adsCoordinator.start()
+    }
+    
     func childDidFinish(_ childCoordinator: Coordinator) {
         if let index = childCoordinators.firstIndex(where: { coordinator -> Bool
             in

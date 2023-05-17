@@ -20,7 +20,9 @@ class InformationController: VMController<InformationPresentable, InformationVie
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        viewModel.viewDidDisappear()
+        if isMovingFromParent{
+            viewModel.viewDidDisappear()
+        }
     }
     
     //MARK: - Methods

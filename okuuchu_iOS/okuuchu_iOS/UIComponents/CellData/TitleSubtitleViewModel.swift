@@ -3,7 +3,7 @@ import UIKit
 
 class TitleSubtitleViewModel{
     let title: String?
-    private(set) var subtitle: String
+    private(set) var subtitle: String?
     private(set) var image: UIImage?
     var subTextType: SubTextType?
     private(set) var onCellUpdate: (() -> Void)?
@@ -14,7 +14,7 @@ class TitleSubtitleViewModel{
         return dateFormatter
     }()
     
-    init(title: String? = nil, subtitle: String = "", image: UIImage? = nil, subTextType: SubTextType? = nil, onCellUpdate: (() -> Void)? = nil) {
+    init(title: String? = nil, subtitle: String? = nil, image: UIImage? = nil, subTextType: SubTextType? = nil, onCellUpdate: (() -> Void)? = nil) {
         self.title = title
         self.subtitle = subtitle
         self.image = image

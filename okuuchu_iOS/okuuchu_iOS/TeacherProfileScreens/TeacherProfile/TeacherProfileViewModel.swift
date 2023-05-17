@@ -45,11 +45,12 @@ extension TeacherProfileViewModel: TeacherProfileViewModelInput {
             coordinator?.startInformationScreen()
         case .schedule:
             coordinator?.startSchedule()
+        case .reviews:
+            coordinator?.startReviews()
+        case .ads:
+            coordinator?.startPersonalAds()
         default: break
         }
     }
 }
 
-//extension TeacherProfileViewModel {
-//
-//}

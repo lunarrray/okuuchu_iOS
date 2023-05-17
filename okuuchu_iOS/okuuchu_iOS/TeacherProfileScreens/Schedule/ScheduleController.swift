@@ -3,6 +3,7 @@
 import UIKit
 
 class ScheduleController: VMController<SchedulePresentable, ScheduleViewModelInput> {
+    
     //MARK: - Properties
     
     private var tableViewManager: ScheduleTableViewManager?
@@ -19,7 +20,7 @@ class ScheduleController: VMController<SchedulePresentable, ScheduleViewModelInp
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        
+        viewModel.viewDidDisappear()
     }
     
     //MARK: - Methos

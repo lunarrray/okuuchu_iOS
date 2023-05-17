@@ -1,6 +1,8 @@
 
 import Foundation
 
+//MARK: - Protocols
+
 protocol ScheduleViewModelInput {
     var coordinator: ScheduleCoordinator? { get set }
     var output: ScheduleViewModelOutput? { get set }
@@ -11,7 +13,6 @@ protocol ScheduleViewModelInput {
     func addSelectedItemToSet(at indexPath: IndexPath)
     func removeSelectedItemFromSet(at indexPath: IndexPath)
     func deleteButtonTapped()
-    func addButtonTapped()
     func saveButtonTapped()
     func processInput(firstValue: String, secondValue: String)
 }
@@ -19,6 +20,8 @@ protocol ScheduleViewModelInput {
 protocol ScheduleViewModelOutput: AnyObject {
     func customizeOutput(with scheduleData: [String], selectedIndexes: Set<Int>)
 }
+
+//MARK: - Class
 
 final class ScheduleViewModel: NSObject {
     var coordinator: ScheduleCoordinator?
@@ -54,9 +57,11 @@ final class ScheduleViewModel: NSObject {
     
 }
 
+//MARK: - Extension
+
 extension ScheduleViewModel: ScheduleViewModelInput {
     func viewDidDisappear() {
-        
+        coordinator?.didFinish()
     }
     
     func getScheduleDataFromModel() {
@@ -129,13 +134,10 @@ extension ScheduleViewModel: ScheduleViewModelInput {
         emptySelectedIndexes()
         setOutput(with: currentDay)
     }
-    
-    func addButtonTapped(){
-        
-    }
+
     
     func saveButtonTapped(){
-        
+        // add code for saveButton
     }
     
     func processInput(firstValue: String, secondValue: String) {
