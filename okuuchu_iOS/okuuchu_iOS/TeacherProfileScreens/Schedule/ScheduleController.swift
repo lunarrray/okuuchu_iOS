@@ -10,6 +10,7 @@ class ScheduleController: VMController<SchedulePresentable, ScheduleViewModelInp
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableViewManager = ScheduleTableViewManager()
         content.tableView.dataSource = tableViewManager
         content.tableView.delegate = tableViewManager

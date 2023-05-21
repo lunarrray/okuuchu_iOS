@@ -49,7 +49,8 @@ extension TeacherProfileViewModel: TeacherProfileViewModelInput {
             coordinator?.startReviews()
         case .ads:
             coordinator?.startPersonalAds()
-        default: break
+        case .recordedLessons:
+            coordinator?.startRecordedLessons()
         }
     }
 }

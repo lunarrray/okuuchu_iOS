@@ -10,6 +10,7 @@ class UpdateTeacherInfoController: VMController<UpdateTeacherInfoPresentable, Up
     //MARK: - LifeCycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         content.tableView.dataSource = tableViewManager
         content.tableView.delegate = tableViewManager
         

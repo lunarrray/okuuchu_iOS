@@ -12,6 +12,7 @@ class PersonalAdsController: VMController<PersonalAdsPresentable, PersonalAdsVie
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         collectionViewManager = PersonalAdsCollectionViewManager()
         content.collectionView.delegate = collectionViewManager
         content.collectionView.dataSource = collectionViewManager

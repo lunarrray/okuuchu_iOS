@@ -1,5 +1,5 @@
 
-import Foundation
+import UIKit
 
 enum TeachingLanguage {
     case russian
@@ -32,7 +32,7 @@ enum Lesson {
     case german
     case physics
     case history
-    case geografy
+    case geography
     case geometry
     case kyrgyz
     case kyrgyzLiterature
@@ -57,11 +57,11 @@ enum Lesson {
         case .german:
             return "Немецкий"
         case .physics:
-            return "Немецкая литература"
+            return "Физика"
         case .history:
             return "История"
-        case .geografy:
-            return "Геонрафия"
+        case .geography:
+            return "География"
         case .geometry:
             return "Геометрия"
         case .kyrgyz:
@@ -70,6 +70,41 @@ enum Lesson {
             return "Кыргызская литература"
         case .turkish:
             return "Турецкий"
+        }
+    }
+    
+    var icon: UIImage {
+        switch self {
+        case .math:
+            return Asset.math.image
+        case .programming:
+            return Asset.programming.image
+        case .chemistry:
+            return Asset.chemistry.image
+        case .biology:
+            return Asset.biology.image
+        case .english:
+            return Asset.english.image
+        case .russian:
+            return Asset.russian.image
+        case .russianLiterature:
+            return Asset.russianLiterature.image
+        case .german:
+            return Asset.german.image
+        case .physics:
+            return Asset.physics.image
+        case .history:
+            return Asset.history.image
+        case .geography:
+            return Asset.geography.image
+        case .geometry:
+            return Asset.geometry.image
+        case .kyrgyz:
+            return Asset.kyrgyz.image
+        case .kyrgyzLiterature:
+            return Asset.kyrgyzLiterature.image
+        case .turkish:
+            return Asset.turkish.image
         }
     }
 }

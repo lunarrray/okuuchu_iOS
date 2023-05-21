@@ -10,6 +10,7 @@ class ReviewsController: VMController<ReviewsPresentable, ReviewsViewModelInput>
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableViewManager = ReviewsTableViewManager()
         
         content.tableView.dataSource = tableViewManager

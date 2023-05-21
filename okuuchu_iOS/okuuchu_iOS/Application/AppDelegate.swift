@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator.navigationController.navigationBar.titleTextAttributes = [
             .foregroundColor: Asset.normalTextColor.color
         ]
+        
+//        UINavigationItem.BackButtonDisplayMode = .minimal
+//        coordinator.navigationController.navigationBar.backButtonDisplayMode = .minimal
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         coordinator.start()
         return true

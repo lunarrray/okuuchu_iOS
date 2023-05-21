@@ -7,7 +7,6 @@ class SchedulePresentable: BaseView {
     
     struct Navigation {
         let deleteButton: UIBarButtonItem = .init(title: "Удалить")
-        
     }
     var navigation: Navigation = .init()
     var segmentedControl: CustomSegmentedControl = {
@@ -17,8 +16,8 @@ class SchedulePresentable: BaseView {
         return segmentedControl
     }()
     lazy var tableView: RoundedTableView = .init()
-    var addButton: PrimaryButton = .init()
-    var saveButton: PrimaryButton = .init()
+    private var addButton: PrimaryButton = .init()
+    private var saveButton: PrimaryButton = .init()
 
     private let whiteView: UIView = .init()
 
