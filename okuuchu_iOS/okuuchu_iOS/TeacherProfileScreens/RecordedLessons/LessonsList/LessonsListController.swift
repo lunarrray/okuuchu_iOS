@@ -38,7 +38,7 @@ class LessonsListController: VMController<LessonsListPresentable, LessonsListVie
         viewModel.output = self
     }
     
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         
     }
 }

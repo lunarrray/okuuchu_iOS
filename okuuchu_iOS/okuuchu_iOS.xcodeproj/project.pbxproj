@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D50FB3822A1A8E3E0093513A /* AddVideoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FB3812A1A8E3E0093513A /* AddVideoCoordinator.swift */; };
+		D50FB3842A1A8EBD0093513A /* AddVideoPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FB3832A1A8EBD0093513A /* AddVideoPresentable.swift */; };
+		D50FB3862A1A8EC60093513A /* AddVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FB3852A1A8EC60093513A /* AddVideoController.swift */; };
+		D50FB3882A1A8ECF0093513A /* AddVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FB3872A1A8ECF0093513A /* AddVideoViewModel.swift */; };
+		D50FB38B2A1A941A0093513A /* AddVideoTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FB38A2A1A941A0093513A /* AddVideoTableViewManager.swift */; };
 		D5115A2F2A1898C0008EEEFD /* PullDownOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5115A2E2A1898C0008EEEFD /* PullDownOverlayView.swift */; };
-		D5115A312A189D49008EEEFD /* BlurredBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5115A302A189D49008EEEFD /* BlurredBackgroundView.swift */; };
 		D51528FE2A0E513100BA2AA8 /* ReviewsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51528FD2A0E513100BA2AA8 /* ReviewsPresentable.swift */; };
 		D51529002A0E513D00BA2AA8 /* ReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51528FF2A0E513D00BA2AA8 /* ReviewsController.swift */; };
 		D51529022A0E515000BA2AA8 /* ReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51529012A0E515000BA2AA8 /* ReviewsViewModel.swift */; };
@@ -48,7 +52,6 @@
 		D567813129E985F90035EB11 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D567813029E985F90035EB11 /* Swinject */; };
 		D567813429E9861D0035EB11 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D567813329E9861D0035EB11 /* SnapKit */; };
 		D567813729E986510035EB11 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = D567813629E986510035EB11 /* SwinjectAutoregistration */; };
-		D567813B29E994DC0035EB11 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567813A29E994DC0035EB11 /* MainViewController.swift */; };
 		D567813E29E995A00035EB11 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567813D29E995A00035EB11 /* BaseView.swift */; };
 		D567814029E995AB0035EB11 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567813F29E995AB0035EB11 /* BaseController.swift */; };
 		D567814229E995B30035EB11 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D567814129E995B30035EB11 /* BaseViewModel.swift */; };
@@ -98,6 +101,18 @@
 		D5B7D0AF29F7CD80000FB288 /* LabeledTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7D0AE29F7CD80000FB288 /* LabeledTextViewCell.swift */; };
 		D5B7D0B229FA6041000FB288 /* TeacherProfileTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7D0B129FA6041000FB288 /* TeacherProfileTableViewManager.swift */; };
 		D5BE1D9B29EEA4E3008CB17F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */; };
+		D5E5E9D22A1D0A2400575FD2 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9D12A1D0A2400575FD2 /* MainScreenCoordinator.swift */; };
+		D5E5E9D42A1D0A2F00575FD2 /* MainScreenPresentabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9D32A1D0A2F00575FD2 /* MainScreenPresentabel.swift */; };
+		D5E5E9D62A1D0A3600575FD2 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9D52A1D0A3600575FD2 /* MainScreenController.swift */; };
+		D5E5E9D82A1D0A3F00575FD2 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9D72A1D0A3F00575FD2 /* MainScreenViewModel.swift */; };
+		D5E5E9DC2A1D0F6300575FD2 /* SavedAdsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9DB2A1D0F6300575FD2 /* SavedAdsCoordinator.swift */; };
+		D5E5E9DE2A1D0F7000575FD2 /* SavedAdsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9DD2A1D0F7000575FD2 /* SavedAdsPresentable.swift */; };
+		D5E5E9E02A1D0F7D00575FD2 /* SavedAdsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9DF2A1D0F7D00575FD2 /* SavedAdsController.swift */; };
+		D5E5E9E22A1D0F8E00575FD2 /* SavedAdsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9E12A1D0F8E00575FD2 /* SavedAdsViewModel.swift */; };
+		D5E5E9E62A1D132800575FD2 /* AddAdvertisementCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9E52A1D132800575FD2 /* AddAdvertisementCoordinator.swift */; };
+		D5E5E9E82A1D137400575FD2 /* AddAdvertisementPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9E72A1D137400575FD2 /* AddAdvertisementPresentable.swift */; };
+		D5E5E9EA2A1D137B00575FD2 /* AddAdvertisementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9E92A1D137B00575FD2 /* AddAdvertisementController.swift */; };
+		D5E5E9EC2A1D138400575FD2 /* AddAdvertisementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5E9EB2A1D138400575FD2 /* AddAdvertisementViewModel.swift */; };
 		D5ECB2182A163CF3005A2CC9 /* LessonsListTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECB2172A163CF3005A2CC9 /* LessonsListTableViewManager.swift */; };
 		D5ECB21D2A1643FD005A2CC9 /* RecordedVideosCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECB21C2A1643FD005A2CC9 /* RecordedVideosCoordinator.swift */; };
 		D5ECB21F2A164415005A2CC9 /* RecordedVideosPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ECB21E2A164415005A2CC9 /* RecordedVideosPresentable.swift */; };
@@ -119,8 +134,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D50FB3812A1A8E3E0093513A /* AddVideoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVideoCoordinator.swift; sourceTree = "<group>"; };
+		D50FB3832A1A8EBD0093513A /* AddVideoPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVideoPresentable.swift; sourceTree = "<group>"; };
+		D50FB3852A1A8EC60093513A /* AddVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVideoController.swift; sourceTree = "<group>"; };
+		D50FB3872A1A8ECF0093513A /* AddVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVideoViewModel.swift; sourceTree = "<group>"; };
+		D50FB38A2A1A941A0093513A /* AddVideoTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVideoTableViewManager.swift; sourceTree = "<group>"; };
 		D5115A2E2A1898C0008EEEFD /* PullDownOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullDownOverlayView.swift; sourceTree = "<group>"; };
-		D5115A302A189D49008EEEFD /* BlurredBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredBackgroundView.swift; sourceTree = "<group>"; };
 		D51528FD2A0E513100BA2AA8 /* ReviewsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsPresentable.swift; sourceTree = "<group>"; };
 		D51528FF2A0E513D00BA2AA8 /* ReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsController.swift; sourceTree = "<group>"; };
 		D51529012A0E515000BA2AA8 /* ReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModel.swift; sourceTree = "<group>"; };
@@ -159,7 +178,6 @@
 		D5632C502A0E63A200A9302F /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		D5632C532A0EA47900A9302F /* ReviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewData.swift; sourceTree = "<group>"; };
 		D5632C562A0EA7D200A9302F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D567813A29E994DC0035EB11 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D567813D29E995A00035EB11 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D567813F29E995AB0035EB11 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D567814129E995B30035EB11 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -210,6 +228,18 @@
 		D5B7D0AE29F7CD80000FB288 /* LabeledTextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextViewCell.swift; sourceTree = "<group>"; };
 		D5B7D0B129FA6041000FB288 /* TeacherProfileTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileTableViewManager.swift; sourceTree = "<group>"; };
 		D5BE1D9A29EEA4E3008CB17F /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		D5E5E9D12A1D0A2400575FD2 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		D5E5E9D32A1D0A2F00575FD2 /* MainScreenPresentabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresentabel.swift; sourceTree = "<group>"; };
+		D5E5E9D52A1D0A3600575FD2 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		D5E5E9D72A1D0A3F00575FD2 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		D5E5E9DB2A1D0F6300575FD2 /* SavedAdsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsCoordinator.swift; sourceTree = "<group>"; };
+		D5E5E9DD2A1D0F7000575FD2 /* SavedAdsPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsPresentable.swift; sourceTree = "<group>"; };
+		D5E5E9DF2A1D0F7D00575FD2 /* SavedAdsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsController.swift; sourceTree = "<group>"; };
+		D5E5E9E12A1D0F8E00575FD2 /* SavedAdsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsViewModel.swift; sourceTree = "<group>"; };
+		D5E5E9E52A1D132800575FD2 /* AddAdvertisementCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdvertisementCoordinator.swift; sourceTree = "<group>"; };
+		D5E5E9E72A1D137400575FD2 /* AddAdvertisementPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdvertisementPresentable.swift; sourceTree = "<group>"; };
+		D5E5E9E92A1D137B00575FD2 /* AddAdvertisementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdvertisementController.swift; sourceTree = "<group>"; };
+		D5E5E9EB2A1D138400575FD2 /* AddAdvertisementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdvertisementViewModel.swift; sourceTree = "<group>"; };
 		D5ECB2172A163CF3005A2CC9 /* LessonsListTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsListTableViewManager.swift; sourceTree = "<group>"; };
 		D5ECB21C2A1643FD005A2CC9 /* RecordedVideosCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedVideosCoordinator.swift; sourceTree = "<group>"; };
 		D5ECB21E2A164415005A2CC9 /* RecordedVideosPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedVideosPresentable.swift; sourceTree = "<group>"; };
@@ -244,10 +274,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D50FB3892A1A94060093513A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D50FB38A2A1A941A0093513A /* AddVideoTableViewManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		D5115A322A1A8BBB008EEEFD /* AddVideo */ = {
 			isa = PBXGroup;
 			children = (
 				D5115A332A1A8D56008EEEFD /* Coordinator */,
+				D50FB3832A1A8EBD0093513A /* AddVideoPresentable.swift */,
+				D50FB3852A1A8EC60093513A /* AddVideoController.swift */,
+				D50FB3872A1A8ECF0093513A /* AddVideoViewModel.swift */,
+				D50FB3892A1A94060093513A /* Manager */,
 			);
 			path = AddVideo;
 			sourceTree = "<group>";
@@ -255,6 +297,7 @@
 		D5115A332A1A8D56008EEEFD /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				D50FB3812A1A8E3E0093513A /* AddVideoCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -402,6 +445,9 @@
 				D567815929E99E8F0035EB11 /* TabBar */,
 				D567815C29E99FEE0035EB11 /* Login */,
 				D55A65AF29EE858F001BBDAC /* Registration */,
+				D5E5E9CF2A1D09B400575FD2 /* MainScreen */,
+				D5E5E9D92A1D0F3300575FD2 /* SavedAds */,
+				D5E5E9E32A1D12FA00575FD2 /* AddAvertisement */,
 				D52488D629FB964B0069A4C8 /* TeacherProfileScreens */,
 				D51E306829FAC91A0047B6B2 /* SectionsForManager */,
 				D5F626262A138E73005746D0 /* Data */,
@@ -484,7 +530,6 @@
 			isa = PBXGroup;
 			children = (
 				D550CFA4299A74E100CBD84F /* AppDelegate.swift */,
-				D567813A29E994DC0035EB11 /* MainViewController.swift */,
 				D567813929E986CB0035EB11 /* Services */,
 			);
 			path = Application;
@@ -547,9 +592,9 @@
 		D567814F29E99BD60035EB11 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				D567815729E99E110035EB11 /* Coordinator.swift */,
-				D567815329E99C6C0035EB11 /* AppCoordinator.swift */,
+				D5E5E9ED2A1D1DAC00575FD2 /* Coordinator */,
 				D567815529E99E010035EB11 /* MainCoordinator.swift */,
+				D567815329E99C6C0035EB11 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -750,6 +795,71 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		D5E5E9CF2A1D09B400575FD2 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D5E5E9D02A1D0A0A00575FD2 /* Coordinator */,
+				D5E5E9D32A1D0A2F00575FD2 /* MainScreenPresentabel.swift */,
+				D5E5E9D52A1D0A3600575FD2 /* MainScreenController.swift */,
+				D5E5E9D72A1D0A3F00575FD2 /* MainScreenViewModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		D5E5E9D02A1D0A0A00575FD2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D5E5E9D12A1D0A2400575FD2 /* MainScreenCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D5E5E9D92A1D0F3300575FD2 /* SavedAds */ = {
+			isa = PBXGroup;
+			children = (
+				D5E5E9DA2A1D0F4B00575FD2 /* Coordinator */,
+				D5E5E9DD2A1D0F7000575FD2 /* SavedAdsPresentable.swift */,
+				D5E5E9DF2A1D0F7D00575FD2 /* SavedAdsController.swift */,
+				D5E5E9E12A1D0F8E00575FD2 /* SavedAdsViewModel.swift */,
+			);
+			path = SavedAds;
+			sourceTree = "<group>";
+		};
+		D5E5E9DA2A1D0F4B00575FD2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D5E5E9DB2A1D0F6300575FD2 /* SavedAdsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D5E5E9E32A1D12FA00575FD2 /* AddAvertisement */ = {
+			isa = PBXGroup;
+			children = (
+				D5E5E9E42A1D131400575FD2 /* Coordinator */,
+				D5E5E9E72A1D137400575FD2 /* AddAdvertisementPresentable.swift */,
+				D5E5E9E92A1D137B00575FD2 /* AddAdvertisementController.swift */,
+				D5E5E9EB2A1D138400575FD2 /* AddAdvertisementViewModel.swift */,
+			);
+			path = AddAvertisement;
+			sourceTree = "<group>";
+		};
+		D5E5E9E42A1D131400575FD2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D5E5E9E52A1D132800575FD2 /* AddAdvertisementCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D5E5E9ED2A1D1DAC00575FD2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D567815729E99E110035EB11 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		D5ECB2192A16436E005A2CC9 /* LessonsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -823,7 +933,6 @@
 				D5F6261D2A10A5E6005746D0 /* CustomSegmentedControl.swift */,
 				D5FD9CDA2A152A8900C8171C /* SearchTextField.swift */,
 				D5115A2E2A1898C0008EEEFD /* PullDownOverlayView.swift */,
-				D5115A302A189D49008EEEFD /* BlurredBackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -965,6 +1074,7 @@
 				D51529052A0E516500BA2AA8 /* ReviewsTableViewManager.swift in Sources */,
 				D5F626252A10AE68005746D0 /* PersonalAdsCollectionViewManager.swift in Sources */,
 				D5F626182A0F5FCF005746D0 /* PersonalAdsPresentable.swift in Sources */,
+				D5E5E9EC2A1D138400575FD2 /* AddAdvertisementViewModel.swift in Sources */,
 				D58EA57229EE87B900D8F0B0 /* RegistrationTwoPresentable.swift in Sources */,
 				D5B7D0B229FA6041000FB288 /* TeacherProfileTableViewManager.swift in Sources */,
 				D5B7D0A329F7AAC2000FB288 /* UpdateTeacherInfoPresentable.swift in Sources */,
@@ -975,6 +1085,7 @@
 				D58EA56E29EE86F900D8F0B0 /* RegistrationCoordinator.swift in Sources */,
 				D59AF72B29F12763004FA0A7 /* TeacherProfilePresentable.swift in Sources */,
 				D5632C542A0EA47900A9302F /* ReviewData.swift in Sources */,
+				D50FB3882A1A8ECF0093513A /* AddVideoViewModel.swift in Sources */,
 				D567816129E9A01B0035EB11 /* LoginPresentable.swift in Sources */,
 				D562180E29FC119800BCD1A1 /* ScheduleViewModel.swift in Sources */,
 				D59AF72F29F1277F004FA0A7 /* TeacherProfileViewModel.swift in Sources */,
@@ -987,18 +1098,24 @@
 				D5F6262C2A139153005746D0 /* TeachingDetails.swift in Sources */,
 				D5B7D0AA29F7AC19000FB288 /* UpdateTeacherInfoCoordinator.swift in Sources */,
 				D56A757229EE92CD0072BB29 /* RegistrationTwoViewModel.swift in Sources */,
+				D5E5E9E82A1D137400575FD2 /* AddAdvertisementPresentable.swift in Sources */,
 				D5F6262E2A13952C005746D0 /* TutorData.swift in Sources */,
 				D567815429E99C6C0035EB11 /* AppCoordinator.swift in Sources */,
+				D5E5E9E22A1D0F8E00575FD2 /* SavedAdsViewModel.swift in Sources */,
 				D567813E29E995A00035EB11 /* BaseView.swift in Sources */,
 				D5F626282A138E95005746D0 /* AdvertisementData.swift in Sources */,
+				D5E5E9E62A1D132800575FD2 /* AddAdvertisementCoordinator.swift in Sources */,
+				D5E5E9DC2A1D0F6300575FD2 /* SavedAdsCoordinator.swift in Sources */,
 				D5115A2F2A1898C0008EEEFD /* PullDownOverlayView.swift in Sources */,
 				D588E8082A0BBBB70039D9C8 /* LessonsScheduleData.swift in Sources */,
 				D59AF72929F12713004FA0A7 /* TeacherProfileCoordinator.swift in Sources */,
+				D50FB3842A1A8EBD0093513A /* AddVideoPresentable.swift in Sources */,
 				D51529082A0E53E800BA2AA8 /* ReviewsCoordinator.swift in Sources */,
 				D5632C572A0EA7D200A9302F /* User.swift in Sources */,
 				D58EA57629EE881900D8F0B0 /* RegistrationOneViewModel.swift in Sources */,
 				D5F626162A0F5EE6005746D0 /* PersonalAdsCoordinator.swift in Sources */,
 				D5294A8F29F6DA8600CEDA54 /* BaseCell.swift in Sources */,
+				D5E5E9DE2A1D0F7000575FD2 /* SavedAdsPresentable.swift in Sources */,
 				D5B7D0AD29F7C04F000FB288 /* ImageCell.swift in Sources */,
 				D58EA57929EE8A0100D8F0B0 /* PrimaryView.swift in Sources */,
 				D54D2C4E29FBF6DA00ACE864 /* AboutAppCoordinator.swift in Sources */,
@@ -1011,6 +1128,7 @@
 				D54D2C5029FBF74700ACE864 /* AboutAppPresentable.swift in Sources */,
 				D5ECB2182A163CF3005A2CC9 /* LessonsListTableViewManager.swift in Sources */,
 				D55A65AC29EDA267001BBDAC /* UIStackView+Extension.swift in Sources */,
+				D5E5E9E02A1D0F7D00575FD2 /* SavedAdsController.swift in Sources */,
 				D52488D529FACEFB0069A4C8 /* PrimaryButtonCell.swift in Sources */,
 				D5B7D0A729F7ABBF000FB288 /* UpdateTeacherInfoViewModel.swift in Sources */,
 				D595C57B29ED907D00CED84D /* Assets.swift in Sources */,
@@ -1018,12 +1136,15 @@
 				D5ECB2232A164437005A2CC9 /* RecordedVideosViewModel.swift in Sources */,
 				D5294A8B29F1629400CEDA54 /* RoundedTableView.swift in Sources */,
 				D562180A29FC117D00BCD1A1 /* SchedulePresentable.swift in Sources */,
+				D50FB38B2A1A941A0093513A /* AddVideoTableViewManager.swift in Sources */,
+				D5E5E9D62A1D0A3600575FD2 /* MainScreenController.swift in Sources */,
 				D5B7D0AF29F7CD80000FB288 /* LabeledTextViewCell.swift in Sources */,
 				D567815629E99E010035EB11 /* MainCoordinator.swift in Sources */,
+				D50FB3862A1A8EC60093513A /* AddVideoController.swift in Sources */,
 				D531884B2A188E0000414DDD /* SafariCoordinator.swift in Sources */,
 				D562180829FC111C00BCD1A1 /* ScheduleCoordinator.swift in Sources */,
 				D5F6261A2A0F5FDA005746D0 /* PersonalAdsController.swift in Sources */,
-				D567813B29E994DC0035EB11 /* MainViewController.swift in Sources */,
+				D50FB3822A1A8E3E0093513A /* AddVideoCoordinator.swift in Sources */,
 				D569F7B529FB97EA00B86598 /* InformationCoordinator.swift in Sources */,
 				D55A65AE29EDA80E001BBDAC /* PrimaryButton.swift in Sources */,
 				D51E306729FAC4220047B6B2 /* UIButton+Extension.swift in Sources */,
@@ -1036,12 +1157,15 @@
 				D54D2C5229FBF75F00ACE864 /* AboutAppController.swift in Sources */,
 				D54D2C4929FBDA8000ACE864 /* InformationTableViewManager.swift in Sources */,
 				D59206382A15209500AAC59D /* LessonsListController.swift in Sources */,
+				D5E5E9EA2A1D137B00575FD2 /* AddAdvertisementController.swift in Sources */,
 				D5F626222A10AA7A005746D0 /* ImageCollectionViewCell.swift in Sources */,
 				D567814A29E999DA0035EB11 /* AuthModulesAssembly.swift in Sources */,
 				D5294A8629F1557800CEDA54 /* LabeledTextView.swift in Sources */,
 				D51E306529FA6D820047B6B2 /* UpdateTeacherInfoTableViewManager.swift in Sources */,
+				D5E5E9D22A1D0A2400575FD2 /* MainScreenCoordinator.swift in Sources */,
 				D588E80A2A0CA6AC0039D9C8 /* SubtitleCell.swift in Sources */,
 				D567815829E99E110035EB11 /* Coordinator.swift in Sources */,
+				D5E5E9D42A1D0A2F00575FD2 /* MainScreenPresentabel.swift in Sources */,
 				D569F7B729FB97FB00B86598 /* InformationPresentable.swift in Sources */,
 				D5ECB2262A164450005A2CC9 /* RecordedVideosTableViewManager.swift in Sources */,
 				D567814029E995AB0035EB11 /* BaseController.swift in Sources */,
@@ -1052,7 +1176,6 @@
 				D5BE1D9B29EEA4E3008CB17F /* RoundedImageView.swift in Sources */,
 				D567816329E9A0260035EB11 /* LoginController.swift in Sources */,
 				D550CFA5299A74E100CBD84F /* AppDelegate.swift in Sources */,
-				D5115A312A189D49008EEEFD /* BlurredBackgroundView.swift in Sources */,
 				D59AF72D29F1276E004FA0A7 /* TeacherProfileController.swift in Sources */,
 				D567814E29E99AB90035EB11 /* SwinjectServices.swift in Sources */,
 				D562180429FC098B00BCD1A1 /* TextViewWithSeparators.swift in Sources */,
@@ -1061,6 +1184,7 @@
 				D569F7BB29FB981500B86598 /* InformationViewModel.swift in Sources */,
 				D5ECB21F2A164415005A2CC9 /* RecordedVideosPresentable.swift in Sources */,
 				D5632C512A0E63A200A9302F /* ReviewCell.swift in Sources */,
+				D5E5E9D82A1D0A3F00575FD2 /* MainScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

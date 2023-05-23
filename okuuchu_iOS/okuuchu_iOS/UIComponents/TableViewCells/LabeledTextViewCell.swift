@@ -30,8 +30,8 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
     //MARK: - Methods
     override func onConfigureView() {
         
-        labeledView.textView.delegate = self
-        labeledView.configureTextView(insets: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5), cornerRadius: 2)
+//        labeledView.textView.delegate = self
+        labeledView.configureTextView(insets: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5), cornerRadius: 5)
         
         addButton.setImage(Asset.addIcon.image.withTintColor(Asset.lightBlue.color, renderingMode: .alwaysOriginal), for: .normal)
         addButton.isHidden = true
@@ -48,23 +48,12 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
     }
     
     override func onSetupConstraints() {
-        //        if withAddButton {
-        //
-        //            labeledView.snp.remakeConstraints{ maker in
-        //                maker.top.equalToSuperview().offset(20)
-        //                maker.left.equalToSuperview().offset(25)
-        //                maker.right.equalTo(addButton.snp.left).offset(-10)
-        //                maker.bottom.equalToSuperview()
-        //            }
-        //
-        //        } else {
-        //
+  
         labeledView.snp.remakeConstraints{ maker in
             maker.top.equalToSuperview().offset(20)
             maker.left.right.equalToSuperview().inset(25)
             maker.bottom.equalToSuperview()
         }
-        //        }
         
         addButton.snp.makeConstraints{ maker in
             maker.right.equalToSuperview().offset(-25)
@@ -96,6 +85,7 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
         labeledView.configureWith(cellData)
         
     }
+
 }
 
 //MARK: - Extension
@@ -112,24 +102,34 @@ extension LabeledTextViewCell {
         }
     }
     
+    func setTextViewDelegate(delegate: UITextViewDelegate) {
+        labeledView.textView.delegate = delegate
+    }
+    
     @objc func doneButtonTapped(){
         
     }
-}
-
-extension LabeledTextViewCell: UITextViewDelegate {
-    func textViewDidChange(_ textView: UITextView) {
-        
-        let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))
-        let newHeight = size.height
-        
-        textViewHeightConstraint?.update(offset: newHeight)
-        
-        if let tableView = superview as? UITableView, let indexPath = tableView.indexPath(for: self) {
-            tableView.beginUpdates()
-            tableView.endUpdates()
-            tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-        }
+    
+    func setHeightConstraint(newConstraint: ConstraintOffsetTarget){
+        textViewHeightConstraint?.update(offset: newConstraint)
     }
     
+//    func setTextViewHeight(height)
 }
+
+//extension LabeledTextViewCell: UITextViewDelegate {
+//    func textViewDidChange(_ textView: UITextView) {
+//
+//        let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))
+//        let newHeight = size.height
+//
+//        textViewHeightConstraint?.update(offset: newHeight)
+//
+//        if let tableView = superview as? UITableView, let indexPath = tableView.indexPath(for: self) {
+//            tableView.beginUpdates()
+//            tableView.endUpdates()
+//            tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+//        }
+//    }
+    
+//}

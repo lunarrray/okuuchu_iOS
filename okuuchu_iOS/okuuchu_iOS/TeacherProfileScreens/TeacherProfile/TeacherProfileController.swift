@@ -28,7 +28,7 @@ final class TeacherProfileController: VMController<TeacherProfilePresentable, Te
         viewModel.output = self
     }
     
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         
     }
 }

@@ -75,7 +75,9 @@ extension RecordedVideosViewModel: RecordedVideosViewModelInput {
     }
     
     func addButtonTapped() {
-        print("add video")
+        if let subject = subject {
+            coordinator?.startAddVideo(for: subject)
+        }
     }
     
     func deleteButtonTapped() {

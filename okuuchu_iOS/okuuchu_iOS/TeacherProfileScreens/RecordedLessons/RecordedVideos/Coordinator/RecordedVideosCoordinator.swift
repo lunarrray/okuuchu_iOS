@@ -5,6 +5,7 @@ class RecordedVideosCoordinator: Coordinator {
     private(set) var childCoordinators: [Coordinator] = []
     var parentCoordinator: Coordinator?
     var navigationController: UINavigationController
+    var onUpdateVideos = { }
     
     init(navigationController: UINavigationController){
         self.navigationController = navigationController
@@ -16,6 +17,7 @@ class RecordedVideosCoordinator: Coordinator {
         let controller: RecordedVideosController = .init()
         controller.viewModel.coordinator = self
         controller.viewModel.subject = subject
+        onUpdateVideos = controller.viewModel.getRecordedVideosFromModel
         controller.navigationItem.title = subject.title
         navigationController.pushViewController(controller, animated: true)
     }
@@ -25,6 +27,13 @@ class RecordedVideosCoordinator: Coordinator {
         childCoordinators.append(safariCoordinator)
         safariCoordinator.parentCoordinator = self
         safariCoordinator.openSafari(with: url)
+    }
+    
+    func startAddVideo(for subject: Lesson){
+        let addVideoCoordinator: AddVideoCoordinator = .init(navigationController: navigationController)
+        addVideoCoordinator.parentCoordinator = self
+        childCoordinators.append(addVideoCoordinator)
+        addVideoCoordinator.openAddVideo(for: subject)
     }
     
     func didFinish(){

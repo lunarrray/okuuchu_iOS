@@ -12,7 +12,7 @@ final class TeacherProfilePresentable: PrimaryView{
     private var lessonsView: LabeledTextView = .init()
     
     var tableView: RoundedTableView = .init()
-    private let whiteView: UIView = .init()
+//    private let whiteView: UIView = .init()
     
     //MARK: - Methods
     
@@ -39,7 +39,7 @@ final class TeacherProfilePresentable: PrimaryView{
         
         tableView.register(TitleCell.self, forCellReuseIdentifier: String(describing: TitleCell.self))
 
-        whiteView.backgroundColor = Asset.white.color
+//        whiteView.backgroundColor = Asset.white.color
     }
     
     override func onAddSubviews() {
@@ -51,7 +51,7 @@ final class TeacherProfilePresentable: PrimaryView{
             ratingView,
             aboutTeacherView,
             lessonsView,
-            whiteView,
+//            whiteView,
             tableView
         )
     }
@@ -90,15 +90,16 @@ final class TeacherProfilePresentable: PrimaryView{
         
         tableView.snp.makeConstraints{ maker in
             maker.width.equalToSuperview()
-            maker.height.equalTo(250)
+//            maker.height.equalTo(250)
             maker.top.equalTo(lessonsView.snp.bottom).offset(25)
-        }
-        
-        whiteView.snp.makeConstraints{ maker in
-            maker.top.equalTo(tableView.snp.bottom)
-            maker.right.left.equalToSuperview()
             maker.bottom.equalToSuperview()
         }
+        
+//        whiteView.snp.makeConstraints{ maker in
+//            maker.top.equalTo(tableView.snp.bottom)
+//            maker.right.left.equalToSuperview()
+//            maker.bottom.equalToSuperview()
+//        }
     }
     
     override func onSetupTargets() {

@@ -18,6 +18,13 @@ class LoginCoordinator: Coordinator {
         appDelegate?.window?.makeKeyAndVisible()
     }
     
+    func startMain(){
+        navigationController.viewControllers.removeAll()
+        let mainCoordinator: MainCoordinator = .init(navigationController: navigationController)
+        childCoordinators.append(mainCoordinator)
+        mainCoordinator.start()
+    }
+    
     func startRegistration(){
         let coordinator: RegistrationCoordinator = .init(navigationController: navigationController)
         coordinator.start()

@@ -13,13 +13,13 @@ open class BaseController<View: UIView>: UIViewController{
         
         onConfigureController()
         onConfigureViewModel()
-        onConfiugureActions()
+        onConfigureActions()
         
     }
     
     func onConfigureController() { }
     func onConfigureViewModel(){ }
-    func onConfiugureActions() { }
+    func onConfigureActions() { }
 }
 
 open class VMController<View: UIView, VMInput>: BaseController<View> {

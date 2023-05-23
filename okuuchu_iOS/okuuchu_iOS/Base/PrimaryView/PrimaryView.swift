@@ -12,6 +12,7 @@ class PrimaryView: BaseView {
     
     private let informationScreenImage: UIImageView = .init()
     private let walkingGirlImage: UIImageView = .init()
+    private let videoPublishingImage: UIImageView = .init()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,6 +31,7 @@ class PrimaryView: BaseView {
         
         informationScreenImage.image = Asset.informationScreenImage.image
         walkingGirlImage.image = Asset.walkingGirlImage.image
+        videoPublishingImage.image = Asset.videoPublishing.image
     
         topLeftBlueBall.isHidden = true
         topRightBlueBall.isHidden = true
@@ -39,6 +41,7 @@ class PrimaryView: BaseView {
         
         informationScreenImage.isHidden = true
         walkingGirlImage.isHidden = true
+        videoPublishingImage.isHidden  = true
     }
     
     override func onAddSubviews() {
@@ -49,7 +52,9 @@ class PrimaryView: BaseView {
         bottomRightBlueBall,
         topLeftWhiteBall,
         informationScreenImage,
-        walkingGirlImage)
+        walkingGirlImage,
+        videoPublishingImage
+        )
     }
     
     override func onSetupConstraints() {
@@ -88,6 +93,10 @@ class PrimaryView: BaseView {
             maker.bottom.equalToSuperview().offset(-30)
         }
         
+        videoPublishingImage.snp.makeConstraints{ maker in
+            maker.centerX.equalToSuperview()
+            maker.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-30)
+        }
 
     }
 }
@@ -129,6 +138,10 @@ extension PrimaryView {
     
     func addWalkingGirlImage(){
         walkingGirlImage.isHidden = false
+    }
+    
+    func addVidoPublishingImage(){
+        videoPublishingImage.isHidden = false
     }
     
 }

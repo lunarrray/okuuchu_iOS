@@ -9,10 +9,12 @@ protocol UpdateTeacherInfoTableViewDelegate: AnyObject {
 final class UpdateTeacherInfoTableViewManager: NSObject {
     weak var delegate: UpdateTeacherInfoTableViewDelegate?
     private var dataSource: [Section] = []
+    private var tableView: UITableView?
     
     func setTeacherData(_ dataSource: [Section], tableView: UITableView){
         self.dataSource.removeAll(keepingCapacity: true)
         self.dataSource = dataSource
+        self.tableView = tableView
         tableView.reloadData()
     }
 }
@@ -41,6 +43,7 @@ extension UpdateTeacherInfoTableViewManager: UITableViewDataSource, UITableViewD
             
         case .titleTextViewSection(let data):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: LabeledTextViewCell.self), for: indexPath) as? LabeledTextViewCell else { return LabeledTextViewCell() }
+            cell.setTextViewDelegate(delegate: self)
             let cellData = data[indexPath.row]
             cell.configureCell(with: cellData)
             
@@ -56,11 +59,25 @@ extension UpdateTeacherInfoTableViewManager: UITableViewDataSource, UITableViewD
         
     }
     
-    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = .clear
     }
-    
+}
+
+extension UpdateTeacherInfoTableViewManager: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        
+        let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))
+        let point = textView.convert(textView.bounds.origin, to: tableView)
+        let newHeight = size.height
+        if let indexPath = tableView?.indexPathForRow(at: point) {
+            let cell = tableView?.cellForRow(at: indexPath) as? LabeledTextViewCell
+            cell?.setHeightConstraint(newConstraint: newHeight)
+            tableView?.beginUpdates()
+            tableView?.endUpdates()
+            tableView?.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        }
+    }
 }
 
 

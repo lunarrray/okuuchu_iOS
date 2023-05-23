@@ -37,7 +37,7 @@ class ScheduleController: VMController<SchedulePresentable, ScheduleViewModelInp
         viewModel.output = self
     }
     
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         content.handleSegmentedControlValueChanged = viewModel.toggleTableView(segmentedControlIndex:)
         content.handleDeleteButtonTapAction = viewModel.deleteButtonTapped
         content.handleAddButtonTapAction = showAlert

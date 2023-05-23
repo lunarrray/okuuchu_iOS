@@ -7,7 +7,7 @@ class RegistrationTwoController: VMController<RegistrationTwoPresentable, Regist
         viewModel.output = self
     }
     
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         content.loginTapAction = handleLoginTapAction
     }
 }

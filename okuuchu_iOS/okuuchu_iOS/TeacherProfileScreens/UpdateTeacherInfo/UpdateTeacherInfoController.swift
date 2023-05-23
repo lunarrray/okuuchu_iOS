@@ -28,7 +28,7 @@ class UpdateTeacherInfoController: VMController<UpdateTeacherInfoPresentable, Up
         viewModel.output = self
     }
     
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         
     }
 }

@@ -40,7 +40,7 @@ class RecordedVideosController: VMController<RecordedVideoPresentable, RecordedV
         viewModel.output = self
     }
 
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         content.handleDeleteButtonTapAction = deleteItemsTapped
         content.handleSelectButtonTapAction = selectItemsTapped
 

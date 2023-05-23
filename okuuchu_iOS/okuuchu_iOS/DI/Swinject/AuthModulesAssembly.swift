@@ -52,6 +52,22 @@ public final class AuthModulesAssembly: Assembly {
         container.autoregister(
             RecordedVideosViewModelInput.self,
             initializer: RecordedVideosViewModel.init)
+        
+        container.autoregister(
+            AddVideoViewModelInput.self,
+            initializer: AddVideoViewModel.init)
+        
+        container.autoregister(
+            MainScreenViewModelInput.self,
+            initializer: MainScreenViewModel.init)
+        
+        container.autoregister(
+            SavedAdsViewModelInput.self,
+            initializer: SavedAdsViewModel.init)
+        
+        container.autoregister(
+            AddAdvertisementViewModelInput.self,
+            initializer: AddAdvertisementViewModel.init)
     
     }
     
