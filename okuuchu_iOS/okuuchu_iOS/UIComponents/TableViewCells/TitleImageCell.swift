@@ -12,6 +12,9 @@ class TitleImageCell: TitleCell {
     
     override func onConfigureView() {
         super.onConfigureView()
+        
+        imageIcon.contentMode = .scaleAspectFill
+        
         backgroundColor = Asset.white.color
         layer.cornerRadius = 20
         layer.masksToBounds = true

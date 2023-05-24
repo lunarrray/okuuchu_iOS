@@ -21,6 +21,7 @@ class PersonalAdsPresentable: BaseView {
     private var addButton: PrimaryButton = .init()
     
     var handleSegmentedControlValueChanged: ((Int) -> Void)?
+    var handleAddButtonTapAction: (() -> Void)?
     
     //MARK: - OverrideMethods
     
@@ -72,6 +73,7 @@ class PersonalAdsPresentable: BaseView {
     
     override func onSetupTargets() {
         segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
+        addButton.addTarget(self, action: #selector(addButtonTapAction), for: .touchUpInside)
     }
 }
 
@@ -80,5 +82,9 @@ class PersonalAdsPresentable: BaseView {
 extension PersonalAdsPresentable {
     @objc private func segmentedControlValueChanged(_ sender: UISegmentedControl){
         handleSegmentedControlValueChanged?(sender.selectedSegmentIndex)
+    }
+    
+    @objc func addButtonTapAction(){
+        handleAddButtonTapAction?()
     }
 }

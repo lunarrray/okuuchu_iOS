@@ -18,6 +18,7 @@ class AddAdvertisementController: VMController<AddAdvertisementPresentable, AddA
 
     override func onConfigureController() {
         navigationItem.title = "Добавить объявление"
+        navigationItem.leftBarButtonItem = content.navigation.cancelButton
     }
     
     override func onConfigureViewModel() {
@@ -25,7 +26,7 @@ class AddAdvertisementController: VMController<AddAdvertisementPresentable, AddA
     }
     
     override func onConfigureActions() {
-        
+        content.handleCancelButtonTapAction = viewModel.cancelAddingVideo
     }
 }
 

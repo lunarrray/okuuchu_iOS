@@ -40,6 +40,7 @@ class PersonalAdsController: VMController<PersonalAdsPresentable, PersonalAdsVie
     
     override func onConfigureActions() {
         content.handleSegmentedControlValueChanged = viewModel.toggleCollectionView(segmentedControlIndex:)
+        content.handleAddButtonTapAction = viewModel.addAdvertisement
     }
 }
 

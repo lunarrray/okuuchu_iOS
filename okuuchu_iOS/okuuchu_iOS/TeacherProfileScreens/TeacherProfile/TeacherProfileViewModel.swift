@@ -33,7 +33,6 @@ final class TeacherProfileViewModel {
 
 extension TeacherProfileViewModel: TeacherProfileViewModelInput {
     func getDataFromModel() {
-        // getting data from model
         output?.customizeOutput(with: teacherData)
     }
     

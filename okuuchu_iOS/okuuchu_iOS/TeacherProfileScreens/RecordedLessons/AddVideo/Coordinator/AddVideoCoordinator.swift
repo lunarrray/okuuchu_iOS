@@ -38,8 +38,8 @@ class AddVideoCoordinator: Coordinator {
     }
     
     func didFinish(){
-        navigationController.dismiss(animated: true)
         parentCoordinator?.childDidFinish(self)
+        navigationController.dismiss(animated: true)
     }
     
 }

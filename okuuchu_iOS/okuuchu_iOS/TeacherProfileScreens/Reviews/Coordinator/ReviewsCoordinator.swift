@@ -14,6 +14,7 @@ class ReviewsCoordinator: Coordinator {
     func start() {
         let controller: ReviewsController = .init()
         controller.viewModel.coordinator = self
+        controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
     

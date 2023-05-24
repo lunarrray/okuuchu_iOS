@@ -6,6 +6,7 @@ import Foundation
 protocol AddAdvertisementViewModelInput{
     var coordinator: AddAdvertisementCoordinator? { get set }
     var output: AddAdvertisementViewModelOutput? { get set }
+    func cancelAddingVideo()
 }
 
 protocol AddAdvertisementViewModelOutput {
@@ -27,4 +28,7 @@ class AddAdvertisementViewModel {
 
 extension AddAdvertisementViewModel: AddAdvertisementViewModelInput{
     
+    func cancelAddingVideo() {
+        coordinator?.didFinish()
+    }
 }

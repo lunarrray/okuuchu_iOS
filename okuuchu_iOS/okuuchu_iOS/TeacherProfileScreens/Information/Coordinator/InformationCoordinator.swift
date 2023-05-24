@@ -15,6 +15,7 @@ class InformationCoordinator: Coordinator {
     func start() {
         let controller: InformationController = .init()
         controller.viewModel.coordinator = self
+        controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
     

@@ -97,6 +97,10 @@ internal enum Asset {
   internal static let lessonImage2 = ImageAsset(name: "lessonImage2")
   internal static let mainIcon = ImageAsset(name: "mainIcon")
   internal static let menAvatar = ImageAsset(name: "menAvatar")
+  internal static let prof = ImageAsset(name: "prof")
+  internal static let prof1 = ImageAsset(name: "prof1")
+  internal static let prof3 = DataAsset(name: "prof3")
+  internal static let prof4 = ImageAsset(name: "prof4")
   internal static let rightBlueBalls = ImageAsset(name: "rightBlueBalls")
   internal static let rightBottomBalls = ImageAsset(name: "rightBottomBalls")
   internal static let searchingGirlImage = ImageAsset(name: "searchingGirlImage")
@@ -172,6 +176,30 @@ internal extension SwiftUI.Color {
   }
 }
 #endif
+
+internal struct DataAsset {
+  internal fileprivate(set) var name: String
+
+  @available(iOS 9.0, tvOS 9.0, watchOS 6.0, macOS 10.11, *)
+  internal var data: NSDataAsset {
+    guard let data = NSDataAsset(asset: self) else {
+      fatalError("Unable to load data asset named \(name).")
+    }
+    return data
+  }
+}
+
+@available(iOS 9.0, tvOS 9.0, watchOS 6.0, macOS 10.11, *)
+internal extension NSDataAsset {
+  convenience init?(asset: DataAsset) {
+    let bundle = BundleToken.bundle
+    #if os(iOS) || os(tvOS) || os(watchOS)
+    self.init(name: asset.name, bundle: bundle)
+    #elseif os(macOS)
+    self.init(name: NSDataAsset.Name(asset.name), bundle: bundle)
+    #endif
+  }
+}
 
 internal struct ImageAsset {
   internal fileprivate(set) var name: String

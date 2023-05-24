@@ -13,6 +13,7 @@ class LessonsListCoordinator: Coordinator {
     func start() {
         let controller: LessonsListController = .init()
         controller.viewModel.coordinator = self
+        controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
     
