@@ -34,6 +34,7 @@ class LabeledTextView: UIView {
         textView.textContainerInset = .zero
         textView.textAlignment = .center
         textView.textContainer.lineFragmentPadding = 0
+        textView.autocorrectionType = .no
         textView.textContainerInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
     }
     

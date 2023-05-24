@@ -42,25 +42,49 @@ internal enum Asset {
   internal static let aboutAppIcon = ImageAsset(name: "aboutAppIcon")
   internal static let addIcon = ImageAsset(name: "addIcon")
   internal static let avatarIcon = ImageAsset(name: "avatarIcon")
+  internal static let backIcon = ImageAsset(name: "backIcon")
+  internal static let biology = ImageAsset(name: "biology")
   internal static let boyAndPhoneImage = ImageAsset(name: "boyAndPhoneImage")
   internal static let cameraIcon = ImageAsset(name: "cameraIcon")
+  internal static let cancelIcon = ImageAsset(name: "cancelIcon")
   internal static let checkmark = ImageAsset(name: "checkmark")
+  internal static let chemistry = ImageAsset(name: "chemistry")
   internal static let contactsIcon = ImageAsset(name: "contactsIcon")
   internal static let doneIcon = ImageAsset(name: "doneIcon")
+  internal static let emptyCheckMarkIcon = ImageAsset(name: "emptyCheckMarkIcon")
   internal static let emtyStarIcon = ImageAsset(name: "emtyStarIcon")
+  internal static let english = ImageAsset(name: "english")
   internal static let feedbackBlack = ImageAsset(name: "feedback_black")
   internal static let fullStarIcon = ImageAsset(name: "fullStarIcon")
+  internal static let geography = ImageAsset(name: "geography")
+  internal static let geometry = ImageAsset(name: "geometry")
+  internal static let german = ImageAsset(name: "german")
+  internal static let germanLiterature = ImageAsset(name: "germanLiterature")
   internal static let halfStarIcon = ImageAsset(name: "halfStarIcon")
+  internal static let history = ImageAsset(name: "history")
   internal static let homeIcon = ImageAsset(name: "homeIcon")
   internal static let invisibleIcon = ImageAsset(name: "invisibleIcon")
+  internal static let kyrgyz = ImageAsset(name: "kyrgyz")
+  internal static let kyrgyzLiterature = ImageAsset(name: "kyrgyzLiterature")
   internal static let logoImage = ImageAsset(name: "logoImage")
   internal static let logoutIcon = ImageAsset(name: "logoutIcon")
+  internal static let math = ImageAsset(name: "math")
   internal static let messageIcon = ImageAsset(name: "messageIcon")
   internal static let neutralAvatarIcon = ImageAsset(name: "neutralAvatarIcon")
+  internal static let physics = ImageAsset(name: "physics")
+  internal static let programming = ImageAsset(name: "programming")
   internal static let rectangleIcon = ImageAsset(name: "rectangleIcon")
+  internal static let russian = ImageAsset(name: "russian")
+  internal static let russianLiterature = ImageAsset(name: "russianLiterature")
   internal static let saveIcon = ImageAsset(name: "saveIcon")
   internal static let savedIcon = ImageAsset(name: "savedIcon")
+  internal static let savedItemsIcon = ImageAsset(name: "savedItemsIcon")
+  internal static let searchIcon = ImageAsset(name: "searchIcon")
+  internal static let selectedAvatarIcon = ImageAsset(name: "selectedAvatarIcon")
+  internal static let selectedHomeIcon = ImageAsset(name: "selectedHomeIcon")
+  internal static let selectedSavedItemsIcon = ImageAsset(name: "selectedSavedItemsIcon")
   internal static let shareIcon = ImageAsset(name: "shareIcon")
+  internal static let turkish = ImageAsset(name: "turkish")
   internal static let visibleIcon = ImageAsset(name: "visibleIcon")
   internal static let avatarImg = ImageAsset(name: "avatarImg")
   internal static let girlAndInfoImage = ImageAsset(name: "girlAndInfoImage")
@@ -73,9 +97,14 @@ internal enum Asset {
   internal static let lessonImage2 = ImageAsset(name: "lessonImage2")
   internal static let mainIcon = ImageAsset(name: "mainIcon")
   internal static let menAvatar = ImageAsset(name: "menAvatar")
+  internal static let prof = ImageAsset(name: "prof")
+  internal static let prof1 = ImageAsset(name: "prof1")
+  internal static let prof3 = DataAsset(name: "prof3")
+  internal static let prof4 = ImageAsset(name: "prof4")
   internal static let rightBlueBalls = ImageAsset(name: "rightBlueBalls")
   internal static let rightBottomBalls = ImageAsset(name: "rightBottomBalls")
   internal static let searchingGirlImage = ImageAsset(name: "searchingGirlImage")
+  internal static let videoPublishing = ImageAsset(name: "videoPublishing")
   internal static let videoWatchingGirlImage = ImageAsset(name: "videoWatchingGirlImage")
   internal static let walkingGirlImage = ImageAsset(name: "walkingGirlImage")
   internal static let womenAvatar = ImageAsset(name: "womenAvatar")
@@ -147,6 +176,30 @@ internal extension SwiftUI.Color {
   }
 }
 #endif
+
+internal struct DataAsset {
+  internal fileprivate(set) var name: String
+
+  @available(iOS 9.0, tvOS 9.0, watchOS 6.0, macOS 10.11, *)
+  internal var data: NSDataAsset {
+    guard let data = NSDataAsset(asset: self) else {
+      fatalError("Unable to load data asset named \(name).")
+    }
+    return data
+  }
+}
+
+@available(iOS 9.0, tvOS 9.0, watchOS 6.0, macOS 10.11, *)
+internal extension NSDataAsset {
+  convenience init?(asset: DataAsset) {
+    let bundle = BundleToken.bundle
+    #if os(iOS) || os(tvOS) || os(watchOS)
+    self.init(name: asset.name, bundle: bundle)
+    #elseif os(macOS)
+    self.init(name: NSDataAsset.Name(asset.name), bundle: bundle)
+    #endif
+  }
+}
 
 internal struct ImageAsset {
   internal fileprivate(set) var name: String

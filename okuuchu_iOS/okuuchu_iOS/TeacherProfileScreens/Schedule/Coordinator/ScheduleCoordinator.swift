@@ -13,6 +13,7 @@ class ScheduleCoordinator: Coordinator {
     func start() {
         let controller: ScheduleController = .init()
         controller.viewModel.coordinator = self
+        controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
     

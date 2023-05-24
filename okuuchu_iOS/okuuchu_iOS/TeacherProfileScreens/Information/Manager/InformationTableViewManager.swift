@@ -1,9 +1,14 @@
 
 import UIKit
 
+//MARK: - Protocol
+
 protocol InformationTableViewDelegate: AnyObject{
     func selectedCell(type: InformationCellType)
 }
+
+//MARK: - Class
+
 
 class InformationTableViewManager: NSObject{
     
@@ -13,6 +18,8 @@ class InformationTableViewManager: NSObject{
         SectionForInfoCellType.type([.logout])
     ]
 }
+
+//MARK: - Extension
 
 extension InformationTableViewManager: UITableViewDataSource, UITableViewDelegate{
     

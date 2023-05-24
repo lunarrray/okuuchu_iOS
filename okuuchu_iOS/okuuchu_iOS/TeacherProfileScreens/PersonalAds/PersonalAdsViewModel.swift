@@ -10,6 +10,7 @@ protocol PersonalAdsViewModelInput {
     func viewDidDisappear()
     func toggleCollectionView(segmentedControlIndex: Int)
     func getActiveAdsDataFromModel()
+    func addAdvertisement()
 }
 
 protocol PersonalAdsViewModelOutput: AnyObject {
@@ -69,6 +70,10 @@ extension PersonalAdsViewModel: PersonalAdsViewModelInput {
         }
         
        sendConvertedData()
+    }
+    
+    func addAdvertisement() {
+        coordinator?.startAddAdvertisement()
     }
 }
 

@@ -10,6 +10,7 @@ class ScheduleController: VMController<SchedulePresentable, ScheduleViewModelInp
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableViewManager = ScheduleTableViewManager()
         content.tableView.dataSource = tableViewManager
         content.tableView.delegate = tableViewManager
@@ -36,7 +37,7 @@ class ScheduleController: VMController<SchedulePresentable, ScheduleViewModelInp
         viewModel.output = self
     }
     
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         content.handleSegmentedControlValueChanged = viewModel.toggleTableView(segmentedControlIndex:)
         content.handleDeleteButtonTapAction = viewModel.deleteButtonTapped
         content.handleAddButtonTapAction = showAlert

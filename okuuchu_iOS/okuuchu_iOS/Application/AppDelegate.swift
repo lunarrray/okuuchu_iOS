@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator.navigationController.navigationBar.titleTextAttributes = [
             .foregroundColor: Asset.normalTextColor.color
         ]
+        
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         coordinator.start()
         return true

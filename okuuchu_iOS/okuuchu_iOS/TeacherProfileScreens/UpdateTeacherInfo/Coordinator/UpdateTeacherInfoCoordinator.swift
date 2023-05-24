@@ -11,9 +11,10 @@ class UpdateTeacherInfoCoordinator: Coordinator {
     }
     
     func start() {
-        let updateTeacherInfoController: UpdateTeacherInfoController = .init()
-        updateTeacherInfoController.viewModel.coordinator = self
-        navigationController.pushViewController(updateTeacherInfoController, animated: true)
+        let controller: UpdateTeacherInfoController = .init()
+        controller.viewModel.coordinator = self
+        controller.hidesBottomBarWhenPushed = true
+        navigationController.pushViewController(controller, animated: true)
     }
     
     func didFinish(){

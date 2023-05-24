@@ -35,6 +35,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
         imageView.image = Asset.menAvatar.image
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         
         stackView.backgroundColor = .white
         stackView.layer.cornerRadius = 10

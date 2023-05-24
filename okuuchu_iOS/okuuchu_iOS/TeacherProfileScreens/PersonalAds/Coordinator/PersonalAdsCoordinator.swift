@@ -13,9 +13,16 @@ class PersonalAdsCoordinator: Coordinator {
     func start() {
         let controller: PersonalAdsController = .init()
         controller.viewModel.coordinator = self
+        controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
     
+    func startAddAdvertisement(){
+        let addAdvertisementCoordinator: AddAdvertisementCoordinator = .init(navigationController: navigationController)
+        addAdvertisementCoordinator.parentCoordinator = self
+        childCoordinators.append(addAdvertisementCoordinator)
+        addAdvertisementCoordinator.start()
+    }
     func didFinish(){
         parentCoordinator?.childDidFinish(self)
     }

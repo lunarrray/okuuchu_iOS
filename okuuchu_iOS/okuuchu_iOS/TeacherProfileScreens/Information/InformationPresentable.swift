@@ -6,7 +6,7 @@ class InformationPresentable: PrimaryView {
     
     // MARK: - Properties
     
-    var tableView: UITableView = .init()
+    lazy var tableView: UITableView = .init()
     
     //MARK: - Methods
         

@@ -5,7 +5,7 @@ protocol LoginViewModelInput {
     var coordinator: LoginCoordinator? { get set }
     var output: LoginViewModelOutput? { get set }
     func openRegistration()
-    func goToProfile()
+    func openMainScreen()
 }
 
 protocol LoginViewModelOutput {
@@ -28,7 +28,7 @@ extension LoginViewModel: LoginViewModelInput {
         coordinator?.startRegistration()
     }
     
-    func goToProfile() {
-        coordinator?.startTeacherProfile()
+    func openMainScreen() {
+        coordinator?.startMain()
     }
 }

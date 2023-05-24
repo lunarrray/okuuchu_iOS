@@ -14,10 +14,12 @@ final class AppCoordinator: Coordinator {
         let loginCoordinator = LoginCoordinator(navigationController: navigationController)
         childCoordinators.append(loginCoordinator)
         loginCoordinator.start()
-        
-//        let registrationCoordinator = RegistrationCoordinator(navigationController: navigationController)
-//        childCoordinators.append(registrationCoordinator)
-//        registrationCoordinator.start()
-
+    }
+    
+    func startMain(){
+        navigationController.viewControllers.removeAll()
+        let mainCoordinator: MainCoordinator = .init(navigationController: navigationController)
+        childCoordinators.append(mainCoordinator)
+        mainCoordinator.start()
     }
 }

@@ -50,6 +50,13 @@ class TeacherProfileCoordinator: Coordinator{
         adsCoordinator.start()
     }
     
+    func startRecordedLessons(){
+        let lessonsListCoordinator = LessonsListCoordinator(navigationController: navigationController)
+        lessonsListCoordinator.parentCoordinator = self
+        childCoordinators.append(lessonsListCoordinator)
+        lessonsListCoordinator.start()
+    }
+    
     func childDidFinish(_ childCoordinator: Coordinator) {
         if let index = childCoordinators.firstIndex(where: { coordinator -> Bool
             in

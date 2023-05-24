@@ -46,6 +46,7 @@ class TitleSubtitleViewModel{
             onCellUpdate()
         }
     }
+    
 }
 
 enum SubTextType {

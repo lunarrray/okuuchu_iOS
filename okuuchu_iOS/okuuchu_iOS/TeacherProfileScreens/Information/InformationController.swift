@@ -27,6 +27,10 @@ class InformationController: VMController<InformationPresentable, InformationVie
     
     //MARK: - Methods
     
+    override func onConfigureController() {
+        navigationItem.title = "Информация"
+    }
+    
     override func onConfigureViewModel() {
         viewModel.output = self
     }

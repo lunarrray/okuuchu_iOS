@@ -12,10 +12,14 @@ class RoundedTableView: UITableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func onConfigureView(){
+    private func onConfigureView(){
         layer.cornerRadius = 40
         layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         clipsToBounds = true
         backgroundColor = Asset.white.color
     }
+    
+    
+
+    
 }

@@ -6,7 +6,7 @@ class LoginController: VMController<LoginPresentable, LoginViewModelInput> {
     override func onConfigureViewModel() {
         viewModel.output = self
     }
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         content.registerTapAction = handleRegisterTapAction
         content.loginTapAction = handleLoginTapAction
     }
@@ -18,6 +18,6 @@ extension LoginController: LoginViewModelOutput {
     }
     
     private func handleLoginTapAction(){
-        viewModel.goToProfile()
+        viewModel.openMainScreen()
     }
 }

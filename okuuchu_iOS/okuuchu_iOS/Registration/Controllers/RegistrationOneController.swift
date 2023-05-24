@@ -7,7 +7,7 @@ class RegistrationOneController: VMController<RegistrationOnePresentable, Regist
         viewModel.output = self
     }
     
-    override func onConfiugureActions() {
+    override func onConfigureActions() {
         content.continueRegistrationTapAction = handleContiniueRegistrationTapAction
         content.loginTapAction = handleLoginTapAction
     }

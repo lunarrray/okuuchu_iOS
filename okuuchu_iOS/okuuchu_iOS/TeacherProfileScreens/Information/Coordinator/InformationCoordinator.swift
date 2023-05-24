@@ -9,11 +9,13 @@ class InformationCoordinator: Coordinator {
     
     init(navigationController: UINavigationController){
         self.navigationController = navigationController
+
     }
     
     func start() {
         let controller: InformationController = .init()
         controller.viewModel.coordinator = self
+        controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
     

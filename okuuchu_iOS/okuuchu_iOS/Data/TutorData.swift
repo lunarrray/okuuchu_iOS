@@ -13,8 +13,9 @@ class TutorData {
     var location: Location?
     var teachingLanguages: [TeachingLanguage]?
     var lessons: [Lesson]?
+    var recordedVideos: [RecordedVideo]?
     
-    init(name: String? = nil, image: UIImage? = nil, description: String? = nil, education: String? = nil, dateOfBirth: Date? = nil, whatsappNumber: String? = nil, telegramNumber: String? = nil, workExperience: String? = nil, location: Location? = nil, teachingLanguages: [TeachingLanguage]? = nil, lessons: [Lesson]? = nil) {
+    init(name: String? = nil, image: UIImage? = nil, description: String? = nil, education: String? = nil, dateOfBirth: Date? = nil, whatsappNumber: String? = nil, telegramNumber: String? = nil, workExperience: String? = nil, location: Location? = nil, teachingLanguages: [TeachingLanguage]? = nil, lessons: [Lesson]? = nil, recordedVideo: [RecordedVideo]? = nil) {
         self.name = name
         self.image = image
         self.description = description
@@ -26,5 +27,21 @@ class TutorData {
         self.location = location
         self.teachingLanguages = teachingLanguages
         self.lessons = lessons
+    }
+}
+
+class RecordedVideo{
+    var id: Int?
+    var title: String?
+    var description: String?
+    var link: String?
+    var subject: Lesson?
+    
+    init(id: Int? = nil, title: String? = nil, description: String? = nil, link: String? = nil, subject: Lesson? = nil) {
+        self.id = id
+        self.title = title
+        self.description = description
+        self.link = link
+        self.subject = subject
     }
 }
