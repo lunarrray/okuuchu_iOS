@@ -9,6 +9,7 @@ protocol MainScreenViewModelInput:  AnyObject {
     
     func toggleCollectionView()
     func getActiveAdsDataFromModel()
+    func cellTapped(at indexPath: IndexPath)
 }
 
 protocol MainScreenViewModelOutput: AnyObject {
@@ -54,6 +55,17 @@ extension MainScreenViewModel: MainScreenViewModelInput {
         
         sendConvertedData()
     }
+    
+    func cellTapped(at indexPath: IndexPath) {
+        let index = indexPath.row
+        
+        if isAdsData {
+            
+        } else {
+            let tutor = tutorsData[index]
+            coordinator?.startVideoTutor(for: tutor)
+        }
+    }
 }
 
 extension MainScreenViewModel {
@@ -61,22 +73,9 @@ extension MainScreenViewModel {
         var subsubtitleViewModels: [SubsubtitleViewModel] = []
         for advertisement in advertisements {
             
-            guard let price = advertisement.price.self, let lessonsData = advertisement.lessons, let teachingTypesData = advertisement.teachingTypes, let image = advertisement.image else { return nil }
-            var lessons = ""
-            let spacing = ", "
-            for (i, item) in lessonsData.enumerated() {
-                lessons += item.title
-                if i != lessonsData.count - 1 {
-                    lessons += spacing
-                }
-            }
-            var teachingTypes = ""
-            for (i, item) in teachingTypesData.enumerated() {
-                teachingTypes += item.title
-                if i != teachingTypesData.count - 1 {
-                    teachingTypes += spacing
-                }
-            }
+            guard let price = advertisement.price.self, let image = advertisement.image else { return nil }
+            let lessons = advertisement.convertLessonsToString()
+            let teachingTypes = advertisement.convertTeachingTypesToString()
             
             let subsubtitle = SubsubtitleViewModel(title: String(describing: price) + " сом", subtitle:  lessons, subsubtitle: teachingTypes, image: image)
             subsubtitleViewModels.append(subsubtitle)
@@ -89,15 +88,8 @@ extension MainScreenViewModel {
         var subsubtitleViewModels: [SubsubtitleViewModel] = []
         for tutor in tutors {
             
-            guard let name = tutor.name, let lessonsData = tutor.lessons, let image = tutor.image else { return nil }
-            var lessons = ""
-            let spacing = ", "
-            for (i, item) in lessonsData.enumerated() {
-                lessons += item.title
-                if i != lessonsData.count - 1 {
-                    lessons += spacing
-                }
-            }
+            guard let name = tutor.name, let image = tutor.image else { return nil }
+            let lessons = tutor.convertLessonsToString()
             
             let subsubtitle = SubsubtitleViewModel(title: String(describing: name), subtitle:  lessons, image: image)
             subsubtitleViewModels.append(subsubtitle)
@@ -134,7 +126,7 @@ extension MainScreenViewModel {
     
     private func getTutors() -> [TutorData]{
         let tutors: [TutorData] = [
-            TutorData(name: "Алексей Ромашенко", image: Asset.prof.image ,lessons: [.math, .programming]),
+            TutorData(name: "Алексей Ромашенко", image: Asset.prof.image, description: "ОLörem ipsum klimatmat fibid tisos, supöning retopi. Geodögisk ont vifilig. Föder vitigt, gyförat. Egol seminas köns gepåktig timypp. sjdvbvb dbvbdvbv dkbvdbv kjdbvbb jsdvbjbbv sdvbvbbvk", education: "Lörem ipsum klimatmat fibid tisos, supöning retopi. Geodögisk", phoneNumber: "+1234567890", whatsappNumber: "+996704304786", telegramNic: "Kerimkullova", workExperience: "6 лет", location: .chui, teachingLanguages: [.russian, .english], lessons: [.math, .programming], reviews: [ReviewData(assessment: 3)]),
             TutorData(name: "Айдана Касымова", image: Asset.prof1.image ,lessons: [.math]),
             TutorData(name: "Эрмек Токтогулов", image: Asset.womenAvatar.image ,lessons: [.physics]),
             TutorData(name: "Гулназ Садыкова", image: Asset.prof4.image ,lessons: [.biology, .chemistry]),

@@ -22,6 +22,7 @@ class RoundedImageView: UIView {
         imageView.layer.borderWidth = 1.0
         imageView.layer.cornerRadius = min(bounds.width, bounds.height) / 2.0
         imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFill
         addSubview(imageView)
         
         button.setImage(Asset.cameraIcon.image, for: .normal)

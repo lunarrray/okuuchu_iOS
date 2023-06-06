@@ -20,6 +20,7 @@ final class AppCoordinator: Coordinator {
         navigationController.viewControllers.removeAll()
         let mainCoordinator: MainCoordinator = .init(navigationController: navigationController)
         childCoordinators.append(mainCoordinator)
+     
         mainCoordinator.start()
     }
 }

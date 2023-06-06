@@ -36,11 +36,11 @@ class TeacherProfileCoordinator: Coordinator{
         scheduleCoordinator.start()
     }
     
-    func startReviews(){
+    func startReviews(reviews: [ReviewData]){
         let reviewsCoordinator = ReviewsCoordinator(navigationController: navigationController)
         reviewsCoordinator.parentCoordinator = self
         childCoordinators.append(reviewsCoordinator)
-        reviewsCoordinator.start()
+        reviewsCoordinator.openReviews(with: reviews)
     }
     
     func startPersonalAds(){
@@ -50,11 +50,11 @@ class TeacherProfileCoordinator: Coordinator{
         adsCoordinator.start()
     }
     
-    func startRecordedLessons(){
+    func startRecordedLessons(with lessons: [Lesson]){
         let lessonsListCoordinator = LessonsListCoordinator(navigationController: navigationController)
         lessonsListCoordinator.parentCoordinator = self
         childCoordinators.append(lessonsListCoordinator)
-        lessonsListCoordinator.start()
+        lessonsListCoordinator.openLessonsWith(list: lessons)
     }
     
     func childDidFinish(_ childCoordinator: Coordinator) {

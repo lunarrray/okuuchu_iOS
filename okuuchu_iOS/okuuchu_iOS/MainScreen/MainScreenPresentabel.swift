@@ -39,6 +39,7 @@ class MainScreenPresentable: BaseView {
         collectionView.backgroundView = view
         collectionView.alwaysBounceVertical = true
         collectionView.showsVerticalScrollIndicator = false
+        collectionView.allowsSelection = true
         collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: ImageCollectionViewCell.self))
 
         

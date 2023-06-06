@@ -13,6 +13,11 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     private var viewModel: SubsubtitleViewModel?
     
+    override var isSelected: Bool {
+         didSet {
+             contentView.backgroundColor = isSelected ? Asset.textGrayColor.color : .clear
+         }
+     }
 //    var handleActivatingStatusTapAction: (() -> Void)?
 //    var handleDeleteButtonTapAction: (() -> Void)?
     
@@ -31,6 +36,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
     
     func onConfigureView(){
+        
+//        isUserInteractionEnabled = true
         
         imageView.image = Asset.menAvatar.image
         imageView.layer.cornerRadius = 10
@@ -86,13 +93,13 @@ class ImageCollectionViewCell: UICollectionViewCell {
         imageView.snp.makeConstraints{ maker in
             maker.centerX.equalToSuperview()
             maker.top.equalToSuperview().offset(5)
-            maker.width.equalToSuperview().offset(5)
+            maker.width.equalToSuperview()
             maker.height.equalTo(contentView.snp.width)
         }
         
         stackView.snp.makeConstraints{ maker in
             maker.top.equalTo(imageView.snp.bottom).offset(5)
-            maker.width.equalToSuperview().offset(5)
+            maker.width.equalToSuperview()
             maker.height.equalTo(64)
             maker.centerX.equalToSuperview()
 //            maker.bottom.equalToSuperview().offset(5)

@@ -12,8 +12,16 @@ class ReviewsCoordinator: Coordinator {
     }
     
     func start() {
+//        let controller: ReviewsController = .init()
+//        controller.viewModel.coordinator = self
+//        controller.hidesBottomBarWhenPushed = true
+//        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func openReviews(with reviews: [ReviewData]){
         let controller: ReviewsController = .init()
         controller.viewModel.coordinator = self
+        controller.viewModel.allReviews = reviews
         controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }

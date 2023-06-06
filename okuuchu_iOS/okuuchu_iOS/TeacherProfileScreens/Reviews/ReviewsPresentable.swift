@@ -13,11 +13,8 @@ class ReviewsPresentable: BaseView {
     
     override func onConfigureView() {
         backgroundColor = Asset.secondaryBlueBackground.color
-        
-        ratingView.configureWith(rating: 3.2, spacing: 25, starColor: .black)
-        
+                
         ratingLabel.font = .systemFont(ofSize: 32)
-        ratingLabel.text = "3.2"
         
         tableView.register(ReviewCell.self, forCellReuseIdentifier: String(describing: ReviewCell.self))
         
@@ -53,3 +50,12 @@ class ReviewsPresentable: BaseView {
 }
 
 //MARK: - Extension
+
+extension ReviewsPresentable {
+    func setReviewData(rating: Double){
+        
+        ratingLabel.text = String(rating)
+        ratingView.configureWith(rating: rating, spacing: 25, starColor: .black)
+
+    }
+}

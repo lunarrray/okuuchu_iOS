@@ -28,6 +28,7 @@ extension ReviewsTableViewManager: UITableViewDataSource, UITableViewDelegate {
         let reviewerData = reviews[indexPath.row]
         let cellData = TitleSubtitleViewModel(title: reviewerData.reviewer?.name, subtitle: reviewerData.reviewText, image: reviewerData.reviewer?.image)
         
+        cell.selectionStyle = .none
         cell.configureCell(with: cellData, rating: reviewerData.assessment ?? 0)
         return cell
     }

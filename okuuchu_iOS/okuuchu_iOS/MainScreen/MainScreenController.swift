@@ -44,5 +44,7 @@ extension MainScreenController: MainScreenViewModelOutput {
 }
 
 extension MainScreenController: MainScreenCollectionViewDelegate {
-    
+    func selectedCell(at indexPath: IndexPath) {
+        viewModel.cellTapped(at: indexPath)
+    }
 }
