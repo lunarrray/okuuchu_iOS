@@ -16,7 +16,7 @@ class ReviewsController: VMController<ReviewsPresentable, ReviewsViewModelInput>
         content.tableView.dataSource = tableViewManager
         content.tableView.delegate = tableViewManager
         
-        viewModel.getReviewsDataFromModel()
+        viewModel.getData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -38,7 +38,8 @@ class ReviewsController: VMController<ReviewsPresentable, ReviewsViewModelInput>
 //MARK: - Extension
 
 extension ReviewsController: ReviewsViewModelOutput {
-    func customizeOutput(with data: [ReviewData]) {
+    func customizeOutput(with data: [ReviewData], rating: Double) {
+        content.setReviewData(rating: rating)
         tableViewManager?.setTableViewData(reviews: data, tableView: content.tableView)
     }
     

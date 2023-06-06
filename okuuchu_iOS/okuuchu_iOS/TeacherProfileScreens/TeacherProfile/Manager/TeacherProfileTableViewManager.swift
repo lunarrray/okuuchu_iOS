@@ -5,7 +5,7 @@ protocol TeacherProfileTableViewDelegate: AnyObject {
     func selectedMenuItem(_ menuItem: Menu)
 }
 
-class TeacherProfileTableViewManager: NSObject {
+final class TeacherProfileTableViewManager: NSObject {
     weak var delegate: TeacherProfileTableViewDelegate?
     private var menuData: [Menu] = [.schedule, .recordedLessons, .updatePersonalInfo, .ads, .reviews, .information]
 }

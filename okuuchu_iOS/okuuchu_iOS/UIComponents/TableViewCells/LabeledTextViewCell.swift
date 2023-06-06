@@ -68,7 +68,8 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
         contentView.backgroundColor = .clear
     }
     
-    override func configureCell(with cellData: TitleSubtitleViewModel) {
+    func configureCell(with cellData: TitleSubtitleViewModel, textViewBackgroundColor: UIColor = Asset.white.color){
+        
         self.viewModel = cellData
         
         switch cellData.subTextType {
@@ -82,9 +83,27 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
         default: break
         }
         
-        labeledView.configureWith(cellData)
+        labeledView.configureWith(cellData, textBackgroundColor: textViewBackgroundColor)
         
     }
+    
+//    override func configureCell(with cellData: TitleSubtitleViewModel) {
+//        self.viewModel = cellData
+//
+//        switch cellData.subTextType {
+//        case .selectingSeveral:
+//            activateAddButton()
+//        case .phoneNumber:
+//            labeledView.textView.keyboardType = .phonePad
+//        case .date:
+//            labeledView.textView.inputView = datePickerView
+//            labeledView.textView.inputAccessoryView = toolBar
+//        default: break
+//        }
+//
+//        labeledView.configureWith(cellData)
+//
+//    }
 
 }
 
@@ -114,22 +133,18 @@ extension LabeledTextViewCell {
         textViewHeightConstraint?.update(offset: newConstraint)
     }
     
-//    func setTextViewHeight(height)
+    func enableTextViewEditing(){
+        labeledView.textView.isUserInteractionEnabled = true
+    }
+    
+    func nonEditableTextView(){
+        labeledView.nonEditableTextView()
+    }
+    
+    func setTextViewColor(color: UIColor){
+        labeledView.textView.textColor = color
+    }
+    
+
 }
 
-//extension LabeledTextViewCell: UITextViewDelegate {
-//    func textViewDidChange(_ textView: UITextView) {
-//
-//        let size = textView.sizeThatFits(CGSize(width: textView.frame.width, height: CGFloat.greatestFiniteMagnitude))
-//        let newHeight = size.height
-//
-//        textViewHeightConstraint?.update(offset: newHeight)
-//
-//        if let tableView = superview as? UITableView, let indexPath = tableView.indexPath(for: self) {
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
-//            tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//        }
-//    }
-    
-//}

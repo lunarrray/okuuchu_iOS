@@ -10,7 +10,9 @@ final class TabBarController: UITabBarController {
     private let mainScreenCoordinator: MainScreenCoordinator = .init(navigationController: .init())
     private let savedAdsCoordinator: SavedAdsCoordinator = .init(navigationController: .init())
     private let addAdvertisementCoordinator: AddAdvertisementCoordinator = .init(navigationController: .init())
+    private let lessonsListCoordinator: LessonsListCoordinator = .init(navigationController: .init())
     private let teacherProfileCoordinator: TeacherProfileCoordinator = .init(navigationController: .init())
+
     
     //MARK: - Lifecycle
     
@@ -28,6 +30,7 @@ final class TabBarController: UITabBarController {
             mainScreenCoordinator,
             savedAdsCoordinator,
             addAdvertisementCoordinator,
+            lessonsListCoordinator,
             teacherProfileCoordinator
         ]
         
@@ -38,17 +41,20 @@ final class TabBarController: UITabBarController {
         let mainScreenController = mainScreenCoordinator.navigationController
         let savedAdsController = savedAdsCoordinator.navigationController
         let addAdvertisementController = addAdvertisementCoordinator.navigationController
+        let lessonsListController = lessonsListCoordinator.navigationController
         let teacherProfileController = teacherProfileCoordinator.navigationController
         
         mainScreenController.tabBarItem = tabBarItemBuilder(title: "", icon: Asset.homeIcon.image, selectedIcon: Asset.selectedHomeIcon.image)
         savedAdsController.tabBarItem = tabBarItemBuilder(title: "", icon: Asset.savedItemsIcon.image, selectedIcon: Asset.selectedSavedItemsIcon.image)
         addAdvertisementController.tabBarItem = tabBarItemBuilder(title: "", icon: Asset.addIcon.image, selectedIcon: nil)
+        lessonsListController.tabBarItem = tabBarItemBuilder(title: "", icon: Asset.playVideo.image, selectedIcon: Asset.selectedPlayVideo.image)
         teacherProfileController.tabBarItem = tabBarItemBuilder(title: "", icon: Asset.avatarIcon.image, selectedIcon: Asset.selectedAvatarIcon.image)
         
         viewControllers = [
             mainScreenController,
             savedAdsController,
             addAdvertisementController,
+            lessonsListController,
             teacherProfileController
         ]
         

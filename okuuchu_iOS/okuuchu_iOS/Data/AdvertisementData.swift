@@ -29,4 +29,31 @@ class AdvertisementData {
         self.price = price
         self.status = status
     }
+    
+    func convertLessonsToString() -> String {
+        guard let lessons =  lessons else { return "" }
+        var text = ""
+        let spacing = ", "
+        for (i, lesson) in lessons.enumerated() {
+            text += lesson.title
+            if i != lessons.count - 1 {
+                text += spacing
+            }
+        }
+        return text
+    }
+    
+    func convertTeachingTypesToString() -> String {
+        guard let teachingTypes =  teachingTypes else { return "" }
+        var text = ""
+        let spacing = ", "
+        for (i, teachingType) in teachingTypes.enumerated() {
+            text += teachingType.title
+            if i != teachingTypes.count - 1 {
+                text += spacing
+            }
+        }
+        
+        return text
+    }
 }

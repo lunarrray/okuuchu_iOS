@@ -19,21 +19,14 @@ final class TeacherProfilePresentable: PrimaryView{
         super.onConfigureView()
         super.setBlueWithLeftTopBalls()
         
-        nameLabel.text = "Алиса Иванова"
         nameLabel.font = .systemFont(ofSize: 25)
         nameLabel.textAlignment = .left
         nameLabel.textColor = Asset.normalTextColor.color
         
         avatarImageView.imageView.clipsToBounds = true
         
-        ratingView.configureWith(rating: 3.4, spacing: 25, starColor: Asset.normalTextColor.color)
-        let aboutTeacherData = TitleSubtitleViewModel(title: "Немного о себе", subtitle: "Дорогие друзья, выбранный нами инновационный путь способствует повышению актуальности модели развития. Соображения высшего порядка!")
-        
-        aboutTeacherView.configureWith(aboutTeacherData, textBackgroundColor: Asset.textViewBackground.color)
         aboutTeacherView.nonEditableTextView()
-        
-        let lessonsData = TitleSubtitleViewModel(title: "Предметы", subtitle: "Математика, Программирование")
-        lessonsView.configureWith(lessonsData, textBackgroundColor: Asset.textViewBackground.color)
+
         lessonsView.nonEditableTextView()
         
         tableView.register(TitleCell.self, forCellReuseIdentifier: String(describing: TitleCell.self))
@@ -92,8 +85,20 @@ final class TeacherProfilePresentable: PrimaryView{
         }
         
     }
-    
-    override func onSetupTargets() {
-        super.onSetupTargets()
+}
+
+//MARK: - Extension
+
+extension TeacherProfilePresentable {
+    func setTutorData(name: String, image: UIImage, description: String, lessons: String, rating: Double){
+        
+        nameLabel.text = name
+        avatarImageView.imageView.image = image
+        let aboutTeacherData = TitleSubtitleViewModel(title: "Немного о себе", subtitle: description)
+        aboutTeacherView.configureWith(aboutTeacherData, textBackgroundColor: Asset.textViewBackground.color)
+        let lessonsData = TitleSubtitleViewModel(title: "Предметы", subtitle: lessons)
+        lessonsView.configureWith(lessonsData, textBackgroundColor: Asset.textViewBackground.color)
+        ratingView.configureWith(rating: rating, spacing: 25, starColor: Asset.normalTextColor.color)
+
     }
 }

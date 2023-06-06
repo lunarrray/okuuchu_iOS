@@ -3,6 +3,7 @@ import UIKit
 
 class LoginController: VMController<LoginPresentable, LoginViewModelInput> {
     
+    
     override func onConfigureViewModel() {
         viewModel.output = self
     }

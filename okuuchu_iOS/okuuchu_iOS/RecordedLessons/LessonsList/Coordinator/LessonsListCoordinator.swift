@@ -13,6 +13,13 @@ class LessonsListCoordinator: Coordinator {
     func start() {
         let controller: LessonsListController = .init()
         controller.viewModel.coordinator = self
+        navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func openLessonsWith(list: [Lesson]){
+        let controller: LessonsListController = .init()
+        controller.viewModel.coordinator = self
+        controller.viewModel.lessons = list
         controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
@@ -24,6 +31,12 @@ class LessonsListCoordinator: Coordinator {
         recordedVideosCoordinator.openRecordedVideos(for: subject, id: id)
     }
     
+    func startVideoList(for subject: Lesson) {
+        let videoListCoordinator: VideoListCoordinator = .init(navigationController: navigationController)
+        videoListCoordinator.parentCoordinator = self
+        childCoordinators.append(videoListCoordinator)
+        videoListCoordinator.openVideoList(for: subject)
+    }
     
     func didFinish(){
         parentCoordinator?.childDidFinish(self)

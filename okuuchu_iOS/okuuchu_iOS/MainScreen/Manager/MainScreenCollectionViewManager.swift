@@ -4,7 +4,7 @@ import UIKit
 //MARK: - Protocol
 
 protocol MainScreenCollectionViewDelegate: AnyObject {
-    
+    func selectedCell(at indexPath: IndexPath)
 }
 
 //MARK: - Class
@@ -34,13 +34,19 @@ extension MainScreenCollectionViewManager: UICollectionViewDataSource, UICollect
         }
         
         let advertisement = adsData[indexPath.row]
-                
+        cell.isUserInteractionEnabled = true
+//        cell.backgroundColor = .purple
         cell.configureCell(with: advertisement)
+        
+        
+//        if cell.isSelected {
+//            delegate?.selectedCell(at: indexPath)
+//        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        delegate?.selectedCell(at: indexPath)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
     
@@ -52,6 +58,14 @@ extension MainScreenCollectionViewManager: UICollectionViewDataSource, UICollect
 
         return CGSize(width: width, height: (width + spacing * 5 + stackViewHeight))
     }
+    
+ 
+//    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+    
+    
+
 }
 
 

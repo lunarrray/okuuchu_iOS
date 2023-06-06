@@ -1,5 +1,5 @@
 
-import Foundation
+import UIKit
 
 final class TeacherProfileController: VMController<TeacherProfilePresentable, TeacherProfileViewModelInput> {
     
@@ -17,8 +17,8 @@ final class TeacherProfileController: VMController<TeacherProfilePresentable, Te
         content.tableView.delegate = tableviewManager
         content.tableView.dataSource = tableviewManager
         
-//        viewModel.getDataFromModel()
         tableviewManager?.delegate = self
+        viewModel.getDataFromModel()
         
     }
     
@@ -42,7 +42,8 @@ extension TeacherProfileController: TeacherProfileTableViewDelegate {
 }
 
 extension TeacherProfileController: TeacherProfileViewModelOutput{
-    func customizeOutput(with data: [TitleSubtitleViewModel]) {
-//        tableviewManager?.setData(data, tableView: content.tableView)
+    func customizeOutput(name: String, image: UIImage, description: String, lessons: String, rating: Double) {
+        content.setTutorData(name: name, image: image, description: description, lessons: lessons, rating: rating)
     }
+
 }

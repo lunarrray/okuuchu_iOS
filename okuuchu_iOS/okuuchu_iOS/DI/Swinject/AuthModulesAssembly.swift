@@ -68,6 +68,18 @@ public final class AuthModulesAssembly: Assembly {
         container.autoregister(
             AddAdvertisementViewModelInput.self,
             initializer: AddAdvertisementViewModel.init)
+        
+        container.autoregister(
+            VideoListViewModelInput.self,
+            initializer: VideoListViewModel.init)
+        
+        container.autoregister(
+            VideoInfoViewModelInput.self,
+            initializer: VideoInfoViewModel.init)
+        
+        container.autoregister(
+            TutorAccountViewModelInput.self,
+            initializer: TutorAccountViewModel.init)
     
     }
     

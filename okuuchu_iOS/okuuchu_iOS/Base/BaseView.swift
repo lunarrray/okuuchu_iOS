@@ -26,7 +26,5 @@ open class BaseView: UIView {
     
     func onSetupTargets(){ }
     
-    
-    
 }
 

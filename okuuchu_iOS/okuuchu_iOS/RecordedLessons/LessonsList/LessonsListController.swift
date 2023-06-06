@@ -18,7 +18,7 @@ class LessonsListController: VMController<LessonsListPresentable, LessonsListVie
         
         tableViewManager?.delegate = self
         
-        viewModel.getDataFromModel()
+        viewModel.manageLessons()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
