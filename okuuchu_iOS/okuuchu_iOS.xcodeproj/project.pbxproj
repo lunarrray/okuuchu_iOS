@@ -54,6 +54,11 @@
 		D56238422A2F155800E3271B /* TutorAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238412A2F155800E3271B /* TutorAccountViewModel.swift */; };
 		D56238452A2F3ADE00E3271B /* TutorAccountTutorInfoTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238442A2F3ADE00E3271B /* TutorAccountTutorInfoTableViewManager.swift */; };
 		D56238472A2F3B1E00E3271B /* TutorAccountMenuTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238462A2F3B1E00E3271B /* TutorAccountMenuTableViewManager.swift */; };
+		D562384C2A30BBB400E3271B /* TutorScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562384B2A30BBB400E3271B /* TutorScheduleCoordinator.swift */; };
+		D56238502A31B76100E3271B /* AddReviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562384F2A31B76100E3271B /* AddReviewCoordinator.swift */; };
+		D56238522A31B77700E3271B /* AddReviewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238512A31B77700E3271B /* AddReviewPresentable.swift */; };
+		D56238542A31B78600E3271B /* AddReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238532A31B78600E3271B /* AddReviewController.swift */; };
+		D56238562A31B78D00E3271B /* AddReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238552A31B78D00E3271B /* AddReviewViewModel.swift */; };
 		D5632C512A0E63A200A9302F /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5632C502A0E63A200A9302F /* ReviewCell.swift */; };
 		D5632C572A0EA7D200A9302F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5632C562A0EA7D200A9302F /* User.swift */; };
 		D567813129E985F90035EB11 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D567813029E985F90035EB11 /* Swinject */; };
@@ -200,6 +205,11 @@
 		D56238412A2F155800E3271B /* TutorAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorAccountViewModel.swift; sourceTree = "<group>"; };
 		D56238442A2F3ADE00E3271B /* TutorAccountTutorInfoTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorAccountTutorInfoTableViewManager.swift; sourceTree = "<group>"; };
 		D56238462A2F3B1E00E3271B /* TutorAccountMenuTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorAccountMenuTableViewManager.swift; sourceTree = "<group>"; };
+		D562384B2A30BBB400E3271B /* TutorScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorScheduleCoordinator.swift; sourceTree = "<group>"; };
+		D562384F2A31B76100E3271B /* AddReviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewCoordinator.swift; sourceTree = "<group>"; };
+		D56238512A31B77700E3271B /* AddReviewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewPresentable.swift; sourceTree = "<group>"; };
+		D56238532A31B78600E3271B /* AddReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewController.swift; sourceTree = "<group>"; };
+		D56238552A31B78D00E3271B /* AddReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewModel.swift; sourceTree = "<group>"; };
 		D5632C502A0E63A200A9302F /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		D5632C562A0EA7D200A9302F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D567813D29E995A00035EB11 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -368,8 +378,8 @@
 				D52488D729FB96AA0069A4C8 /* Information */,
 				D562180529FC10C200BCD1A1 /* Schedule */,
 				D54372BE2A0E50B5005EFC2A /* Reviews */,
+				D562384D2A31B73B00E3271B /* AddReview */,
 				D5F626132A0F5E83005746D0 /* PersonalAds */,
-				D56238392A2B154900E3271B /* TutorAccount */,
 			);
 			path = TeacherProfileScreens;
 			sourceTree = "<group>";
@@ -482,6 +492,7 @@
 				D5E5E9D92A1D0F3300575FD2 /* SavedAds */,
 				D5E5E9E32A1D12FA00575FD2 /* AddAvertisement */,
 				D52488D629FB964B0069A4C8 /* TeacherProfileScreens */,
+				D56238482A30BB4300E3271B /* TutorAccount */,
 				D592062F2A151F4100AAC59D /* RecordedLessons */,
 				D51E306829FAC91A0047B6B2 /* SectionsForManager */,
 				D5F626262A138E73005746D0 /* Data */,
@@ -577,7 +588,8 @@
 				D56238412A2F155800E3271B /* TutorAccountViewModel.swift */,
 				D56238432A2F3AC000E3271B /* Manager */,
 			);
-			path = TutorAccount;
+			name = TutorAccount;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D562383A2A2B156900E3271B /* Coordinator */ = {
@@ -595,6 +607,51 @@
 				D56238462A2F3B1E00E3271B /* TutorAccountMenuTableViewManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		D56238482A30BB4300E3271B /* TutorAccount */ = {
+			isa = PBXGroup;
+			children = (
+				D56238392A2B154900E3271B /* TutorAccount */,
+				D56238492A30BB7A00E3271B /* TutorSchedule */,
+			);
+			name = TutorAccount;
+			path = TutorAccount/TutorAccount;
+			sourceTree = "<group>";
+		};
+		D56238492A30BB7A00E3271B /* TutorSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				D562384A2A30BB9400E3271B /* Coordinator */,
+			);
+			path = TutorSchedule;
+			sourceTree = "<group>";
+		};
+		D562384A2A30BB9400E3271B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D562384B2A30BBB400E3271B /* TutorScheduleCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D562384D2A31B73B00E3271B /* AddReview */ = {
+			isa = PBXGroup;
+			children = (
+				D562384E2A31B75200E3271B /* Coordinator */,
+				D56238512A31B77700E3271B /* AddReviewPresentable.swift */,
+				D56238532A31B78600E3271B /* AddReviewController.swift */,
+				D56238552A31B78D00E3271B /* AddReviewViewModel.swift */,
+			);
+			path = AddReview;
+			sourceTree = "<group>";
+		};
+		D562384E2A31B75200E3271B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D562384F2A31B76100E3271B /* AddReviewCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		D567813829E986C40035EB11 /* Application */ = {
@@ -1233,6 +1290,7 @@
 				D5B7D0AA29F7AC19000FB288 /* UpdateTeacherInfoCoordinator.swift in Sources */,
 				D555C9DF2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift in Sources */,
 				D56A757229EE92CD0072BB29 /* RegistrationTwoViewModel.swift in Sources */,
+				D562384C2A30BBB400E3271B /* TutorScheduleCoordinator.swift in Sources */,
 				D5E5E9E82A1D137400575FD2 /* AddAdvertisementPresentable.swift in Sources */,
 				D555C9E22A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift in Sources */,
 				D5F6262E2A13952C005746D0 /* TutorData.swift in Sources */,
@@ -1254,11 +1312,13 @@
 				D5294A8F29F6DA8600CEDA54 /* BaseCell.swift in Sources */,
 				D5E5E9DE2A1D0F7000575FD2 /* SavedAdsPresentable.swift in Sources */,
 				D5B7D0AD29F7C04F000FB288 /* ImageCell.swift in Sources */,
+				D56238502A31B76100E3271B /* AddReviewCoordinator.swift in Sources */,
 				D58EA57929EE8A0100D8F0B0 /* PrimaryView.swift in Sources */,
 				D54D2C4E29FBF6DA00ACE864 /* AboutAppCoordinator.swift in Sources */,
 				D54D2C4629FBD5D600ACE864 /* TitleImageCell.swift in Sources */,
 				D51528FE2A0E513100BA2AA8 /* ReviewsPresentable.swift in Sources */,
 				D567814229E995B30035EB11 /* BaseViewModel.swift in Sources */,
+				D56238562A31B78D00E3271B /* AddReviewViewModel.swift in Sources */,
 				D56A756F29EE907D0072BB29 /* RegistrationTwoController.swift in Sources */,
 				D58EA57429EE87DC00D8F0B0 /* RegistrationOneController.swift in Sources */,
 				D56238422A2F155800E3271B /* TutorAccountViewModel.swift in Sources */,
@@ -1310,6 +1370,7 @@
 				D5E5E9D42A1D0A2F00575FD2 /* MainScreenPresentabel.swift in Sources */,
 				D569F7B729FB97FB00B86598 /* InformationPresentable.swift in Sources */,
 				D56238402A2F154D00E3271B /* TutorAccountController.swift in Sources */,
+				D56238542A31B78600E3271B /* AddReviewController.swift in Sources */,
 				D5ECB2262A164450005A2CC9 /* RecordedVideosTableViewManager.swift in Sources */,
 				D567814029E995AB0035EB11 /* BaseController.swift in Sources */,
 				D551485A2A14E70F009374F3 /* SubsubtitleViewModel.swift in Sources */,
@@ -1322,6 +1383,7 @@
 				D567816329E9A0260035EB11 /* LoginController.swift in Sources */,
 				D550CFA5299A74E100CBD84F /* AppDelegate.swift in Sources */,
 				D5799EEA2A20D29D00052F4E /* VideoInfoViewModel.swift in Sources */,
+				D56238522A31B77700E3271B /* AddReviewPresentable.swift in Sources */,
 				D59AF72D29F1276E004FA0A7 /* TeacherProfileController.swift in Sources */,
 				D567814E29E99AB90035EB11 /* SwinjectServices.swift in Sources */,
 				D562180429FC098B00BCD1A1 /* TextViewWithSeparators.swift in Sources */,

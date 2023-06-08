@@ -6,7 +6,9 @@ import Foundation
 protocol SavedAdsViewModelInput: AnyObject{
     var coordinator: SavedAdsCoordinator? { get set }
     var output: SavedAdsViewModelOutput? { get set }
+    var isSavedAdsMode: Bool? { get set }
     
+    func viewDidDisappear()
     func getSavedAdsDataFromModel()
 }
 
@@ -22,7 +24,7 @@ final class SavedAdsViewModel {
             output?.customizeOutput(with: subsubTitleData)
         }
     }
-    
+    var isSavedAdsMode: Bool? = true
     private var adsData: [AdvertisementData] = []
     private var subsubTitleData: [SubsubtitleViewModel] = []
 }
@@ -45,6 +47,10 @@ extension SavedAdsViewModel: SavedAdsViewModelInput {
         ]
         
         sendConvertedData()
+    }
+    
+    func viewDidDisappear() {
+        coordinator?.didFinish()
     }
     
 }

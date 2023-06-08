@@ -14,10 +14,12 @@ final class ScheduleTableViewManager: NSObject {
     weak var delegate: ScheduleTableViewDelegate?
     private var scheduleData: [TitleSubtitleViewModel] = []
     private var selectedIndexes: Set<Int> = []
+    private var isEditingMode: Bool = true
     
-    func setData(_ scheduleData: [TitleSubtitleViewModel], selectedIndexes: Set<Int>, tableView: UITableView){
+    func setData(_ scheduleData: [TitleSubtitleViewModel], selectedIndexes: Set<Int>, tableView: UITableView, isEditingMode: Bool){
         self.scheduleData = scheduleData
         self.selectedIndexes = selectedIndexes
+        self.isEditingMode = isEditingMode
         tableView.reloadData()
     }
 }
@@ -57,21 +59,22 @@ extension ScheduleTableViewManager: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.selectedCell(at: indexPath)
-        let cell = tableView.cellForRow(at: indexPath)
-        
-        let checkmarkImage = Asset.checkmark.image
-        let checkmarkView = UIImageView(image: checkmarkImage)
-        checkmarkView.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        
-        if cell?.accessoryView == nil {
+        if isEditingMode {
             delegate?.selectedCell(at: indexPath)
-            cell?.accessoryView = checkmarkView
-        } else {
-            delegate?.deselectedCell(at: indexPath)
-            cell?.accessoryView = nil
+            let cell = tableView.cellForRow(at: indexPath)
+            
+            let checkmarkImage = Asset.checkmark.image
+            let checkmarkView = UIImageView(image: checkmarkImage)
+            checkmarkView.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+            
+            if cell?.accessoryView == nil {
+                delegate?.selectedCell(at: indexPath)
+                cell?.accessoryView = checkmarkView
+            } else {
+                delegate?.deselectedCell(at: indexPath)
+                cell?.accessoryView = nil
+            }
         }
-
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

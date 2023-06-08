@@ -128,4 +128,10 @@ extension SchedulePresentable {
         handleSaveButtonAction?()
     }
     
+    func nonEditableView(){
+        addButton.isHidden = true
+        saveButton.isHidden = true
+        navigation.deleteButton.isHidden = true
+    }
+    
 }

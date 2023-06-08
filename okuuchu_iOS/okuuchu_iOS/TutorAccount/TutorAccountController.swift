@@ -63,6 +63,6 @@ extension TutorAccountController: TutorAccountViewModelOutput {
 
 extension TutorAccountController: TutorAccountMenuTableViewDelegate {
     func selectedMenuItem(_ menuItem: Menu) {
-        
+        viewModel.menuItemTapped(menuItem)
     }
 }

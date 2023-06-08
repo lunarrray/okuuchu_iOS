@@ -7,6 +7,7 @@ protocol RecordedVideosViewModelInput{
     var coordinator: RecordedVideosCoordinator? { get set }
     var output: RecordedVideosViewModelOutput? { get set }
     var subject: Lesson? { get set }
+    var isEditingMode: Bool? { get set }
     
     func subjectItemTapped(at index: Int)
     func getRecordedVideosFromModel()
@@ -18,7 +19,7 @@ protocol RecordedVideosViewModelInput{
 }
 
 protocol RecordedVideosViewModelOutput: AnyObject {
-    func customizeOutput(with videos: [TitleSubtitleViewModel])
+    func customizeOutput(with videos: [TitleSubtitleViewModel], isEditingMode: Bool)
 }
 //MARK: - Class
 
@@ -30,6 +31,7 @@ final class RecordedVideosViewModel: NSObject {
         }
     }
     var subject: Lesson?
+    var isEditingMode: Bool?
     private var allVideos: [RecordedVideo] = []
     private var videos: [RecordedVideo] = []
     private var selectedVideos: [RecordedVideo] = []
@@ -145,6 +147,6 @@ extension RecordedVideosViewModel {
             let data = TitleSubtitleViewModel(title: video.title, subtitle: video.description)
             convertedVideos.append(data)
         }
-        output?.customizeOutput(with: convertedVideos)
+        output?.customizeOutput(with: convertedVideos, isEditingMode: isEditingMode ?? true)
     }
 }

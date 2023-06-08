@@ -87,23 +87,23 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
         
     }
     
-//    override func configureCell(with cellData: TitleSubtitleViewModel) {
-//        self.viewModel = cellData
-//
-//        switch cellData.subTextType {
-//        case .selectingSeveral:
-//            activateAddButton()
-//        case .phoneNumber:
-//            labeledView.textView.keyboardType = .phonePad
-//        case .date:
-//            labeledView.textView.inputView = datePickerView
-//            labeledView.textView.inputAccessoryView = toolBar
-//        default: break
-//        }
-//
-//        labeledView.configureWith(cellData)
-//
-//    }
+    override func configureCell(with cellData: TitleSubtitleViewModel) {
+        self.viewModel = cellData
+
+        switch cellData.subTextType {
+        case .selectingSeveral:
+            activateAddButton()
+        case .phoneNumber:
+            labeledView.textView.keyboardType = .phonePad
+        case .date:
+            labeledView.textView.inputView = datePickerView
+            labeledView.textView.inputAccessoryView = toolBar
+        default: break
+        }
+
+        labeledView.configureWith(cellData)
+
+    }
 
 }
 
@@ -122,7 +122,7 @@ extension LabeledTextViewCell {
     }
     
     func setTextViewDelegate(delegate: UITextViewDelegate) {
-        labeledView.textView.delegate = delegate
+        labeledView.setTextViewDelegate(delegate: delegate)
     }
     
     @objc func doneButtonTapped(){

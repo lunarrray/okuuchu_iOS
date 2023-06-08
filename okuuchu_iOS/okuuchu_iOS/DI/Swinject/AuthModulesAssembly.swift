@@ -80,6 +80,10 @@ public final class AuthModulesAssembly: Assembly {
         container.autoregister(
             TutorAccountViewModelInput.self,
             initializer: TutorAccountViewModel.init)
+        
+        container.autoregister(
+            AddReviewViewModelInput.self,
+            initializer: AddReviewViewModel.init)
     
     }
     

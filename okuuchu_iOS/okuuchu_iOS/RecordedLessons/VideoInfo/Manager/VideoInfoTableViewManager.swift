@@ -30,7 +30,6 @@ extension VideoInfoTableViewManager: UITableViewDataSource, UITableViewDelegate 
         cell.configureCell(with: currentData)
         cell.enableTextViewEditing()
         cell.setTextViewColor(color: Asset.normalTextColor.color)
-//        cell.setTextViewAlignment(.left)
         cell.selectionStyle = .none
 
         

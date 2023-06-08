@@ -69,6 +69,7 @@ internal enum Asset {
   internal static let kyrgyz = ImageAsset(name: "kyrgyz")
   internal static let kyrgyzLiterature = ImageAsset(name: "kyrgyzLiterature")
   internal static let logoImage = ImageAsset(name: "logoImage")
+  internal static let logoWithoutLabel = ImageAsset(name: "logoWithoutLabel")
   internal static let logoutIcon = ImageAsset(name: "logoutIcon")
   internal static let math = ImageAsset(name: "math")
   internal static let messageIcon = ImageAsset(name: "messageIcon")

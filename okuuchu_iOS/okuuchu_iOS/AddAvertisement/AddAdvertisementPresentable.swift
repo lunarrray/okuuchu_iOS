@@ -8,7 +8,7 @@ class AddAdvertisementPresentable: BaseView {
     struct Navigation {
         let cancelButton: UIBarButtonItem = .init(image: Asset.cancelIcon.image.withTintColor(Asset.normalTextColor.color, renderingMode: .alwaysOriginal))
     }
-    
+
     let navigation: Navigation = .init()
     private let addButton: PrimaryButton = .init()
 

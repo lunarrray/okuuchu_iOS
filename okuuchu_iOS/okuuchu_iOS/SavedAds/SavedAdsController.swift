@@ -22,12 +22,17 @@ class SavedAdsController: VMController<SavedAdsPresesntable, SavedAdsViewModelIn
         viewModel.getSavedAdsDataFromModel()
     }
     
-    //MARK: - Override methods
-    
-    override func onConfigureController() {
-        navigationItem.title = "Сохраненные обьявления"
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if isMovingFromParent {
+            viewModel.viewDidDisappear()
+        }
     }
     
+    //MARK: - Override methods
+    
+ 
     override func onConfigureViewModel() {
         viewModel.output = self
     }

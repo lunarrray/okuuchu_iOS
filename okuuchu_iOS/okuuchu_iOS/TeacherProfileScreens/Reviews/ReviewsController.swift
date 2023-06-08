@@ -27,10 +27,16 @@ class ReviewsController: VMController<ReviewsPresentable, ReviewsViewModelInput>
     
     override func onConfigureController() {
         navigationItem.title = "Отзывы"
+        navigationItem.rightBarButtonItem = content.navigation.addButton
     }
     
     override func onConfigureViewModel() {
         viewModel.output = self
+    }
+    
+    override func onConfigureActions() {
+        content.handleAddButtonTapAction = viewModel.addReview
+
     }
 
 }
@@ -38,8 +44,8 @@ class ReviewsController: VMController<ReviewsPresentable, ReviewsViewModelInput>
 //MARK: - Extension
 
 extension ReviewsController: ReviewsViewModelOutput {
-    func customizeOutput(with data: [ReviewData], rating: Double) {
-        content.setReviewData(rating: rating)
+    func customizeOutput(with data: [ReviewData], rating: Double, isAddingReviewMode: Bool) {
+        content.setReviewData(rating: rating, isAddingReviewMode: isAddingReviewMode)
         tableViewManager?.setTableViewData(reviews: data, tableView: content.tableView)
     }
     

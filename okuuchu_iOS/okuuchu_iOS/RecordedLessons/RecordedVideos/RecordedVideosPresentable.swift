@@ -115,4 +115,9 @@ extension RecordedVideoPresentable{
             isSelectiongMode = true
         }
     }
+    
+    func nonEditableView(){
+        addButton.isHidden = true
+        navigation.selectButton.isHidden = true
+    }
 }
