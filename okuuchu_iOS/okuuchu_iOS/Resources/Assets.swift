@@ -102,6 +102,7 @@ internal enum Asset {
   internal static let lessonImage1 = ImageAsset(name: "lessonImage1")
   internal static let lessonImage2 = ImageAsset(name: "lessonImage2")
   internal static let mainIcon = ImageAsset(name: "mainIcon")
+  internal static let mathImage = ImageAsset(name: "mathImage")
   internal static let menAvatar = ImageAsset(name: "menAvatar")
   internal static let prof = ImageAsset(name: "prof")
   internal static let prof1 = ImageAsset(name: "prof1")
