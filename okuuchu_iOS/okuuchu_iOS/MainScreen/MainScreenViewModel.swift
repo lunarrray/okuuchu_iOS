@@ -60,7 +60,8 @@ extension MainScreenViewModel: MainScreenViewModelInput {
         let index = indexPath.row
         
         if isAdsData {
-            
+            let advertisement = adsData[index]
+            coordinator?.startDetailAd(for: advertisement)
         } else {
             let tutor = tutorsData[index]
             coordinator?.startVideoTutor(for: tutor)

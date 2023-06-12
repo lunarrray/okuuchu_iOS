@@ -32,4 +32,12 @@ class MainScreenCoordinator: Coordinator {
         }
     }
     
+    
+    func startDetailAd(for advertisement: AdvertisementData){
+        let detailAdCoordinator: DetailAdCoordinator = .init(navigationController: navigationController)
+        detailAdCoordinator.parentCoordinator = self
+        childCoordinators.append(detailAdCoordinator)
+        detailAdCoordinator.openDetailAdvertisement(ad: advertisement)
+    }
+    
 }

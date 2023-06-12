@@ -85,6 +85,10 @@ public final class AuthModulesAssembly: Assembly {
             AddReviewViewModelInput.self,
             initializer: AddReviewViewModel.init)
     
+        container.autoregister(
+            DetailAdViewModelInput.self,
+            initializer: DetailAdViewModel.init)
+    
     }
     
     

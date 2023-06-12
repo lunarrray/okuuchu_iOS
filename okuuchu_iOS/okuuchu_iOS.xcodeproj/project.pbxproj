@@ -35,6 +35,10 @@
 		D54D2C5029FBF74700ACE864 /* AboutAppPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D2C4F29FBF74700ACE864 /* AboutAppPresentable.swift */; };
 		D54D2C5229FBF75F00ACE864 /* AboutAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D2C5129FBF75F00ACE864 /* AboutAppController.swift */; };
 		D54D2C5429FBF76A00ACE864 /* AboutAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D2C5329FBF76A00ACE864 /* AboutAppViewModel.swift */; };
+		D54E2E802A3704DD00FEDD0E /* DetailAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E2E7F2A3704DD00FEDD0E /* DetailAdCoordinator.swift */; };
+		D54E2E822A3704F000FEDD0E /* DetailAdPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E2E812A3704F000FEDD0E /* DetailAdPresentable.swift */; };
+		D54E2E842A3704FB00FEDD0E /* DetailAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E2E832A3704FB00FEDD0E /* DetailAdController.swift */; };
+		D54E2E862A37050300FEDD0E /* DetailAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E2E852A37050300FEDD0E /* DetailAdViewModel.swift */; };
 		D550CFA5299A74E100CBD84F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D550CFA4299A74E100CBD84F /* AppDelegate.swift */; };
 		D550CFAE299A74E200CBD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAD299A74E200CBD84F /* Assets.xcassets */; };
 		D550CFB1299A74E200CBD84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAF299A74E200CBD84F /* LaunchScreen.storyboard */; };
@@ -184,6 +188,10 @@
 		D54D2C4F29FBF74700ACE864 /* AboutAppPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppPresentable.swift; sourceTree = "<group>"; };
 		D54D2C5129FBF75F00ACE864 /* AboutAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppController.swift; sourceTree = "<group>"; };
 		D54D2C5329FBF76A00ACE864 /* AboutAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewModel.swift; sourceTree = "<group>"; };
+		D54E2E7F2A3704DD00FEDD0E /* DetailAdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdCoordinator.swift; sourceTree = "<group>"; };
+		D54E2E812A3704F000FEDD0E /* DetailAdPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdPresentable.swift; sourceTree = "<group>"; };
+		D54E2E832A3704FB00FEDD0E /* DetailAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdController.swift; sourceTree = "<group>"; };
+		D54E2E852A37050300FEDD0E /* DetailAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdViewModel.swift; sourceTree = "<group>"; };
 		D550CFA1299A74E100CBD84F /* okuuchu_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = okuuchu_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D550CFA4299A74E100CBD84F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D550CFAD299A74E200CBD84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -461,6 +469,25 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		D54E2E7D2A3704B200FEDD0E /* DetailAdvertisement */ = {
+			isa = PBXGroup;
+			children = (
+				D54E2E7E2A3704BC00FEDD0E /* Coordinator */,
+				D54E2E812A3704F000FEDD0E /* DetailAdPresentable.swift */,
+				D54E2E832A3704FB00FEDD0E /* DetailAdController.swift */,
+				D54E2E852A37050300FEDD0E /* DetailAdViewModel.swift */,
+			);
+			path = DetailAdvertisement;
+			sourceTree = "<group>";
+		};
+		D54E2E7E2A3704BC00FEDD0E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D54E2E7F2A3704DD00FEDD0E /* DetailAdCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		D550CF98299A74E000CBD84F = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +518,7 @@
 				D5E5E9CF2A1D09B400575FD2 /* MainScreen */,
 				D5E5E9D92A1D0F3300575FD2 /* SavedAds */,
 				D5E5E9E32A1D12FA00575FD2 /* AddAvertisement */,
+				D54E2E7D2A3704B200FEDD0E /* DetailAdvertisement */,
 				D52488D629FB964B0069A4C8 /* TeacherProfileScreens */,
 				D56238482A30BB4300E3271B /* TutorAccount */,
 				D592062F2A151F4100AAC59D /* RecordedLessons */,
@@ -1324,6 +1352,7 @@
 				D56238422A2F155800E3271B /* TutorAccountViewModel.swift in Sources */,
 				D5ECB21D2A1643FD005A2CC9 /* RecordedVideosCoordinator.swift in Sources */,
 				D54D2C5029FBF74700ACE864 /* AboutAppPresentable.swift in Sources */,
+				D54E2E822A3704F000FEDD0E /* DetailAdPresentable.swift in Sources */,
 				D5ECB2182A163CF3005A2CC9 /* LessonsListTableViewManager.swift in Sources */,
 				D55A65AC29EDA267001BBDAC /* UIStackView+Extension.swift in Sources */,
 				D5E5E9E02A1D0F7D00575FD2 /* SavedAdsController.swift in Sources */,
@@ -1333,6 +1362,7 @@
 				D588E8052A0BB66C0039D9C8 /* ScheduleTableViewManager.swift in Sources */,
 				D5ECB2232A164437005A2CC9 /* RecordedVideosViewModel.swift in Sources */,
 				D5294A8B29F1629400CEDA54 /* RoundedTableView.swift in Sources */,
+				D54E2E862A37050300FEDD0E /* DetailAdViewModel.swift in Sources */,
 				D562180A29FC117D00BCD1A1 /* SchedulePresentable.swift in Sources */,
 				D50FB38B2A1A941A0093513A /* AddVideoTableViewManager.swift in Sources */,
 				D5799EFB2A20E0AC00052F4E /* VideoListTableViewManager.swift in Sources */,
@@ -1364,8 +1394,10 @@
 				D567814A29E999DA0035EB11 /* AuthModulesAssembly.swift in Sources */,
 				D5294A8629F1557800CEDA54 /* LabeledTextView.swift in Sources */,
 				D51E306529FA6D820047B6B2 /* UpdateTeacherInfoTableViewManager.swift in Sources */,
+				D54E2E842A3704FB00FEDD0E /* DetailAdController.swift in Sources */,
 				D5E5E9D22A1D0A2400575FD2 /* MainScreenCoordinator.swift in Sources */,
 				D588E80A2A0CA6AC0039D9C8 /* SubtitleCell.swift in Sources */,
+				D54E2E802A3704DD00FEDD0E /* DetailAdCoordinator.swift in Sources */,
 				D567815829E99E110035EB11 /* Coordinator.swift in Sources */,
 				D5E5E9D42A1D0A2F00575FD2 /* MainScreenPresentabel.swift in Sources */,
 				D569F7B729FB97FB00B86598 /* InformationPresentable.swift in Sources */,
