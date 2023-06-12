@@ -110,7 +110,7 @@ extension MainScreenViewModel {
     
     private func getAds() -> [AdvertisementData]{
         let ads: [AdvertisementData] = [
-            AdvertisementData(id: 11, lessons: [.math], teachingTypes: [.online], image: Asset.lessonImage1.image, price: 300, status: .active),
+            AdvertisementData(id: 11, tutor: TutorData(name: "Мария Иванова", image: Asset.womenAvatar.image, phoneNumber: "+996990808080"), title: "Английский язык для начальных классов", lessons: [.math], teachingLanguages: [.russian, .english], teachingTypes: [.online], location: .chui, description: "Lörem ipsum klimatmat fibid tisos, supöning retopi. Geodögisk ont vifilig. Föder vitigt, gyförat. Egol seminas köns gepåktig timypp. ksjbvbs sdvkbsvbs hdvbsdvbsd hdvudv hdvuv udgviugsv iudvugv ohdviuh hdvugv oispo [idf paojhf", image: Asset.mathImage.image, whatsappNumber: "+996704304786", telegramNic: "Kerimkullova", price: 300, status: .active),
             AdvertisementData(id: 12, lessons: [.programming], teachingTypes: [.online], image: Asset.menAvatar.image, price: 400, status: .active),
             AdvertisementData(id: 13, lessons: [.german], teachingTypes: [.online, .offline, .group], image: Asset.womenAvatar.image, price: 370, status: .inactive),
             AdvertisementData(id: 14, lessons: [.programming, .math], teachingTypes: [.online], image: Asset.lessonImage2.image, price: 300, status: .active),

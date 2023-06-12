@@ -40,6 +40,7 @@
 		D54E2E842A3704FB00FEDD0E /* DetailAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E2E832A3704FB00FEDD0E /* DetailAdController.swift */; };
 		D54E2E862A37050300FEDD0E /* DetailAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E2E852A37050300FEDD0E /* DetailAdViewModel.swift */; };
 		D54E2E882A3749A700FEDD0E /* CellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E2E872A3749A700FEDD0E /* CellButton.swift */; };
+		D54E2E8A2A374E1800FEDD0E /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54E2E892A374E1800FEDD0E /* HorizontalCell.swift */; };
 		D550CFA5299A74E100CBD84F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D550CFA4299A74E100CBD84F /* AppDelegate.swift */; };
 		D550CFAE299A74E200CBD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAD299A74E200CBD84F /* Assets.xcassets */; };
 		D550CFB1299A74E200CBD84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAF299A74E200CBD84F /* LaunchScreen.storyboard */; };
@@ -48,6 +49,7 @@
 		D555C9E22A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555C9E12A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift */; };
 		D55A65AC29EDA267001BBDAC /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */; };
 		D55A65AE29EDA80E001BBDAC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */; };
+		D561CDAA2A3752AA00B6DA4C /* DetailAdTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D561CDA92A3752AA00B6DA4C /* DetailAdTableViewManager.swift */; };
 		D562180429FC098B00BCD1A1 /* TextViewWithSeparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562180329FC098B00BCD1A1 /* TextViewWithSeparators.swift */; };
 		D562180829FC111C00BCD1A1 /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562180729FC111C00BCD1A1 /* ScheduleCoordinator.swift */; };
 		D562180A29FC117D00BCD1A1 /* SchedulePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562180929FC117D00BCD1A1 /* SchedulePresentable.swift */; };
@@ -59,7 +61,6 @@
 		D56238422A2F155800E3271B /* TutorAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238412A2F155800E3271B /* TutorAccountViewModel.swift */; };
 		D56238452A2F3ADE00E3271B /* TutorAccountTutorInfoTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238442A2F3ADE00E3271B /* TutorAccountTutorInfoTableViewManager.swift */; };
 		D56238472A2F3B1E00E3271B /* TutorAccountMenuTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238462A2F3B1E00E3271B /* TutorAccountMenuTableViewManager.swift */; };
-		D562384C2A30BBB400E3271B /* TutorScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562384B2A30BBB400E3271B /* TutorScheduleCoordinator.swift */; };
 		D56238502A31B76100E3271B /* AddReviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562384F2A31B76100E3271B /* AddReviewCoordinator.swift */; };
 		D56238522A31B77700E3271B /* AddReviewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238512A31B77700E3271B /* AddReviewPresentable.swift */; };
 		D56238542A31B78600E3271B /* AddReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56238532A31B78600E3271B /* AddReviewController.swift */; };
@@ -194,6 +195,7 @@
 		D54E2E832A3704FB00FEDD0E /* DetailAdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdController.swift; sourceTree = "<group>"; };
 		D54E2E852A37050300FEDD0E /* DetailAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdViewModel.swift; sourceTree = "<group>"; };
 		D54E2E872A3749A700FEDD0E /* CellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButton.swift; sourceTree = "<group>"; };
+		D54E2E892A374E1800FEDD0E /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
 		D550CFA1299A74E100CBD84F /* okuuchu_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = okuuchu_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D550CFA4299A74E100CBD84F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D550CFAD299A74E200CBD84F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		D555C9E12A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsCollectionViewManager.swift; sourceTree = "<group>"; };
 		D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		D561CDA92A3752AA00B6DA4C /* DetailAdTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdTableViewManager.swift; sourceTree = "<group>"; };
 		D562180329FC098B00BCD1A1 /* TextViewWithSeparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithSeparators.swift; sourceTree = "<group>"; };
 		D562180729FC111C00BCD1A1 /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
 		D562180929FC117D00BCD1A1 /* SchedulePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePresentable.swift; sourceTree = "<group>"; };
@@ -215,7 +218,6 @@
 		D56238412A2F155800E3271B /* TutorAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorAccountViewModel.swift; sourceTree = "<group>"; };
 		D56238442A2F3ADE00E3271B /* TutorAccountTutorInfoTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorAccountTutorInfoTableViewManager.swift; sourceTree = "<group>"; };
 		D56238462A2F3B1E00E3271B /* TutorAccountMenuTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorAccountMenuTableViewManager.swift; sourceTree = "<group>"; };
-		D562384B2A30BBB400E3271B /* TutorScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorScheduleCoordinator.swift; sourceTree = "<group>"; };
 		D562384F2A31B76100E3271B /* AddReviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewCoordinator.swift; sourceTree = "<group>"; };
 		D56238512A31B77700E3271B /* AddReviewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewPresentable.swift; sourceTree = "<group>"; };
 		D56238532A31B78600E3271B /* AddReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewController.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				D54E2E812A3704F000FEDD0E /* DetailAdPresentable.swift */,
 				D54E2E832A3704FB00FEDD0E /* DetailAdController.swift */,
 				D54E2E852A37050300FEDD0E /* DetailAdViewModel.swift */,
+				D54E2E8B2A37526900FEDD0E /* Manager */,
 			);
 			path = DetailAdvertisement;
 			sourceTree = "<group>";
@@ -488,6 +491,14 @@
 				D54E2E7F2A3704DD00FEDD0E /* DetailAdCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D54E2E8B2A37526900FEDD0E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D561CDA92A3752AA00B6DA4C /* DetailAdTableViewManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		D550CF98299A74E000CBD84F = {
@@ -643,26 +654,9 @@
 			isa = PBXGroup;
 			children = (
 				D56238392A2B154900E3271B /* TutorAccount */,
-				D56238492A30BB7A00E3271B /* TutorSchedule */,
 			);
 			name = TutorAccount;
 			path = TutorAccount/TutorAccount;
-			sourceTree = "<group>";
-		};
-		D56238492A30BB7A00E3271B /* TutorSchedule */ = {
-			isa = PBXGroup;
-			children = (
-				D562384A2A30BB9400E3271B /* Coordinator */,
-			);
-			path = TutorSchedule;
-			sourceTree = "<group>";
-		};
-		D562384A2A30BB9400E3271B /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				D562384B2A30BBB400E3271B /* TutorScheduleCoordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		D562384D2A31B73B00E3271B /* AddReview */ = {
@@ -991,6 +985,7 @@
 				D54D2C4529FBD5D600ACE864 /* TitleImageCell.swift */,
 				D5632C502A0E63A200A9302F /* ReviewCell.swift */,
 				D5ECB2272A1679A5005A2CC9 /* TitleSubtitleCell.swift */,
+				D54E2E892A374E1800FEDD0E /* HorizontalCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -1311,6 +1306,7 @@
 				D567816129E9A01B0035EB11 /* LoginPresentable.swift in Sources */,
 				D562180E29FC119800BCD1A1 /* ScheduleViewModel.swift in Sources */,
 				D59AF72F29F1277F004FA0A7 /* TeacherProfileViewModel.swift in Sources */,
+				D561CDAA2A3752AA00B6DA4C /* DetailAdTableViewManager.swift in Sources */,
 				D567814C29E99A5A0035EB11 /* ModulesAssembly.swift in Sources */,
 				D562180C29FC118F00BCD1A1 /* ScheduleController.swift in Sources */,
 				D592063A2A1520A100AAC59D /* LessonsListViewModel.swift in Sources */,
@@ -1322,7 +1318,6 @@
 				D5B7D0AA29F7AC19000FB288 /* UpdateTeacherInfoCoordinator.swift in Sources */,
 				D555C9DF2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift in Sources */,
 				D56A757229EE92CD0072BB29 /* RegistrationTwoViewModel.swift in Sources */,
-				D562384C2A30BBB400E3271B /* TutorScheduleCoordinator.swift in Sources */,
 				D5E5E9E82A1D137400575FD2 /* AddAdvertisementPresentable.swift in Sources */,
 				D555C9E22A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift in Sources */,
 				D5F6262E2A13952C005746D0 /* TutorData.swift in Sources */,
@@ -1425,6 +1420,7 @@
 				D562180429FC098B00BCD1A1 /* TextViewWithSeparators.swift in Sources */,
 				D5294A9229F6DC7900CEDA54 /* TitleSubtitleViewModel.swift in Sources */,
 				D51529002A0E513D00BA2AA8 /* ReviewsController.swift in Sources */,
+				D54E2E8A2A374E1800FEDD0E /* HorizontalCell.swift in Sources */,
 				D5799EED2A20D2F900052F4E /* VideoInfoTableViewManager.swift in Sources */,
 				D569F7BB29FB981500B86598 /* InformationViewModel.swift in Sources */,
 				D5ECB21F2A164415005A2CC9 /* RecordedVideosPresentable.swift in Sources */,

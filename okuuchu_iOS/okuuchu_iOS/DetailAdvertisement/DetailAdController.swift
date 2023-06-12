@@ -5,11 +5,18 @@ final class DetailAdController: VMController<DetailAdPresentable, DetailAdViewMo
     
     //MARK: - Properties
     
+    private var tableViewManager: DetailAdTableViewManager?
     
     //MARK: - Life cycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        tableViewManager = DetailAdTableViewManager()
         
+        content.tableView.dataSource = tableViewManager
+        content.tableView.delegate = tableViewManager
+        
+        viewModel.prepareData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -31,14 +38,17 @@ final class DetailAdController: VMController<DetailAdPresentable, DetailAdViewMo
     }
     
     override func onConfigureActions() {
-        
+        content.handleCallButtonTapAction = viewModel.callTutor
+        content.handleWhatsappTapAction = viewModel.whatsappTutor
+        content.handleTelegramTapAction = viewModel.telegramTutor
     }
 }
 
 //MARK: - Extension
 
 extension DetailAdController: DetailAdViewModelOutput {
-    func customizeOutput() {
-        
+    func customizeOutput(detailData: [TitleSubtitleViewModel], image: UIImage, priceText: String, titleText: String, tutorText: String, tutorImage: UIImage, descriptionText: String) {
+        content.setContentData(image: image, priceText: priceText, titleText: titleText, tutorText: tutorText, tutorImage: tutorImage, descriptionText: descriptionText)
+        tableViewManager?.setData(detailData, tableView: content.tableView)
     }
 }
