@@ -16,7 +16,8 @@ class MainScreenController: VMController<MainScreenPresentable, MainScreenViewMo
         content.collectionView.dataSource = collectionViewManager
         content.collectionView.delegate = collectionViewManager
         collectionViewManager?.delegate = self
-        viewModel.getActiveAdsDataFromModel()
+        viewModel.getDataFromModel()
+//        viewModel.getActiveAdsDataFromModel()
         
     }
 
@@ -32,6 +33,7 @@ class MainScreenController: VMController<MainScreenPresentable, MainScreenViewMo
     
     override func onConfigureActions() {
         content.handleSegmentedControlValueChanged = viewModel.toggleCollectionView
+        content.searchField.delegate = self
     }
 }
 
@@ -47,4 +49,23 @@ extension MainScreenController: MainScreenCollectionViewDelegate {
     func selectedCell(at indexPath: IndexPath) {
         viewModel.cellTapped(at: indexPath)
     }
+}
+
+extension MainScreenController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if let text = textField.text {
+            if text != ""{
+                viewModel.performSearch(with: text)
+            }
+        }
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text == ""{
+            viewModel.getDataFromModel()
+        }
+    }
+
 }

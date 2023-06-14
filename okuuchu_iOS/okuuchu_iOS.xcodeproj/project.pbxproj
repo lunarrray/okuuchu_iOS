@@ -50,6 +50,8 @@
 		D55A65AC29EDA267001BBDAC /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */; };
 		D55A65AE29EDA80E001BBDAC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */; };
 		D561CDAA2A3752AA00B6DA4C /* DetailAdTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D561CDA92A3752AA00B6DA4C /* DetailAdTableViewManager.swift */; };
+		D561CDAE2A39DE2100B6DA4C /* RegistrationOneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D561CDAD2A39DE2100B6DA4C /* RegistrationOneCoordinator.swift */; };
+		D561CDB22A39DE8C00B6DA4C /* RegistrationTwoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D561CDB12A39DE8C00B6DA4C /* RegistrationTwoCoordinator.swift */; };
 		D562180429FC098B00BCD1A1 /* TextViewWithSeparators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562180329FC098B00BCD1A1 /* TextViewWithSeparators.swift */; };
 		D562180829FC111C00BCD1A1 /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562180729FC111C00BCD1A1 /* ScheduleCoordinator.swift */; };
 		D562180A29FC117D00BCD1A1 /* SchedulePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562180929FC117D00BCD1A1 /* SchedulePresentable.swift */; };
@@ -104,7 +106,6 @@
 		D588E8052A0BB66C0039D9C8 /* ScheduleTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588E8042A0BB66C0039D9C8 /* ScheduleTableViewManager.swift */; };
 		D588E8082A0BBBB70039D9C8 /* LessonsScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588E8072A0BBBB60039D9C8 /* LessonsScheduleData.swift */; };
 		D588E80A2A0CA6AC0039D9C8 /* SubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588E8092A0CA6AC0039D9C8 /* SubtitleCell.swift */; };
-		D58EA56E29EE86F900D8F0B0 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA56D29EE86F900D8F0B0 /* RegistrationCoordinator.swift */; };
 		D58EA57029EE877400D8F0B0 /* RegistrationOnePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA56F29EE877400D8F0B0 /* RegistrationOnePresentable.swift */; };
 		D58EA57229EE87B900D8F0B0 /* RegistrationTwoPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA57129EE87B900D8F0B0 /* RegistrationTwoPresentable.swift */; };
 		D58EA57429EE87DC00D8F0B0 /* RegistrationOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EA57329EE87DC00D8F0B0 /* RegistrationOneController.swift */; };
@@ -207,6 +208,8 @@
 		D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		D55A65AD29EDA80E001BBDAC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		D561CDA92A3752AA00B6DA4C /* DetailAdTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAdTableViewManager.swift; sourceTree = "<group>"; };
+		D561CDAD2A39DE2100B6DA4C /* RegistrationOneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOneCoordinator.swift; sourceTree = "<group>"; };
+		D561CDB12A39DE8C00B6DA4C /* RegistrationTwoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTwoCoordinator.swift; sourceTree = "<group>"; };
 		D562180329FC098B00BCD1A1 /* TextViewWithSeparators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithSeparators.swift; sourceTree = "<group>"; };
 		D562180729FC111C00BCD1A1 /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
 		D562180929FC117D00BCD1A1 /* SchedulePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePresentable.swift; sourceTree = "<group>"; };
@@ -258,7 +261,6 @@
 		D588E8042A0BB66C0039D9C8 /* ScheduleTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewManager.swift; sourceTree = "<group>"; };
 		D588E8072A0BBBB60039D9C8 /* LessonsScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsScheduleData.swift; sourceTree = "<group>"; };
 		D588E8092A0CA6AC0039D9C8 /* SubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleCell.swift; sourceTree = "<group>"; };
-		D58EA56D29EE86F900D8F0B0 /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
 		D58EA56F29EE877400D8F0B0 /* RegistrationOnePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOnePresentable.swift; sourceTree = "<group>"; };
 		D58EA57129EE87B900D8F0B0 /* RegistrationTwoPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTwoPresentable.swift; sourceTree = "<group>"; };
 		D58EA57329EE87DC00D8F0B0 /* RegistrationOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationOneController.swift; sourceTree = "<group>"; };
@@ -533,7 +535,7 @@
 				D5E5E9E32A1D12FA00575FD2 /* AddAvertisement */,
 				D54E2E7D2A3704B200FEDD0E /* DetailAdvertisement */,
 				D52488D629FB964B0069A4C8 /* TeacherProfileScreens */,
-				D56238482A30BB4300E3271B /* TutorAccount */,
+				D56238392A2B154900E3271B /* TutorAccount */,
 				D592062F2A151F4100AAC59D /* RecordedLessons */,
 				D51E306829FAC91A0047B6B2 /* SectionsForManager */,
 				D5F626262A138E73005746D0 /* Data */,
@@ -565,38 +567,48 @@
 		D55A65AF29EE858F001BBDAC /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				D55A65B029EE85A9001BBDAC /* Coordinator */,
-				D55A65B129EE85B2001BBDAC /* Presentables */,
-				D55A65B229EE85C6001BBDAC /* Controllers */,
-				D56A757029EE92AB0072BB29 /* ViewModels */,
+				D561CDAB2A39DDEE00B6DA4C /* RegistrationPartOne */,
+				D561CDAF2A39DE6300B6DA4C /* RegistrationPartTwo */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
 		};
-		D55A65B029EE85A9001BBDAC /* Coordinator */ = {
+		D561CDAB2A39DDEE00B6DA4C /* RegistrationPartOne */ = {
 			isa = PBXGroup;
 			children = (
-				D58EA56D29EE86F900D8F0B0 /* RegistrationCoordinator.swift */,
+				D561CDAC2A39DE0200B6DA4C /* Coordinator */,
+				D58EA56F29EE877400D8F0B0 /* RegistrationOnePresentable.swift */,
+				D58EA57329EE87DC00D8F0B0 /* RegistrationOneController.swift */,
+				D58EA57529EE881900D8F0B0 /* RegistrationOneViewModel.swift */,
+			);
+			path = RegistrationPartOne;
+			sourceTree = "<group>";
+		};
+		D561CDAC2A39DE0200B6DA4C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D561CDAD2A39DE2100B6DA4C /* RegistrationOneCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		D55A65B129EE85B2001BBDAC /* Presentables */ = {
+		D561CDAF2A39DE6300B6DA4C /* RegistrationPartTwo */ = {
 			isa = PBXGroup;
 			children = (
-				D58EA56F29EE877400D8F0B0 /* RegistrationOnePresentable.swift */,
+				D561CDB02A39DE7700B6DA4C /* Coordinator */,
 				D58EA57129EE87B900D8F0B0 /* RegistrationTwoPresentable.swift */,
+				D56A756E29EE907D0072BB29 /* RegistrationTwoController.swift */,
+				D56A757129EE92CD0072BB29 /* RegistrationTwoViewModel.swift */,
 			);
-			path = Presentables;
+			path = RegistrationPartTwo;
 			sourceTree = "<group>";
 		};
-		D55A65B229EE85C6001BBDAC /* Controllers */ = {
+		D561CDB02A39DE7700B6DA4C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				D58EA57329EE87DC00D8F0B0 /* RegistrationOneController.swift */,
-				D56A756E29EE907D0072BB29 /* RegistrationTwoController.swift */,
+				D561CDB12A39DE8C00B6DA4C /* RegistrationTwoCoordinator.swift */,
 			);
-			path = Controllers;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		D562180529FC10C200BCD1A1 /* Schedule */ = {
@@ -629,8 +641,7 @@
 				D56238412A2F155800E3271B /* TutorAccountViewModel.swift */,
 				D56238432A2F3AC000E3271B /* Manager */,
 			);
-			name = TutorAccount;
-			path = ..;
+			path = TutorAccount;
 			sourceTree = "<group>";
 		};
 		D562383A2A2B156900E3271B /* Coordinator */ = {
@@ -648,15 +659,6 @@
 				D56238462A2F3B1E00E3271B /* TutorAccountMenuTableViewManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		D56238482A30BB4300E3271B /* TutorAccount */ = {
-			isa = PBXGroup;
-			children = (
-				D56238392A2B154900E3271B /* TutorAccount */,
-			);
-			name = TutorAccount;
-			path = TutorAccount/TutorAccount;
 			sourceTree = "<group>";
 		};
 		D562384D2A31B73B00E3271B /* AddReview */ = {
@@ -784,15 +786,6 @@
 				D569F7B429FB97EA00B86598 /* InformationCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		D56A757029EE92AB0072BB29 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				D58EA57529EE881900D8F0B0 /* RegistrationOneViewModel.swift */,
-				D56A757129EE92CD0072BB29 /* RegistrationTwoViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D5799EEB2A20D2C200052F4E /* Manager */ = {
@@ -1300,7 +1293,6 @@
 				D549082F29F12C34007CA37A /* RatingView.swift in Sources */,
 				D567815B29E99EA90035EB11 /* TabBarController.swift in Sources */,
 				D567815F29E9A00E0035EB11 /* LoginCoordinator.swift in Sources */,
-				D58EA56E29EE86F900D8F0B0 /* RegistrationCoordinator.swift in Sources */,
 				D59AF72B29F12763004FA0A7 /* TeacherProfilePresentable.swift in Sources */,
 				D50FB3882A1A8ECF0093513A /* AddVideoViewModel.swift in Sources */,
 				D567816129E9A01B0035EB11 /* LoginPresentable.swift in Sources */,
@@ -1320,6 +1312,7 @@
 				D56A757229EE92CD0072BB29 /* RegistrationTwoViewModel.swift in Sources */,
 				D5E5E9E82A1D137400575FD2 /* AddAdvertisementPresentable.swift in Sources */,
 				D555C9E22A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift in Sources */,
+				D561CDAE2A39DE2100B6DA4C /* RegistrationOneCoordinator.swift in Sources */,
 				D5F6262E2A13952C005746D0 /* TutorData.swift in Sources */,
 				D567815429E99C6C0035EB11 /* AppCoordinator.swift in Sources */,
 				D5E5E9E22A1D0F8E00575FD2 /* SavedAdsViewModel.swift in Sources */,
@@ -1408,6 +1401,7 @@
 				D5B7D0A529F7ABB5000FB288 /* UpdateTeacherInfoController.swift in Sources */,
 				D595C58129ED9E1600CED84D /* MainTextField.swift in Sources */,
 				D54D2C5429FBF76A00ACE864 /* AboutAppViewModel.swift in Sources */,
+				D561CDB22A39DE8C00B6DA4C /* RegistrationTwoCoordinator.swift in Sources */,
 				D5799EF72A20E08B00052F4E /* VideoListViewModel.swift in Sources */,
 				D5BE1D9B29EEA4E3008CB17F /* RoundedImageView.swift in Sources */,
 				D5799EE82A20D29200052F4E /* VideoInfoController.swift in Sources */,

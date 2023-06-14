@@ -1,7 +1,7 @@
 
 import UIKit
 
-class PersonalAdsCoordinator: Coordinator {
+class RegistrationTwoCoordinator: Coordinator {
     private(set) var childCoordinators: [Coordinator] = []
     var parentCoordinator: Coordinator?
     var navigationController: UINavigationController
@@ -10,22 +10,22 @@ class PersonalAdsCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func start() {
-        let controller: PersonalAdsController = .init()
+    func start() { }
+    
+    func continueRegistration() {
+        let controller: RegistrationTwoController = .init()
         controller.viewModel.coordinator = self
-        controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func startAddAdvertisement(){
-        let addAdvertisementCoordinator: AddAdvertisementCoordinator = .init(navigationController: navigationController)
-        addAdvertisementCoordinator.parentCoordinator = self
-        childCoordinators.append(addAdvertisementCoordinator)
-        addAdvertisementCoordinator.present()
-        
+    func startLogin() {
+        let coordinator: LoginCoordinator = .init(navigationController: navigationController)
+        coordinator.start()
     }
+    
     func didFinish(){
         parentCoordinator?.childDidFinish(self)
+        navigationController.dismiss(animated: true)
     }
     
     func childDidFinish(_ childCoordinator: Coordinator) {
@@ -36,4 +36,5 @@ class PersonalAdsCoordinator: Coordinator {
             childCoordinators.remove(at: index)
         }
     }
+
 }

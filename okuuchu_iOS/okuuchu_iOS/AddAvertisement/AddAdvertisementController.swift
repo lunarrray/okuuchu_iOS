@@ -10,7 +10,9 @@ class AddAdvertisementController: VMController<AddAdvertisementPresentable, AddA
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if isMovingFromParent {
+            viewModel.viewDidDisappear()
+        }
     }
 
     
@@ -19,6 +21,7 @@ class AddAdvertisementController: VMController<AddAdvertisementPresentable, AddA
     override func onConfigureController() {
         navigationItem.title = "Добавить объявление"
         navigationItem.leftBarButtonItem = content.navigation.cancelButton
+        navigationItem.rightBarButtonItem = content.navigation.addButton
     }
     
     override func onConfigureViewModel() {

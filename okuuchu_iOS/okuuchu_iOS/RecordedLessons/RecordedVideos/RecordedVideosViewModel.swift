@@ -41,9 +41,6 @@ final class RecordedVideosViewModel: NSObject {
 //MARK: - Extension
 
 extension RecordedVideosViewModel: RecordedVideosViewModelInput {
-//    func subjectItemTapped(at index: Int) {
-//        <#code#>
-//    }
     
     func getRecordedVideosFromModel() {
         allVideos = [
@@ -54,14 +51,14 @@ extension RecordedVideosViewModel: RecordedVideosViewModelInput {
             RecordedVideo(id: 114, title: "Алгебраические выражения", description: "Введение в алгебраические выражения и их упрощение. Решение уравнений и неравенств с одной переменной.", link: "https://youtu.be/X85soC5evw0", subject: .math),
             RecordedVideo(id: 115, title: "Статистика и диаграммы", description: "Сбор, представление и анализ данных в виде диаграмм и таблиц. Расчет среднего значения, медианы и моды. Решение задач на основе статистических данных.", link: "https://youtu.be/X85soC5evw0", subject: .math),
             RecordedVideo(id: 116, title: "Диаграммы", description: "Столбчатая диаграмма, Круговая диаграмма: Линейная диаграмма Кольцевая диаграмма.", link: "https://youtu.be/X85soC5evw0", subject: .math),
-
+            
             RecordedVideo(id: 117, title: "programming", description: "Приложение разработано для удобного и быстрого поиска подходящих репетиторов и учеников.", subject: .programming),
             RecordedVideo(id: 118, title: "programming", description: "Приложение разработано для удобного и быстрого поиска подходящих репетиторов и учеников.", subject: .programming),
             RecordedVideo(id: 119, title: "physics", description: "Приложение разработано для удобного и быстрого поиска подходящих репетиторов и учеников.", subject: .physics),
             RecordedVideo(id: 120, title: "physics", description: "Приложение разработано для удобного и быстрого поиска подходящих репетиторов и учеников.", subject: .physics),
             RecordedVideo(id: 121, title: "physics", description: "Приложение разработано для удобного и быстрого поиска подходящих репетиторов и учеников.", subject: .physics),
         ]
-
+        
         filterVideos()
         prepareAndSendDataToOutput()
     }
@@ -94,7 +91,7 @@ extension RecordedVideosViewModel: RecordedVideosViewModelInput {
         selectedVideos.removeAll()
         filterVideos()
         prepareAndSendDataToOutput()
-
+        
     }
     
     func performSearch(with text: String) {
@@ -111,10 +108,8 @@ extension RecordedVideosViewModel: RecordedVideosViewModelInput {
             }
         }
         
-        if !filteredVideos.isEmpty {
-            videos = filteredVideos
-            prepareAndSendDataToOutput()
-        }
+        videos = filteredVideos
+        prepareAndSendDataToOutput()
     }
     
     func selectedVideo(at index: Int) {

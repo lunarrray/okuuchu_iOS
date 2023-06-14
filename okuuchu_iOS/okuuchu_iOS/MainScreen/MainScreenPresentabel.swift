@@ -87,12 +87,12 @@ class MainScreenPresentable: BaseView {
 //MARK: - Extension
 
 extension MainScreenPresentable {
+    
     @objc private func segmentedControlValueChanged(_ sender: UISegmentedControl){
+        searchField.text = ""
         handleSegmentedControlValueChanged?()
     }
 }
-
-
 
 
 //MARK: - Extension

@@ -38,7 +38,7 @@ class SavedAdsController: VMController<SavedAdsPresesntable, SavedAdsViewModelIn
     }
     
     override func onConfigureActions() {
-        
+        content.searchField.delegate = self
     }
 
 }
@@ -53,5 +53,25 @@ extension SavedAdsController: SavedAdsViewModelOutput {
 }
 
 extension SavedAdsController: SavedAdsCollectionViewDelegate{
+    func selectedCell(at indexPath: IndexPath) {
+        viewModel.cellTapped(at: indexPath)
+    }
+}
+
+extension SavedAdsController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if let text = textField.text {
+            if text != ""{
+                viewModel.performSearch(with: text)
+            }
+        }
+        return true
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text == ""{
+            viewModel.getSavedAdsDataFromModel()
+        }
+    }
 }

@@ -26,6 +26,13 @@ class SavedAdsCoordinator: Coordinator {
         navigationController.pushViewController(controller, animated: true)
     }
     
+    func startDetailAd(for advertisement: AdvertisementData){
+        let detailAdCoordinator: DetailAdCoordinator = .init(navigationController: navigationController)
+        detailAdCoordinator.parentCoordinator = self
+        childCoordinators.append(detailAdCoordinator)
+        detailAdCoordinator.openDetailAdvertisement(ad: advertisement)
+    }
+    
     func didFinish(){
         parentCoordinator?.childDidFinish(self)
         navigationController.dismiss(animated: true)

@@ -80,10 +80,8 @@ extension VideoListViewModel: VideoListViewModelInput {
             }
         }
         
-        if !filteredVideos.isEmpty {
             videos = filteredVideos
             prepareAndSendDataToOutput()
-        }
     }
 }
 
