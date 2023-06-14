@@ -38,6 +38,7 @@ final class DetailAdController: VMController<DetailAdPresentable, DetailAdViewMo
     }
     
     override func onConfigureActions() {
+        content.handleTutorButtonTapAction = viewModel.openTutorDetail
         content.handleCallButtonTapAction = viewModel.callTutor
         content.handleWhatsappTapAction = viewModel.whatsappTutor
         content.handleTelegramTapAction = viewModel.telegramTutor

@@ -20,6 +20,14 @@ final class DetailAdCoordinator: Coordinator {
         navigationController.pushViewController(controller, animated: true)
     }
     
+    func startDetailTutor(for tutor: TutorData){
+        let tutorAccountCoordinator: TutorAccountCoordinator = .init(navigationController: navigationController)
+        tutorAccountCoordinator.parentCoordinator = self
+        childCoordinators.append(tutorAccountCoordinator)
+        tutorAccountCoordinator.openTutorAccount(tutor: tutor)
+    }
+
+    
     func didFinish(){
         parentCoordinator?.childDidFinish(self)
         navigationController.dismiss(animated: true)

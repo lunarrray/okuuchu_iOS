@@ -21,6 +21,7 @@ final class DetailAdPresentable: BaseView {
     private let descriptionView: LabeledTextView = .init()
     private let callButton: PrimaryButton = .init()
     
+    var handleTutorButtonTapAction: (() -> Void)?
     var handleCallButtonTapAction: (() -> Void)?
     var handleWhatsappTapAction: (() -> Void)?
     var handleTelegramTapAction: (() -> Void)?
@@ -153,6 +154,7 @@ final class DetailAdPresentable: BaseView {
     }
     
     override func onSetupTargets() {
+        tutorButton.addTarget(self, action: #selector(tutorButtonTapAction), for: .touchUpInside)
         callButton.addTarget(self, action: #selector(callButtonTapAction), for: .touchUpInside)
         whatsappButton.addTarget(self, action: #selector(whatsappTapAction), for: .touchUpInside)
         telegramButton.addTarget(self, action: #selector(telegramTapAction), for: .touchUpInside)
@@ -172,6 +174,10 @@ extension DetailAdPresentable {
         tutorButton.configureCellButtonWith(image: tutorImage, titleText: tutorText)
         
         descriptionView.configureWith(TitleSubtitleViewModel(title: "Описание", subtitle: descriptionText))
+    }
+    
+    @objc private func tutorButtonTapAction(){
+        handleTutorButtonTapAction?()
     }
     
     @objc private func callButtonTapAction() {

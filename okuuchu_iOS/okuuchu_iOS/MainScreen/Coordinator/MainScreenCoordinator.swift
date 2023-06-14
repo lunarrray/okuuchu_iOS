@@ -16,11 +16,18 @@ class MainScreenCoordinator: Coordinator {
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func startVideoTutor(for tutor: TutorData){
+    func startDetailTutor(for tutor: TutorData){
         let tutorAccountCoordinator: TutorAccountCoordinator = .init(navigationController: navigationController)
         tutorAccountCoordinator.parentCoordinator = self
         childCoordinators.append(tutorAccountCoordinator)
         tutorAccountCoordinator.openTutorAccount(tutor: tutor)
+    }
+    
+    func startDetailAd(for advertisement: AdvertisementData){
+        let detailAdCoordinator: DetailAdCoordinator = .init(navigationController: navigationController)
+        detailAdCoordinator.parentCoordinator = self
+        childCoordinators.append(detailAdCoordinator)
+        detailAdCoordinator.openDetailAdvertisement(ad: advertisement)
     }
     
     func childDidFinish(_ childCoordinator: Coordinator) {
@@ -30,14 +37,6 @@ class MainScreenCoordinator: Coordinator {
         }) {
             childCoordinators.remove(at: index)
         }
-    }
-    
-    
-    func startDetailAd(for advertisement: AdvertisementData){
-        let detailAdCoordinator: DetailAdCoordinator = .init(navigationController: navigationController)
-        detailAdCoordinator.parentCoordinator = self
-        childCoordinators.append(detailAdCoordinator)
-        detailAdCoordinator.openDetailAdvertisement(ad: advertisement)
     }
     
 }

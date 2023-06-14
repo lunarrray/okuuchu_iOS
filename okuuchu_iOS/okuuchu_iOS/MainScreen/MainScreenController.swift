@@ -23,7 +23,7 @@ class MainScreenController: VMController<MainScreenPresentable, MainScreenViewMo
     //MARK: - Override methods
 
     override func onConfigureController() {
-
+        navigationItem.title = "Главный экран"
     }
     
     override func onConfigureViewModel() {

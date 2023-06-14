@@ -10,6 +10,7 @@ protocol DetailAdViewModelInput {
     
     func viewDidDisappear()
     func prepareData()
+    func openTutorDetail()
     func callTutor()
     func whatsappTutor()
     func telegramTutor()
@@ -67,6 +68,12 @@ extension DetailAdViewModel: DetailAdViewModelInput {
         }
         
         sendPreparedDataToOutput()
+    }
+    
+    func openTutorDetail() {
+        if let tutorData = advertisement?.tutor {
+            coordinator?.startDetailTutor(for: tutorData)
+        }
     }
     
     func callTutor() {
