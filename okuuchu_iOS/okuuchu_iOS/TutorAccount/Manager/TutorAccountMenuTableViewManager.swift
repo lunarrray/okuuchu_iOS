@@ -37,6 +37,7 @@ extension TutorAccountMenuTableViewManager: UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.selectedMenuItem(menuData[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

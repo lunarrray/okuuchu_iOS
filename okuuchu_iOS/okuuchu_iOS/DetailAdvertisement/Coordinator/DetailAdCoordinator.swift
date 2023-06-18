@@ -1,7 +1,7 @@
 
 import UIKit
 
-final class TutorAccountCoordinator: Coordinator {
+final class DetailAdCoordinator: Coordinator {
     private(set) var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     var parentCoordinator: Coordinator?
@@ -12,17 +12,25 @@ final class TutorAccountCoordinator: Coordinator {
     
     func start() { }
     
-    func openTutorAccount(tutor: TutorData) {
-        let controller: TutorAccountController = .init()
+    func openDetailAdvertisement(ad: AdvertisementData) {
+        let controller: DetailAdController = .init()
         controller.viewModel.coordinator = self
-        controller.viewModel.tutorData = tutor
+        controller.viewModel.advertisement = ad
         controller.hidesBottomBarWhenPushed = true
-        controller.navigationItem.title = tutor.name
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func didFinsish(){
+    func startDetailTutor(for tutor: TutorData){
+        let tutorAccountCoordinator: TutorAccountCoordinator = .init(navigationController: navigationController)
+        tutorAccountCoordinator.parentCoordinator = self
+        childCoordinators.append(tutorAccountCoordinator)
+        tutorAccountCoordinator.openTutorAccount(tutor: tutor)
+    }
+
+    
+    func didFinish(){
         parentCoordinator?.childDidFinish(self)
+        navigationController.dismiss(animated: true)
     }
     
     func childDidFinish(_ childCoordinator: Coordinator) {

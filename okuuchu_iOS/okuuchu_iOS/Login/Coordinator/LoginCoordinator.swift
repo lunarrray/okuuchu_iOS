@@ -26,14 +26,14 @@ class LoginCoordinator: Coordinator {
     }
     
     func startRegistration(){
-        let coordinator: RegistrationCoordinator = .init(navigationController: navigationController)
+        let coordinator: RegistrationOneCoordinator = .init(navigationController: navigationController)
         coordinator.start()
     }
     
-    func startTeacherProfile(){
-        let profileCoordinator: TeacherProfileCoordinator = .init(navigationController: navigationController)
-        profileCoordinator.start()
-    }
+//    func startTeacherProfile(){
+//        let profileCoordinator: TeacherProfileCoordinator = .init(navigationController: navigationController)
+//        profileCoordinator.start()
+//    }
 }
 
 

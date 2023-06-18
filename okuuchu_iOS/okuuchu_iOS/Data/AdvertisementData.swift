@@ -4,6 +4,7 @@ import UIKit
 class AdvertisementData {
     var id: Int?
     var tutor: TutorData?
+    var title: String?
     var lessons: [Lesson]?
     var teachingLanguages: [TeachingLanguage]?
     var teachingTypes: [TeachingType]?
@@ -11,13 +12,14 @@ class AdvertisementData {
     var description: String?
     var image: UIImage?
     var whatsappNumber: String?
-    var telegramNumber: String?
+    var telegramNic: String?
     var price: Int?
     var status: ActiveStatus?
     
-    init(id: Int? = nil, tutor: TutorData? = nil, lessons: [Lesson]? = nil, teachingLanguages: [TeachingLanguage]? = nil, teachingTypes: [TeachingType]? = nil, location: Location? = nil, description: String? = nil, image: UIImage? = nil, whatsappNumber: String? = nil, telegramNumber: String? = nil, price: Int? = nil, status: ActiveStatus? = nil) {
+    init(id: Int? = nil, tutor: TutorData? = nil, title: String? = nil, lessons: [Lesson]? = nil, teachingLanguages: [TeachingLanguage]? = nil, teachingTypes: [TeachingType]? = nil, location: Location? = nil, description: String? = nil, image: UIImage? = nil, whatsappNumber: String? = nil, telegramNic: String? = nil, price: Int? = nil, status: ActiveStatus? = nil) {
         self.id = id
         self.tutor = tutor
+        self.title = title
         self.lessons = lessons
         self.teachingLanguages = teachingLanguages
         self.teachingTypes = teachingTypes
@@ -25,13 +27,13 @@ class AdvertisementData {
         self.description = description
         self.image = image
         self.whatsappNumber = whatsappNumber
-        self.telegramNumber = telegramNumber
+        self.telegramNic = telegramNic
         self.price = price
         self.status = status
     }
     
     func convertLessonsToString() -> String {
-        guard let lessons =  lessons else { return "" }
+        guard let lessons = lessons else { return "" }
         var text = ""
         let spacing = ", "
         for (i, lesson) in lessons.enumerated() {
@@ -44,7 +46,7 @@ class AdvertisementData {
     }
     
     func convertTeachingTypesToString() -> String {
-        guard let teachingTypes =  teachingTypes else { return "" }
+        guard let teachingTypes = teachingTypes else { return "" }
         var text = ""
         let spacing = ", "
         for (i, teachingType) in teachingTypes.enumerated() {
@@ -55,5 +57,25 @@ class AdvertisementData {
         }
         
         return text
+    }
+    
+    func convertLanguagesToString() -> String {
+        guard let teachingLanguages = teachingLanguages else { return "" }
+        var text = ""
+        let spacing = ", "
+        for (i, language) in teachingLanguages.enumerated() {
+            text += language.title
+            if i != teachingLanguages.count - 1 {
+                text += spacing
+            }
+        }
+        return text
+    }
+    
+    func getPrice() -> String? {
+        if let price = price {
+            return "\(price) сом"
+        }
+        return nil
     }
 }

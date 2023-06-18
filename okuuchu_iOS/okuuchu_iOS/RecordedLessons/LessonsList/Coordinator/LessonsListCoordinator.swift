@@ -16,19 +16,20 @@ class LessonsListCoordinator: Coordinator {
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func openLessonsWith(list: [Lesson]){
+    func openLessonsWith(list: [Lesson], isEditingMode: Bool){
         let controller: LessonsListController = .init()
         controller.viewModel.coordinator = self
         controller.viewModel.lessons = list
+        controller.viewModel.isEditingMode = isEditingMode
         controller.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func startRecordedVideos(for subject: Lesson, id: Int){
+    func startRecordedVideos(for subject: Lesson, id: Int, isEditingMode: Bool){
         let recordedVideosCoordinator: RecordedVideosCoordinator = .init(navigationController: navigationController)
         recordedVideosCoordinator.parentCoordinator = self
         childCoordinators.append(recordedVideosCoordinator)
-        recordedVideosCoordinator.openRecordedVideos(for: subject, id: id)
+        recordedVideosCoordinator.openRecordedVideos(for: subject, id: id, isEditingMode: isEditingMode)
     }
     
     func startVideoList(for subject: Lesson) {

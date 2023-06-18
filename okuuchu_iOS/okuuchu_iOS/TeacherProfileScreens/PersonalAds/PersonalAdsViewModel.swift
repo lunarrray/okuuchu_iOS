@@ -11,6 +11,7 @@ protocol PersonalAdsViewModelInput {
     func toggleCollectionView(segmentedControlIndex: Int)
     func getActiveAdsDataFromModel()
     func addAdvertisement()
+    
 }
 
 protocol PersonalAdsViewModelOutput: AnyObject {

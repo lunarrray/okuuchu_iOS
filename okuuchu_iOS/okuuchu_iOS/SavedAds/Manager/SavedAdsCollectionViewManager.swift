@@ -5,6 +5,7 @@ import UIKit
 
 protocol SavedAdsCollectionViewDelegate: AnyObject {
     
+    func selectedCell(at indexPath: IndexPath)
 }
 
 //MARK: - Class
@@ -40,6 +41,8 @@ extension SavedAdsCollectionViewManager: UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        delegate?.selectedCell(at: indexPath)
         
         collectionView.deselectItem(at: indexPath, animated: true)
     }

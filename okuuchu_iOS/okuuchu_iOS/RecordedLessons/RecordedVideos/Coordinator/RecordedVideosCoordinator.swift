@@ -13,10 +13,11 @@ class RecordedVideosCoordinator: Coordinator {
     
     func start() { }
     
-    func openRecordedVideos(for subject: Lesson, id: Int){
+    func openRecordedVideos(for subject: Lesson, id: Int, isEditingMode: Bool){
         let controller: RecordedVideosController = .init()
         controller.viewModel.coordinator = self
         controller.viewModel.subject = subject
+        controller.viewModel.isEditingMode = isEditingMode
         onUpdateVideos = controller.viewModel.getRecordedVideosFromModel
         controller.navigationItem.title = subject.title
         navigationController.pushViewController(controller, animated: true)

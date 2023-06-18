@@ -6,6 +6,8 @@ import Foundation
 protocol ScheduleViewModelInput {
     var coordinator: ScheduleCoordinator? { get set }
     var output: ScheduleViewModelOutput? { get set }
+    var isEditingMode: Bool? { get set }
+
     
     func viewDidDisappear()
     func getScheduleDataFromModel()
@@ -18,7 +20,7 @@ protocol ScheduleViewModelInput {
 }
 
 protocol ScheduleViewModelOutput: AnyObject {
-    func customizeOutput(with scheduleData: [String], selectedIndexes: Set<Int>)
+    func customizeOutput(with scheduleData: [String], selectedIndexes: Set<Int>, isEditingMode: Bool)
 }
 
 //MARK: - Class
@@ -29,10 +31,11 @@ final class ScheduleViewModel: NSObject {
         didSet{
             if scheduleData.count > 0 {
                 guard let indexes = selectedItemsIndexes[currentDay], let currentData = scheduleData[currentDay] else { return }
-                self.output?.customizeOutput(with: currentData, selectedIndexes: indexes)
+                self.output?.customizeOutput(with: currentData, selectedIndexes: indexes, isEditingMode: isEditingMode ?? true)
             }
         }
     }
+    var isEditingMode: Bool?
     private var scheduleData: [Weekday: [String]] = [
         .monday: [],
         .tuesday: [],
@@ -155,7 +158,7 @@ extension ScheduleViewModel: ScheduleViewModelInput {
 extension ScheduleViewModel {
     private func setOutput(with day: Weekday = .monday){
         guard let indexes = selectedItemsIndexes[day], let currentData = scheduleData[day] else { return }
-        self.output?.customizeOutput(with: currentData, selectedIndexes: indexes)
+        self.output?.customizeOutput(with: currentData, selectedIndexes: indexes, isEditingMode: isEditingMode ?? true)
     }
     
     private func emptySelectedIndexes(){

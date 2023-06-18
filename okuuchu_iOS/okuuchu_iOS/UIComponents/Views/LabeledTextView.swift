@@ -55,7 +55,7 @@ class LabeledTextView: UIView {
         }
     }
     
-    func configureWith(_ data: TitleSubtitleViewModel, textBackgroundColor: UIColor = Asset.white.color){
+    func configureWith(_ data: TitleSubtitleViewModel, textBackgroundColor: UIColor? = Asset.white.color){
         
         titleLabel.text = data.title
         textView.text = data.subtitle
@@ -73,6 +73,10 @@ extension LabeledTextView {
     func configureTextView(insets: UIEdgeInsets, cornerRadius: CGFloat){
         textView.textContainerInset = insets
         textView.layer.cornerRadius = cornerRadius
+    }
+    
+    func setTextViewDelegate(delegate: UITextViewDelegate) {
+        textView.delegate = delegate
     }
 }
 

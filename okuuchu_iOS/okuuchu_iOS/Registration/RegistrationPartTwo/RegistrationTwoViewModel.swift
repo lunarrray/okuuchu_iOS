@@ -2,7 +2,7 @@
 import Foundation
 
 protocol RegistrationTwoViewModelInput {
-    var coordinator: RegistrationCoordinator? { get set }
+    var coordinator: RegistrationTwoCoordinator? { get set }
     var output: RegistrationTwoViewModelOutput? { get set }
     func openLoginScreen()
 }
@@ -12,7 +12,7 @@ protocol RegistrationTwoViewModelOutput {
 }
 
 class RegistrationTwoViewModel {
-    var coordinator: RegistrationCoordinator?
+    var coordinator: RegistrationTwoCoordinator?
     var output: RegistrationTwoViewModelOutput?
 }
 

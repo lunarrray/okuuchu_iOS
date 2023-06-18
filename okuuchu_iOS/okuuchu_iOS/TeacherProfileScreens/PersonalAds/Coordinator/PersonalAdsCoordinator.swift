@@ -21,7 +21,8 @@ class PersonalAdsCoordinator: Coordinator {
         let addAdvertisementCoordinator: AddAdvertisementCoordinator = .init(navigationController: navigationController)
         addAdvertisementCoordinator.parentCoordinator = self
         childCoordinators.append(addAdvertisementCoordinator)
-        addAdvertisementCoordinator.start()
+        addAdvertisementCoordinator.present()
+        
     }
     func didFinish(){
         parentCoordinator?.childDidFinish(self)

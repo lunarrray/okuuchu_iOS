@@ -7,13 +7,15 @@ protocol ReviewsViewModelInput {
     var coordinator: ReviewsCoordinator? { get set }
     var output: ReviewsViewModelOutput? { get set }
     var allReviews: [ReviewData]? { get set }
+    var isAddingReviewMode: Bool? { get set }
     
     func viewDidDisappear()
     func getData()
+    func addReview()
 }
 
 protocol ReviewsViewModelOutput: AnyObject {
-    func customizeOutput(with data: [ReviewData], rating: Double)
+    func customizeOutput(with data: [ReviewData], rating: Double, isAddingReviewMode: Bool)
 }
 
 //MARK: - Class
@@ -23,11 +25,11 @@ final class ReviewsViewModel: NSObject {
     weak var output: ReviewsViewModelOutput? {
         didSet {
             if let reviews = allReviews {
-                output?.customizeOutput(with: reviews, rating: rating)
+                output?.customizeOutput(with: reviews, rating: rating, isAddingReviewMode: isAddingReviewMode ?? true)
             }
         }
     }
-    
+    var isAddingReviewMode: Bool?
     internal var allReviews: [ReviewData]?
     private var rating: Double = 0.0
 }
@@ -48,7 +50,11 @@ extension ReviewsViewModel: ReviewsViewModelInput {
         countRating = countRating / Double(allReviews.count)
         rating = countRating
         
-        output?.customizeOutput(with: allReviews, rating: rating)
+        output?.customizeOutput(with: allReviews, rating: rating, isAddingReviewMode: isAddingReviewMode ?? true)
+    }
+    
+    func addReview(){
+        coordinator?.startAddReview(for: 1)
     }
     
 //    func getReviewsDataFromModel() {

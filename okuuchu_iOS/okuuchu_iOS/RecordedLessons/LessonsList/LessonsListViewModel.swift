@@ -6,6 +6,7 @@ protocol LessonsListViewModelInput{
     var coordinator: LessonsListCoordinator? { get set }
     var output: LessonsLisViewModelOutput? { get set }
     var lessons: [Lesson]? { get set }
+    var isEditingMode: Bool? { get set }
     
     func manageLessons()
     func subjectItemTapped(at index: Int)
@@ -28,7 +29,7 @@ final class LessonsListViewModel{
             }
         }
     }
-    
+    var isEditingMode: Bool?
     var lessons: [Lesson]?
     private var isTabbarController: Bool = false
 }
@@ -73,7 +74,7 @@ extension LessonsListViewModel: LessonsListViewModelInput{
         if isTabbarController {
             coordinator?.startVideoList(for: subject)
         } else {
-            coordinator?.startRecordedVideos(for: subject, id: 1)
+            coordinator?.startRecordedVideos(for: subject, id: 1, isEditingMode: isEditingMode ?? false)
         }
     }
     

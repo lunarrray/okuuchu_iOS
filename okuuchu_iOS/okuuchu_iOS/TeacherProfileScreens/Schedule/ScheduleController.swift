@@ -48,7 +48,11 @@ class ScheduleController: VMController<SchedulePresentable, ScheduleViewModelInp
 //MARK: - Extension
 
 extension ScheduleController: ScheduleViewModelOutput{
-    func customizeOutput(with scheduleData: [String], selectedIndexes: Set<Int>) {
+    func customizeOutput(with scheduleData: [String], selectedIndexes: Set<Int>, isEditingMode: Bool) {
+        
+        if !isEditingMode {
+            content.nonEditableView()
+        }
         var currentScheduleData = [TitleSubtitleViewModel]()
         
         for item in scheduleData {
@@ -56,7 +60,7 @@ extension ScheduleController: ScheduleViewModelOutput{
             currentScheduleData.append(cellData)
         }
         
-        tableViewManager?.setData(currentScheduleData, selectedIndexes: selectedIndexes, tableView: content.tableView)
+        tableViewManager?.setData(currentScheduleData, selectedIndexes: selectedIndexes, tableView: content.tableView, isEditingMode: isEditingMode)
     }
 }
 

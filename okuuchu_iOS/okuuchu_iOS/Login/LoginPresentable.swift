@@ -15,7 +15,8 @@ class LoginPresentable: PrimaryView {
     private let horizontalStackView: UIStackView = .init()
     private let questionLabel: UILabel = .init()
     private let registerButton: UIButton = .init()
-    private let dismissKeyboard: UITapGestureRecognizer = .init()
+    
+    private let dismissKeyboardTap: UITapGestureRecognizer = .init()
     
     var registerTapAction: (() -> Void)?
     var loginTapAction: (() -> Void)?
@@ -90,7 +91,8 @@ class LoginPresentable: PrimaryView {
             registerButton
         )
         
-        
+        addGestureRecognizer(dismissKeyboardTap)
+
     }
     
     override func onSetupConstraints() {
@@ -133,7 +135,7 @@ class LoginPresentable: PrimaryView {
     }
     
     override func onSetupTargets() {
-        dismissKeyboard.addTarget(self, action: #selector(viewTapped))
+        dismissKeyboardTap.addTarget(self, action: #selector(viewTapped))
         registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }

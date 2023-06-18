@@ -7,8 +7,8 @@ open class BaseView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
                 
-        onAddSubviews()
         onConfigureView()
+        onAddSubviews()
         onSetupTargets()
         onSetupConstraints()
         

@@ -27,7 +27,7 @@ class RoundedImageView: UIView {
         
         button.setImage(Asset.cameraIcon.image, for: .normal)
         button.isHidden = true
-        button.addShadow()
+//        button.addShadow()
 
         addSubview(button)
     }

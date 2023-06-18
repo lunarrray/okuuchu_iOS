@@ -53,7 +53,10 @@ class RecordedVideosController: VMController<RecordedVideoPresentable, RecordedV
 //MARK: - Extension
 
 extension RecordedVideosController: RecordedVideosViewModelOutput{
-    func customizeOutput(with videos: [TitleSubtitleViewModel]) {
+    func customizeOutput(with videos: [TitleSubtitleViewModel], isEditingMode: Bool) {
+        if !isEditingMode {
+            content.nonEditableView()
+        }
         tableViewManager?.setTableViewData(videos, tableView: content.tableView)
     }
 }

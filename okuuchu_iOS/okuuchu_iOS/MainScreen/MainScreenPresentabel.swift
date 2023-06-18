@@ -5,6 +5,8 @@ class MainScreenPresentable: BaseView {
     
     //MARK: - Properties
     
+    var searchField: SearchTextField = .init()
+    
     private var segmentedControl: CustomSegmentedControl = {
         let segmentedControl = CustomSegmentedControl(items: ["Объявления", "Репетиторы"])
         segmentedControl.contentVerticalAlignment = .center
@@ -24,6 +26,8 @@ class MainScreenPresentable: BaseView {
     
     override func onConfigureView() {
         backgroundColor = Asset.primaryGrayBackground.color
+        
+        searchField.returnKeyType = .search
         
         segmentedControl.selectedSegmentTintColor = Asset.darkBlue.color
         fixBackgroundSegmentControl(segmentedControl)
@@ -47,14 +51,22 @@ class MainScreenPresentable: BaseView {
     
     override func onAddSubviews() {
         addSubviews(
+            searchField,
             segmentedControl,
             collectionView
         )
     }
     
     override func onSetupConstraints() {
+        
+        searchField.snp.makeConstraints{ maker in
+            maker.top.equalTo(safeAreaLayoutGuide.snp.top).offset(10)
+            maker.horizontalEdges.equalToSuperview().inset(20)
+            maker.height.equalTo(32)
+        }
+        
         segmentedControl.snp.makeConstraints{ maker in
-            maker.top.equalTo(safeAreaLayoutGuide.snp.top).offset(15)
+            maker.top.equalTo(searchField.snp.bottom).offset(10)
             maker.horizontalEdges.equalToSuperview().inset(20)
         }
         
@@ -75,12 +87,12 @@ class MainScreenPresentable: BaseView {
 //MARK: - Extension
 
 extension MainScreenPresentable {
+    
     @objc private func segmentedControlValueChanged(_ sender: UISegmentedControl){
+        searchField.text = ""
         handleSegmentedControlValueChanged?()
     }
 }
-
-
 
 
 //MARK: - Extension

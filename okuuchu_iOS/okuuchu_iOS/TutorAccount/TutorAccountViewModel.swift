@@ -12,6 +12,7 @@ protocol TutorAccountViewModelInput {
     func callTutor()
     func whatsappTutor()
     func telegramTutor()
+    func menuItemTapped(_ item: Menu)
 }
 
 protocol TutorAccountViewModelOutput: AnyObject {
@@ -95,6 +96,23 @@ extension TutorAccountViewModel: TutorAccountViewModelInput {
             } else {
                 // Telegram is not installed, handle the error as needed
             }
+        }
+    }
+    
+    func menuItemTapped(_ item: Menu) {
+        switch item {
+        case .schedule:
+            coordinator?.startSchedule()
+        case .recordedLessons:
+            guard let lessons = tutorData?.lessons else { return }
+            coordinator?.startRecordedLessons(with: lessons)
+        case .reviews:
+            guard let reviews = tutorData?.reviews else { return }
+            coordinator?.startReviews(reviews: reviews)
+        case .ads:
+            coordinator?.startPersonalAds(for: 1)
+
+        default: return
         }
     }
 }
