@@ -43,26 +43,26 @@ extension DetailAdViewModel: DetailAdViewModelInput {
     func prepareData() {
         if let subject = advertisement?.convertLessonsToString() {
             if subject != ""{
-                let titleSubtitleData = TitleSubtitleViewModel(title: "Предмет", subtitle: subject)
+                let titleSubtitleData = TitleSubtitleViewModel(title: "Сабак", subtitle: subject)
                 titleSubtitleViewModel.append(titleSubtitleData)
             }
         }
         
         if let language = advertisement?.convertLanguagesToString() {
             if language != "" {
-                let titleSubtitleData = TitleSubtitleViewModel(title: "Язык преподавания", subtitle: language)
+                let titleSubtitleData = TitleSubtitleViewModel(title: "Окутуу тили", subtitle: language)
                 titleSubtitleViewModel.append(titleSubtitleData)
             }
         }
         
         if let location = advertisement?.location?.title {
-            let titleSubtitleData = TitleSubtitleViewModel(title: "Местоположение", subtitle: location)
+            let titleSubtitleData = TitleSubtitleViewModel(title: "Жайгашкан жери", subtitle: location)
             titleSubtitleViewModel.append(titleSubtitleData)
         }
         
         if let teachingType = advertisement?.convertTeachingTypesToString() {
             if teachingType != "" {
-                let titleSubtitleData = TitleSubtitleViewModel(title: "Тип обучения", subtitle: teachingType)
+                let titleSubtitleData = TitleSubtitleViewModel(title: "Окутуунун түрү", subtitle: teachingType)
                 titleSubtitleViewModel.append(titleSubtitleData)
             }
         }

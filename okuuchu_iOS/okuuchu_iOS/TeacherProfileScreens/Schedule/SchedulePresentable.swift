@@ -6,7 +6,7 @@ class SchedulePresentable: BaseView {
     //MARK: - Properties
     
     struct Navigation {
-        let deleteButton: UIBarButtonItem = .init(title: "Удалить")
+        let deleteButton: UIBarButtonItem = .init(title: "Өчүрүү")
     }
     var navigation: Navigation = .init()
     var segmentedControl: CustomSegmentedControl = {
@@ -35,7 +35,7 @@ class SchedulePresentable: BaseView {
         let font = UIFont.systemFont(ofSize: 17)
         let fontDescriptor = font.fontDescriptor.withSymbolicTraits(.traitBold)!
 
-        navigation.deleteButton.title = "Удалить"
+        navigation.deleteButton.title = "Өчүрүү"
         navigation.deleteButton.setTitleTextAttributes([.font: UIFont(descriptor: fontDescriptor, size: font.pointSize)], for: .normal)
         navigation.deleteButton.tintColor = Asset.redButton.color
 
@@ -51,11 +51,11 @@ class SchedulePresentable: BaseView {
         
         addButton.backgroundColor = Asset.darkBlue.color
         addButton.setTitleColor(Asset.white.color, for: .normal)
-        addButton.setTitle("Добавить", for: .normal)
+        addButton.setTitle("Кошуу", for: .normal)
         
         saveButton.backgroundColor = Asset.darkBlue.color
         saveButton.setTitleColor(Asset.white.color, for: .normal)
-        saveButton.setTitle("Сохранить", for: .normal)
+        saveButton.setTitle("Сактоо", for: .normal)
         
         whiteView.backgroundColor = Asset.white.color
         

@@ -31,7 +31,7 @@ class LessonsListController: VMController<LessonsListPresentable, LessonsListVie
     //MARK: - Override Methods
 
     override func onConfigureController() {
-        navigationItem.title = "Предметы"
+        navigationItem.title = "Сабактар"
     }
     
     override func onConfigureViewModel() {

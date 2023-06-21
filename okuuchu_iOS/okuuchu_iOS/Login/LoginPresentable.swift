@@ -15,8 +15,7 @@ class LoginPresentable: PrimaryView {
     private let horizontalStackView: UIStackView = .init()
     private let questionLabel: UILabel = .init()
     private let registerButton: UIButton = .init()
-    
-    private let dismissKeyboardTap: UITapGestureRecognizer = .init()
+    private let dismissKeyboard: UITapGestureRecognizer = .init()
     
     var registerTapAction: (() -> Void)?
     var loginTapAction: (() -> Void)?
@@ -30,7 +29,8 @@ class LoginPresentable: PrimaryView {
         mainLabel.textAlignment = .center
         mainLabel.font = .boldSystemFont(ofSize: 22)
         mainLabel.textColor = Asset.normalTextColor.color
-        mainLabel.text = "Добро пожаловать"
+        mainLabel.text = "Kош Kелиңиз!"
+//        mainLabel.text = "Добро пожаловать"
         
         presentingImage.image = Asset.boyAndPhoneImage.image
         
@@ -39,31 +39,31 @@ class LoginPresentable: PrimaryView {
         stackView.spacing = 25
         stackView.distribution = .fill
         
-        emailTextField.placeholder = "Введите email"
+        emailTextField.placeholder = "email киргизиңиз"
         emailTextField.keyboardType = .emailAddress
         
-        passwordTextfield.placeholder = "Введите пароль"
+        passwordTextfield.placeholder = "сыр сөз киргизиңиз"
         passwordTextfield.passwordModeActivate()
         
-        forgotPasswordButton.setTitle("Забыли пароль?", for: .normal)
+        forgotPasswordButton.setTitle("Сыр сөз унуттуңузбу?", for: .normal)
         forgotPasswordButton.setTitleColor(Asset.textButton.color, for: .normal)
         forgotPasswordButton.setTitleColor(Asset.darkBlue.color, for: .selected)
         forgotPasswordButton.titleLabel?.font = .boldSystemFont(ofSize: 14)
         
         loginButton.backgroundColor = Asset.primaryButtonsBlue.color
-        loginButton.setTitle("Войти", for: .normal)
+        loginButton.setTitle("Кирүү", for: .normal)
         
         horizontalStackView.axis = .horizontal
         horizontalStackView.spacing = 8
         horizontalStackView.alignment = .center
         horizontalStackView.distribution = .fillProportionally
         
-        questionLabel.text = "Нет аккаунта?"
+        questionLabel.text = "Аккаунтуңуз жокпу?"
         questionLabel.textColor = Asset.normalTextColor.color
         questionLabel.textAlignment = .right
         questionLabel.font = .systemFont(ofSize: 14)
         
-        registerButton.setTitle("Зарегистрироваться", for: .normal)
+        registerButton.setTitle("Катталуу", for: .normal)
         registerButton.setTitleColor(Asset.textButton.color, for: .normal)
         registerButton.setTitleColor(Asset.darkBlue.color, for: .selected)
         registerButton.titleLabel?.font = .boldSystemFont(ofSize: 14)
@@ -91,8 +91,7 @@ class LoginPresentable: PrimaryView {
             registerButton
         )
         
-        addGestureRecognizer(dismissKeyboardTap)
-
+        
     }
     
     override func onSetupConstraints() {
@@ -135,7 +134,7 @@ class LoginPresentable: PrimaryView {
     }
     
     override func onSetupTargets() {
-        dismissKeyboardTap.addTarget(self, action: #selector(viewTapped))
+        dismissKeyboard.addTarget(self, action: #selector(viewTapped))
         registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }

@@ -33,7 +33,7 @@ class LessonsListPresentable: PrimaryView {
             maker.top.equalTo(safeAreaLayoutGuide.snp.top).offset(30)
             maker.width.equalToSuperview().inset(15)
             maker.centerX.equalToSuperview()
-            maker.height.equalToSuperview()
+            maker.bottom.equalToSuperview()
         }
         
    

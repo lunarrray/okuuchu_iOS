@@ -31,7 +31,7 @@ class AddVideoPresentable: BaseView {
         tableView.backgroundView = view
         tableView.separatorStyle = .none
         
-        addButton.setTitle("Добавить", for: .normal)
+        addButton.setTitle("Кошуу", for: .normal)
         addButton.backgroundColor = Asset.primaryButtonsBlue.color
     }
     

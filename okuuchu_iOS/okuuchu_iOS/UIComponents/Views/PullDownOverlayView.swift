@@ -13,7 +13,7 @@ class PullDownOverlayView: BaseView {
         backgroundColor = .darkGray
         layer.cornerRadius = 10
         
-        button.setTitle("Удалить", for: .normal)
+        button.setTitle("Жок кылуу", for: .normal)
         button.setTitleColor(.white, for: .normal)
     }
     

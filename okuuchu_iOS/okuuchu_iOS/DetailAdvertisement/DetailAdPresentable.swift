@@ -47,7 +47,7 @@ final class DetailAdPresentable: BaseView {
         tableView.separatorStyle = .none
         tableView.register(HorizontalCell.self, forCellReuseIdentifier: String(describing: HorizontalCell.self))
         
-        detailTitle.text = "Связаться:"
+        detailTitle.text = "Байланышуу:"
         detailTitle.textColor = Asset.normalTextColor.color
         detailTitle.font = .systemFont(ofSize: 13)
         
@@ -65,7 +65,7 @@ final class DetailAdPresentable: BaseView {
         
         descriptionView.nonEditableTextView()
         
-        callButton.setTitle("Позвонить", for: .normal)
+        callButton.setTitle("Чалуу", for: .normal)
         callButton.backgroundColor = Asset.primaryButtonsBlue.color
         
     }
@@ -173,7 +173,7 @@ extension DetailAdPresentable {
         
         tutorButton.configureCellButtonWith(image: tutorImage, titleText: tutorText)
         
-        descriptionView.configureWith(TitleSubtitleViewModel(title: "Описание", subtitle: descriptionText))
+        descriptionView.configureWith(TitleSubtitleViewModel(title: "Маалымат", subtitle: descriptionText))
     }
     
     @objc private func tutorButtonTapAction(){

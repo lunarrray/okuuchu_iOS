@@ -94,9 +94,9 @@ extension TeacherProfilePresentable {
         
         nameLabel.text = name
         avatarImageView.imageView.image = image
-        let aboutTeacherData = TitleSubtitleViewModel(title: "Немного о себе", subtitle: description)
+        let aboutTeacherData = TitleSubtitleViewModel(title: "Өзүм жөнүндө", subtitle: description)
         aboutTeacherView.configureWith(aboutTeacherData, textBackgroundColor: Asset.textViewBackground.color)
-        let lessonsData = TitleSubtitleViewModel(title: "Предметы", subtitle: lessons)
+        let lessonsData = TitleSubtitleViewModel(title: "Сабактар", subtitle: lessons)
         lessonsView.configureWith(lessonsData, textBackgroundColor: Asset.textViewBackground.color)
         ratingView.configureWith(rating: rating, spacing: 25, starColor: Asset.normalTextColor.color)
 

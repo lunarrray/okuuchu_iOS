@@ -14,7 +14,7 @@ class SavedAdsCoordinator: Coordinator {
     func start() {
         let controller: SavedAdsController = .init()
         controller.viewModel.coordinator = self
-        controller.navigationItem.title = "Сохраненные обьявления"
+        controller.navigationItem.title = "Сакталган жарнамалар"
         navigationController.pushViewController(controller, animated: true)
     }
     
@@ -22,7 +22,7 @@ class SavedAdsCoordinator: Coordinator {
         let controller: SavedAdsController = .init()
         controller.viewModel.coordinator = self
         controller.viewModel.isSavedAdsMode = false
-        controller.navigationItem.title = "Обьявления"
+        controller.navigationItem.title = "Жарнамалар"
         navigationController.pushViewController(controller, animated: true)
     }
     

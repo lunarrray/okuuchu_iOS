@@ -40,7 +40,7 @@ final class TutorAccountPresentable: PrimaryView {
         stackView.spacing = 3
         stackView.distribution = .fillEqually
         
-        contactLabel.text = "Cвязаться:"
+        contactLabel.text = "Байланышуу:"
         contactLabel.font = .systemFont(ofSize: 14)
         contactLabel.textColor = Asset.normalTextColor.color
         
@@ -57,7 +57,7 @@ final class TutorAccountPresentable: PrimaryView {
         menuTableView.register(TitleCell.self, forCellReuseIdentifier: String(describing: TitleCell.self))
         
         callButton.backgroundColor = Asset.darkBlue.color
-        callButton.setTitle("Позвонить", for: .normal)
+        callButton.setTitle("Чалуу", for: .normal)
         
     }
     
@@ -105,7 +105,7 @@ final class TutorAccountPresentable: PrimaryView {
         
         stackView.snp.makeConstraints{ maker in
             maker.top.equalTo(tutorInfoTableView.snp.bottom).offset(10)
-            maker.horizontalEdges.equalToSuperview().inset(90)
+            maker.horizontalEdges.equalToSuperview().inset(60)
         }
         
         menuTableView.snp.makeConstraints{ maker in

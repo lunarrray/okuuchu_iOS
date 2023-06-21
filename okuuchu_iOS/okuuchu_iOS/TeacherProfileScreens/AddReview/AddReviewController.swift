@@ -19,7 +19,7 @@ final class AddReviewController: VMController<AddReviewPresentable, AddReviewVie
     //MARK: - Override methods
     
     override func onConfigureController() {
-        navigationItem.title = "Добавить отзыв"
+        navigationItem.title = "Пикир жазуу"
         navigationItem.leftBarButtonItem = content.navigation.cancelButton
         content.reviewTextView.setTextViewDelegate(delegate: self)
     }

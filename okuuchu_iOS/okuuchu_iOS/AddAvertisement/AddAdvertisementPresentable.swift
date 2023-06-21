@@ -7,7 +7,7 @@ class AddAdvertisementPresentable: BaseView {
     
     struct Navigation {
         let cancelButton: UIBarButtonItem = .init(image: Asset.cancelIcon.image.withTintColor(Asset.normalTextColor.color, renderingMode: .alwaysOriginal))
-        let addButton: UIBarButtonItem = .init(title: "Добавить")
+        let addButton: UIBarButtonItem = .init(title: "Кошуу")
     }
 
     let navigation: Navigation = .init()
@@ -24,12 +24,12 @@ class AddAdvertisementPresentable: BaseView {
         let font = UIFont.systemFont(ofSize: 17)
         let fontDescriptor = font.fontDescriptor.withSymbolicTraits(.traitBold)!
 
-        navigation.addButton.title = "Добавить"
+        navigation.addButton.title = "Кошуу"
         navigation.addButton.setTitleTextAttributes([.font: UIFont(descriptor: fontDescriptor, size: font.pointSize)], for: .normal)
         navigation.addButton.tintColor = Asset.darkBlue.color
 
         
-        addButton.setTitle("Добавить", for: .normal)
+        addButton.setTitle("Кошуу", for: .normal)
         addButton.backgroundColor = Asset.primaryButtonsBlue.color
     }
     

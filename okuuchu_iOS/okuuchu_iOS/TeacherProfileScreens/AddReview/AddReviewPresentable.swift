@@ -43,10 +43,10 @@ class AddReviewPresentable: PrimaryView {
             buttons.append(button)
         }
         
-        reviewTextView.configureWith(TitleSubtitleViewModel(title: "Напишите отзыв"))
+        reviewTextView.configureWith(TitleSubtitleViewModel(title: "Пикир жазыңыз"))
         logo.image = Asset.logoWithoutLabel.image
         
-        addButton.setTitle("Добавить", for: .normal)
+        addButton.setTitle("Кошуу", for: .normal)
         addButton.backgroundColor = Asset.primaryButtonsBlue.color
     }
     

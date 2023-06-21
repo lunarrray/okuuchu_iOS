@@ -10,13 +10,13 @@ enum TeachingLanguage {
     var title: String {
         switch self {
         case .russian:
-            return "Русский"
+            return "Орусча"
         case .turkish:
-            return "Турецкий"
+            return "Түркчө"
         case .kyrgyz:
-            return "Кыргызский"
+            return "Кыргызча"
         case .english:
-            return "Английский"
+            return "Англисче"
         }
     }
 }
@@ -43,33 +43,33 @@ enum Lesson {
         case .math:
             return "Математика"
         case .programming:
-            return "Программирование"
+            return "Программалоо"
         case .chemistry:
             return "Химия"
         case .biology:
             return "Биология"
         case .english:
-            return "Английиский язык"
+            return "Английис тили"
         case .russian:
-            return "Русский язык"
+            return "Орус тили"
         case .russianLiterature:
-            return "Русская литература"
+            return "Орус адабияты"
         case .german:
-            return "Немецкий"
+            return "Немис тили"
         case .physics:
             return "Физика"
         case .history:
-            return "История"
+            return "Тарых"
         case .geography:
             return "География"
         case .geometry:
             return "Геометрия"
         case .kyrgyz:
-            return "Кыргызский"
+            return "Кыргыз тили"
         case .kyrgyzLiterature:
-            return "Кыргызская литература"
+            return "Кыргыз адабияты"
         case .turkish:
-            return "Турецкий"
+            return "Түрк тили"
         }
     }
     
@@ -122,9 +122,9 @@ enum TeachingType{
         case .offline:
             return "Оффлайн"
         case .group:
-            return "В группе"
+            return "Группада"
         case .individual:
-            return "Индивидуально"
+            return "Жекече"
         }
     }
 }
@@ -153,7 +153,7 @@ enum Location {
         case .batken:
             return "Баткен"
         case .issykKul:
-            return "Ысык-кол"
+            return "Ысык-көл"
         }
     }
 }

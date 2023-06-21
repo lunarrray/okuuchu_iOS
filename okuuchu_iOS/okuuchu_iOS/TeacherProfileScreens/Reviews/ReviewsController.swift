@@ -26,7 +26,7 @@ class ReviewsController: VMController<ReviewsPresentable, ReviewsViewModelInput>
     //MARK: - Override methods
     
     override func onConfigureController() {
-        navigationItem.title = "Отзывы"
+        navigationItem.title = "Сын-пикирлер"
         navigationItem.rightBarButtonItem = content.navigation.addButton
     }
     

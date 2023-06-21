@@ -46,9 +46,9 @@ extension VideoInfoViewModel: VideoInfoViewModelInput {
         guard let videoTitle = videoData?.title, let videoDescription = videoData?.description else { return }
         let topic = TitleSubtitleViewModel(title: "Тема", subtitle: videoTitle)
         titleSubtitleData.append(topic)
-        let description = TitleSubtitleViewModel(title: "Описание", subtitle: videoDescription)
+        let description = TitleSubtitleViewModel(title: "Маалымат", subtitle: videoDescription)
         titleSubtitleData.append(description)
-        let tutor = TitleSubtitleViewModel(title: "Преподаватель", subtitle: videoTutor.name)
+        let tutor = TitleSubtitleViewModel(title: "Окутуучу", subtitle: videoTutor.name)
         titleSubtitleData.append(tutor)
         
         output?.customizeOutput(with: titleSubtitleData)

@@ -19,11 +19,11 @@ final class VideoInfoPresentable: BaseView {
         backgroundColor = Asset.primaryGrayBackground.color
         
         viewTutorButton.setTitleColor(Asset.textButton.color, for: .normal)
-        viewTutorButton.setTitle("Посмотреть профиль репетитора", for: .normal)
+        viewTutorButton.setTitle("Репетитордун профилин көрүү", for: .normal)
         viewTutorButton.titleLabel?.textAlignment = .center
         viewTutorButton.titleLabel?.font = .boldSystemFont(ofSize: 14)
         
-        watchVideoButton.setTitle("Смотреть видео", for: .normal)
+        watchVideoButton.setTitle("Видео-сабак көрүү", for: .normal)
         watchVideoButton.backgroundColor = Asset.primaryButtonsBlue.color
         
         imageView.image = Asset.videoPublishing.image

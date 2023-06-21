@@ -26,8 +26,8 @@ class RegistrationTwoPresentable: PrimaryView{
         mainLabel.textAlignment = .center
         mainLabel.font = .boldSystemFont(ofSize: 22)
         mainLabel.textColor = Asset.normalTextColor.color
-        mainLabel.numberOfLines = 2
-        mainLabel.text = "Нам необходимо немного узнать о вас!"
+        mainLabel.numberOfLines = 1
+        mainLabel.text = "Сиз менен таанышалы!"
         
         avatarImageView.imageView.clipsToBounds = true
         avatarImageView.activateCameraButton()
@@ -37,27 +37,27 @@ class RegistrationTwoPresentable: PrimaryView{
         stackView.spacing = 25
         stackView.distribution = .fill
         
-        nameTextField.placeholder = "Введите свое имя и фамилию"
+        nameTextField.placeholder = "Аты жөнүңүздү киргизиңиз"
         
-        roleTextfield.placeholder = "Выберите роль"
+        roleTextfield.placeholder = "Ролуңузду тандаңыз"
         
-        dateTextfield.placeholder = "Укажите дату рождения"
+        dateTextfield.placeholder = "Туулган күнүңүздү киргизиңиз"
         dateTextfield.datePickingModeActivate()
         
         registerButton.backgroundColor = Asset.primaryButtonsBlue.color
-        registerButton.setTitle("Регистрация", for: .normal)
+        registerButton.setTitle("Катталуу", for: .normal)
         
         horizontalStackView.axis = .horizontal
         horizontalStackView.spacing = 8
         horizontalStackView.alignment = .center
         horizontalStackView.distribution = .fillProportionally
         
-        questionLabel.text = "Уже есть аккаунт??"
+        questionLabel.text = "Аккаунтуңуз барбы??"
         questionLabel.textColor = Asset.normalTextColor.color
         questionLabel.textAlignment = .right
         questionLabel.font = .systemFont(ofSize: 14)
         
-        loginTextButton.setTitle("Войти в аккаунт", for: .normal)
+        loginTextButton.setTitle("Аккаунтуңузга кирүү", for: .normal)
         loginTextButton.setTitleColor(Asset.textButton.color, for: .normal)
         loginTextButton.setTitleColor(Asset.darkBlue.color, for: .selected)
         loginTextButton.titleLabel?.font = .boldSystemFont(ofSize: 14)
@@ -93,7 +93,7 @@ class RegistrationTwoPresentable: PrimaryView{
         mainLabel.snp.makeConstraints{ maker in
             maker.centerX.equalToSuperview()
             maker.top.equalToSuperview().inset(180)
-            maker.width.equalTo(230)
+            maker.width.equalToSuperview()
         }
         
         avatarImageView.snp.makeConstraints{ maker in

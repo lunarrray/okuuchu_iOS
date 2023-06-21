@@ -28,7 +28,7 @@ class ScheduleController: VMController<SchedulePresentable, ScheduleViewModelInp
     
     override func onConfigureController() {
         navigationItem.rightBarButtonItem = content.navigation.deleteButton
-        navigationItem.title = "Свободные часы"
+        navigationItem.title = "Бош убакыт"
         navigationItem.largeTitleDisplayMode = .never
 
     }
@@ -77,11 +77,11 @@ extension ScheduleController: ScheduleTableViewDelegate {
 
 extension ScheduleController {
     private func showAlert(){
-        let alertController = UIAlertController(title: "Добавьте свободное время", message: "Впишите время начала и время конца свободного времени", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Бош убакытты кошуңуз", message: "Бош убакыттын башталышын жана аяктоочу убактысын жазыңыз", preferredStyle: .alert)
         var startTextField = UITextField()
         
         alertController.addTextField { textField in
-            textField.placeholder = "Время начала"
+            textField.placeholder = "Баштоо убактысы"
             textField.keyboardType = .decimalPad
             textField.delegate = self
             startTextField = textField
@@ -90,12 +90,12 @@ extension ScheduleController {
         var endTextField = UITextField()
         alertController.addTextField { textField in
             textField.delegate = self
-            textField.placeholder = "Время конца"
+            textField.placeholder = "Бүтүү убактысы"
             textField.keyboardType = .decimalPad
             endTextField = textField
         }
                 
-        let addAction = UIAlertAction(title: "Добавить", style: .default) { [weak self] _ in
+        let addAction = UIAlertAction(title: "Кошуу", style: .default) { [weak self] _ in
             let firstValue = startTextField.text ?? ""
             let secondValue = endTextField.text ?? ""
             
@@ -104,7 +104,7 @@ extension ScheduleController {
             }
         }
 
-        let cancelAction = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Баш тартуу ", style: .cancel, handler: nil)
 
         alertController.addAction(addAction)
         alertController.addAction(cancelAction)

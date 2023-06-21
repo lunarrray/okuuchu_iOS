@@ -42,15 +42,15 @@ extension TutorAccountViewModel: TutorAccountViewModelInput {
         var titleAndSubtitles: [TitleSubtitleViewModel] = []
         
         if let descriptionSubtitle = tutorData?.description {
-            let description: TitleSubtitleViewModel = .init(title: "О преподавателе", subtitle: descriptionSubtitle)
+            let description: TitleSubtitleViewModel = .init(title: "Окутуучу жөнүндө", subtitle: descriptionSubtitle)
             titleAndSubtitles.append(description)
         }
         if let educationSubtitle = tutorData?.education {
-            let education: TitleSubtitleViewModel = .init(title: "Образование", subtitle: educationSubtitle)
+            let education: TitleSubtitleViewModel = .init(title: "Билими", subtitle: educationSubtitle)
             titleAndSubtitles.append(education)
         }
         if let lessonsSubtitle = tutorData?.convertLessonsToString() {
-            let lessons: TitleSubtitleViewModel = .init(title: "Предметы", subtitle: lessonsSubtitle)
+            let lessons: TitleSubtitleViewModel = .init(title: "Сабактар", subtitle: lessonsSubtitle)
             titleAndSubtitles.append(lessons)
         }
         if let languagesSubtitle = tutorData?.convertLessonsToString() {
@@ -58,11 +58,11 @@ extension TutorAccountViewModel: TutorAccountViewModelInput {
             titleAndSubtitles.append(languages)
         }
         if let experienceSubtitle = tutorData?.workExperience {
-            let experience: TitleSubtitleViewModel = .init(title: "Опыт Работы", subtitle: experienceSubtitle)
+            let experience: TitleSubtitleViewModel = .init(title: "Окутуу тажрыйбасы", subtitle: experienceSubtitle)
             titleAndSubtitles.append(experience)
         }
         if let locationSubtitle = tutorData?.location {
-            let location: TitleSubtitleViewModel = .init(title: "Местоположение", subtitle: locationSubtitle.title)
+            let location: TitleSubtitleViewModel = .init(title: "Жайгашкан жери", subtitle: locationSubtitle.title)
             titleAndSubtitles.append(location)
         }
         output?.customizeOutput(image: image, rating: rating, tutorInfo: titleAndSubtitles)

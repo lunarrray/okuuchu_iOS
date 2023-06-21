@@ -39,9 +39,9 @@ extension PersonalAdsCollectionViewManager: UICollectionViewDataSource, UICollec
         
         if let adStatus = advertisement.status {
             if adStatus == .active {
-                cell.addButtons(activatingButtonTitle: "Деактивировать")
+                cell.addButtons(activatingButtonTitle: "Деактивдөө")
             } else if adStatus == .inactive{
-                cell.addButtons(activatingButtonTitle: "Активировать")
+                cell.addButtons(activatingButtonTitle: "Активдөө")
             }
         }
         return cell

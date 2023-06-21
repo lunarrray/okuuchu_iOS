@@ -29,7 +29,7 @@ class AddVideoController: VMController<AddVideoPresentable, AddVideoViewModelInp
     //MARK: - Override methods
     
     override func onConfigureController() {
-        navigationItem.title = "Добавить видео"
+        navigationItem.title = "Видео кошуу"
         navigationItem.leftBarButtonItem = content.navigation.cancelButton
     }
     

@@ -8,7 +8,7 @@ class MainScreenPresentable: BaseView {
     var searchField: SearchTextField = .init()
     
     private var segmentedControl: CustomSegmentedControl = {
-        let segmentedControl = CustomSegmentedControl(items: ["Объявления", "Репетиторы"])
+        let segmentedControl = CustomSegmentedControl(items: ["Жарнамалар", "Репетиторлор"])
         segmentedControl.contentVerticalAlignment = .center
         segmentedControl.selectedSegmentIndex = 0
         return segmentedControl

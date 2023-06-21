@@ -31,7 +31,7 @@ class PersonalAdsController: VMController<PersonalAdsPresentable, PersonalAdsVie
     //MARK: - Override Methods
     
     override func onConfigureController() {
-        navigationItem.title = "Обьявления"
+        navigationItem.title = "Жарнамалар"
     }
 
     override func onConfigureViewModel() {

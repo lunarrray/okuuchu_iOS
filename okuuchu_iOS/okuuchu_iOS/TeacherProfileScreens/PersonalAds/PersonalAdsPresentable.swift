@@ -6,7 +6,7 @@ class PersonalAdsPresentable: BaseView {
     //MARK: - Properties
     
     private var segmentedControl: CustomSegmentedControl = {
-        let segmentedControl = CustomSegmentedControl(items: ["Активные", "Неактивные"])
+        let segmentedControl = CustomSegmentedControl(items: ["Активдүү", "Активдүү эмес"])
         segmentedControl.contentVerticalAlignment = .center
         segmentedControl.selectedSegmentIndex = 0
         return segmentedControl
@@ -40,7 +40,7 @@ class PersonalAdsPresentable: BaseView {
         collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: ImageCollectionViewCell.self))
 
         addButton.backgroundColor = Asset.primaryButtonsBlue.color
-        addButton.setTitle("Добавить", for: .normal)
+        addButton.setTitle("Кошуу", for: .normal)
         
     }
     

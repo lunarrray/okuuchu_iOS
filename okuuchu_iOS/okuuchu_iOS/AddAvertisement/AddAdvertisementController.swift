@@ -19,7 +19,7 @@ class AddAdvertisementController: VMController<AddAdvertisementPresentable, AddA
     //MARK: - Override methods
 
     override func onConfigureController() {
-        navigationItem.title = "Добавить объявление"
+        navigationItem.title = "Жарнама кошуу"
         navigationItem.leftBarButtonItem = content.navigation.cancelButton
         navigationItem.rightBarButtonItem = content.navigation.addButton
     }

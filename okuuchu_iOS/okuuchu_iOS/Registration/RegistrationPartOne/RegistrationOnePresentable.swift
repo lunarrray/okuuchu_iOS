@@ -35,7 +35,7 @@ class RegistrationOnePresentable: PrimaryView {
         smallLabel.textAlignment = .center
         smallLabel.font = .systemFont(ofSize: 16)
         smallLabel.textColor = Asset.normalTextColor.color
-        smallLabel.text = "Пройдите регистрацию"
+        smallLabel.text = "Каттодон өтүңүз"
         
         presentingImage.image = Asset.girlAndPhoneImage.image
         
@@ -44,29 +44,29 @@ class RegistrationOnePresentable: PrimaryView {
         stackView.spacing = 25
         stackView.distribution = .fill
         
-        emailTextField.placeholder = "Введите email"
+        emailTextField.placeholder = "email киргизиңиз"
         emailTextField.keyboardType = .emailAddress
         
-        passwordTextfield.placeholder = "Введите пароль"
+        passwordTextfield.placeholder = "сыр сөз киргизиңиз"
         passwordTextfield.passwordModeActivate()
         
-        repeatPasswordTextfield.placeholder = "Повторите пароль"
+        repeatPasswordTextfield.placeholder = "сыр сөз кайталаңыз"
         repeatPasswordTextfield.passwordModeActivate()
         
         continueRegistrationButton.backgroundColor = Asset.primaryButtonsBlue.color
-        continueRegistrationButton.setTitle("Продолжить регистрацию", for: .normal)
+        continueRegistrationButton.setTitle("Каттону улантуу", for: .normal)
         
         horizontalStackView.axis = .horizontal
         horizontalStackView.spacing = 8
         horizontalStackView.alignment = .center
         horizontalStackView.distribution = .fillProportionally
         
-        questionLabel.text = "Уже есть аккаунт??"
+        questionLabel.text = "Аккаунтуңуз барбы?"
         questionLabel.textColor = Asset.normalTextColor.color
         questionLabel.textAlignment = .right
         questionLabel.font = .systemFont(ofSize: 14)
         
-        loginTextButton.setTitle("Войти в аккаунт", for: .normal)
+        loginTextButton.setTitle("Аккаунтуңузга кирүу", for: .normal)
         loginTextButton.setTitleColor(Asset.textButton.color, for: .normal)
         loginTextButton.setTitleColor(Asset.darkBlue.color, for: .selected)
         loginTextButton.titleLabel?.font = .boldSystemFont(ofSize: 14)

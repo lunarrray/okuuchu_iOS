@@ -53,7 +53,7 @@ extension UpdateTeacherInfoTableViewManager: UITableViewDataSource, UITableViewD
         case .buttonsSection:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PrimaryButtonCell.self), for: indexPath) as? PrimaryButtonCell else { return PrimaryButtonCell() }
             cell.selectionStyle = .none
-            cell.setButtonTitle("Сохранить")
+            cell.setButtonTitle("Cактоо")
             return cell
         }
         

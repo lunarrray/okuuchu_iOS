@@ -31,13 +31,13 @@ enum Menu {
         case .schedule:
             return "График"
         case .recordedLessons:
-            return "Записанные уроки"
+            return "Жазылган сабактар"
         case .reviews:
-            return "Отзывы"
+            return "Cын-пикирлер"
         case .updatePersonalInfo:
-            return "Обновить информацию о себе"
+            return "Өзүңүз жөнүндө маалыматты жаңыртуу"
         case .ads:
-            return "Обьявления"
+            return "Жарнамалар"
         case .information:
             return "Информация"
         }
@@ -52,11 +52,11 @@ enum InformationCellType {
     var title: String {
         switch self{
         case .contacts:
-            return "Контакты"
+            return "Байланыш"
         case .aboutApp:
-            return "О приложении"
+            return "Мобилдик тиркеме жөнүндө"
         case .logout:
-            return "Выйти"
+            return "Чыгуу"
         }
     }
     

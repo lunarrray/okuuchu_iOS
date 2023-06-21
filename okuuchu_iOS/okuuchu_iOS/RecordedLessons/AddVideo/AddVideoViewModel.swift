@@ -29,8 +29,8 @@ final class AddVideoViewModel {
     }
     private var titleSubtitleData: [TitleSubtitleViewModel] = [
         TitleSubtitleViewModel(title: "Тема", subtitle: ""),
-        TitleSubtitleViewModel(title: "Описание", subtitle: ""),
-        TitleSubtitleViewModel(title: "Ссылка", subtitle: ""),
+        TitleSubtitleViewModel(title: "Маалымат", subtitle: ""),
+        TitleSubtitleViewModel(title: "Шилтеме", subtitle: ""),
     ]
     
     var subject: Lesson?

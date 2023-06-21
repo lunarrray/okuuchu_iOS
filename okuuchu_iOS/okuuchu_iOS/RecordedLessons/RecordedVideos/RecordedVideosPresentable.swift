@@ -5,8 +5,8 @@ class RecordedVideoPresentable: BaseView {
     
     //MARK: - Properties
     struct Navigation {
-        let deleteButton: UIBarButtonItem = .init(title: "Удалить")
-        let selectButton: UIBarButtonItem = .init(title: "Выделить")
+        let deleteButton: UIBarButtonItem = .init(title: "Өчүрүү")
+        let selectButton: UIBarButtonItem = .init(title: "Тандоо")
     }
     var navigation: Navigation = .init()
  
@@ -28,14 +28,14 @@ class RecordedVideoPresentable: BaseView {
         let font = UIFont.systemFont(ofSize: 17)
         let fontDescriptor = font.fontDescriptor.withSymbolicTraits(.traitBold)!
 
-        navigation.deleteButton.title = "Удалить"
+        navigation.deleteButton.title = "Өчүрүү"
         navigation.deleteButton.setTitleTextAttributes([.font: UIFont(descriptor: fontDescriptor, size: font.pointSize)], for: .normal)
         navigation.deleteButton.tintColor = Asset.redButton.color
         
         navigation.deleteButton.isHidden = true
 
         
-        navigation.selectButton.title = "Выделить"
+        navigation.selectButton.title = "Тандоо"
         navigation.selectButton.setTitleTextAttributes([.font: UIFont(descriptor: fontDescriptor, size: font.pointSize)], for: .normal)
         navigation.selectButton.tintColor = Asset.textButton.color
         
@@ -44,7 +44,7 @@ class RecordedVideoPresentable: BaseView {
         tableView.register(TitleSubtitleCell.self, forCellReuseIdentifier: String(describing: TitleSubtitleCell.self))
                 
         addButton.backgroundColor = Asset.primaryButtonsBlue.color
-        addButton.setTitle("Добавить", for: .normal)
+        addButton.setTitle("Кошуу", for: .normal)
         addButton.setTitleColor(.white, for: .normal)
     }
     

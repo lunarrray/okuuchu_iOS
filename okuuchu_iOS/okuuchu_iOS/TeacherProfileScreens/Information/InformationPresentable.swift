@@ -40,21 +40,3 @@ class InformationPresentable: PrimaryView {
 
     }
 }
-
-//MARK: - Extension
-
-//extension InformationPresentable: UITableViewDataSource, UITableViewDelegate {
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return displayTypes.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        switch displayTypes[indexPath.row] {
-//        case .contactsAndAboutApp
-//            return .init(frame: .zero)
-//        case .logout:
-//            return .init(frame: .zero)
-//        }
-//    }
-//}

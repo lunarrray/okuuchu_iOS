@@ -4,7 +4,7 @@ import UIKit
 class ReviewsPresentable: BaseView {
     
     struct Navigation {
-        let addButton: UIBarButtonItem = .init(title: "Добавить")
+        let addButton: UIBarButtonItem = .init(title: "Кошуу")
     }
     
     //MARK: - Properties
@@ -24,7 +24,7 @@ class ReviewsPresentable: BaseView {
         let font = UIFont.systemFont(ofSize: 17)
         let fontDescriptor = font.fontDescriptor.withSymbolicTraits(.traitBold)!
 
-        navigation.addButton.title = "Добавить"
+        navigation.addButton.title = "Кошуу"
         navigation.addButton.setTitleTextAttributes([.font: UIFont(descriptor: fontDescriptor, size: font.pointSize)], for: .normal)
         navigation.addButton.tintColor = Asset.darkBlue.color
                 

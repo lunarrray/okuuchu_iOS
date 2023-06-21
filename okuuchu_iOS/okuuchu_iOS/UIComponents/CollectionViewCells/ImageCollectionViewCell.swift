@@ -68,7 +68,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
         deleteButton.backgroundColor = Asset.redButton.color
         deleteButton.layer.cornerRadius = 4
         deleteButton.titleLabel?.font = .systemFont(ofSize: 13)
-        deleteButton.setTitle("Удалить", for: .normal)
+        deleteButton.setTitle("Жок кылуу", for: .normal)
         deleteButton.isHidden = true
 
     }
