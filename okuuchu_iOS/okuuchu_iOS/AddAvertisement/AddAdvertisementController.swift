@@ -5,11 +5,23 @@ class AddAdvertisementController: VMController<AddAdvertisementPresentable, AddA
     
     //MARK: - Properties
     
+    private var tableViewManager: AddAdvertisementTableViewManager?
+    
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       tableViewManager = AddAdvertisementTableViewManager()
+        content.tableView.dataSource = tableViewManager
+        content.tableView.delegate = tableViewManager
+        
+        viewModel.getDataFromModel()
+        tableViewManager?.delegate = self
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
         if isMovingFromParent {
             viewModel.viewDidDisappear()
         }
@@ -36,7 +48,11 @@ class AddAdvertisementController: VMController<AddAdvertisementPresentable, AddA
 //MARK: - Extension
 
 extension AddAdvertisementController: AddAdvertisementViewModelOutput {
-    func customizeOutput() {
-        
+    func customizeOutput(with advertisementData: [TitleSubtitleViewModel]) {
+        tableViewManager?.setData(advertisementData, tableView: content.tableView)
     }
+}
+
+extension AddAdvertisementController: AddAdvertisementTableViewDelegate {
+    
 }

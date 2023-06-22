@@ -62,7 +62,7 @@ extension DetailAdViewModel: DetailAdViewModelInput {
         
         if let teachingType = advertisement?.convertTeachingTypesToString() {
             if teachingType != "" {
-                let titleSubtitleData = TitleSubtitleViewModel(title: "Окутуунун түрү", subtitle: teachingType)
+                let titleSubtitleData = TitleSubtitleViewModel(title: "Окутуу түрү", subtitle: teachingType)
                 titleSubtitleViewModel.append(titleSubtitleData)
             }
         }

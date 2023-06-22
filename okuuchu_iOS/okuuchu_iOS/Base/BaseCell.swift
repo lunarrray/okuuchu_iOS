@@ -9,6 +9,7 @@ open class BaseCell<Model>: UITableViewCell {
         onConfigureView()
         onAddSubviews()
         onSetupConstraints()
+        onSetupTargets()
     }
     
     required public init?(coder: NSCoder) {
@@ -18,6 +19,7 @@ open class BaseCell<Model>: UITableViewCell {
     func onConfigureView(){ }
     func onAddSubviews() { }
     func onSetupConstraints() { }
+    func onSetupTargets() { }
     func configureCell(with model: Model) { }
 
 }

@@ -56,4 +56,5 @@ enum SubTextType {
     case phoneNumber
     case date
     case image
+    case decimal
 }

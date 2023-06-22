@@ -42,7 +42,7 @@ extension UpdateTeacherInfoViewModel: UpdateTeacherInfoViewModelInput {
             TitleSubtitleViewModel(title: "Өзүм жөнүндө", subtitle: "Lörem ipsum klimatmat fibid tisos, supöning retopi. Geodögisk ont vifilig. Föder vitigt, gyförat. Egol seminas köns gepåktig timypp. "),
             TitleSubtitleViewModel(title: "Билим", subtitle: "Lörem ipsum klimatmat fibid tisos, supöning retopi. Geodögisk "),
             TitleSubtitleViewModel(title: "Туулган жылы", subtitle: "12.02.2000"),
-//            TitleSubtitleViewModel(title: "Номер для связи", subtitle: "+996 707 70 70 70"),
+            //            TitleSubtitleViewModel(title: "Номер для связи", subtitle: "+996 707 70 70 70"),
             TitleSubtitleViewModel(title: "Whatsapp", subtitle: "+996 990 506 014"),
             TitleSubtitleViewModel(title: "Telegram", subtitle: "+996 990 506 014"),
             TitleSubtitleViewModel(title: "Репетитордук тажрыйба", subtitle: "4 жыл"),
@@ -63,13 +63,13 @@ extension UpdateTeacherInfoViewModel {
         var sections = [Section]()
         sections.append(.imageSection(imageData: TitleSubtitleViewModel(image: Asset.avatarImg.image, subTextType: .image)))
         let primaryTeacherData = [
-        TitleSubtitleViewModel(title: "Аты-жөнү", subtitle: "Азима Асанова"),
+            TitleSubtitleViewModel(title: "Аты-жөнү", subtitle: "Азима Асанова"),
             TitleSubtitleViewModel(title: "Өзүм жөнүндө", subtitle: "Lörem ipsum klimatmat fibid tisos, supöning retopi. Geodögisk ont vifilig. Föder vitigt, gyförat. Egol seminas köns gepåktig timypp. "),
             TitleSubtitleViewModel(title: "Билим", subtitle: "Lörem ipsum klimatmat fibid tisos, supöning retopi. Geodögisk "),
-        TitleSubtitleViewModel(title: "Туулган жылы", subtitle: "12.02.2000", subTextType: .date),
-//        TitleSubtitleViewModel(title: "Номер для связи", subtitle: "+996 707 70 70 70", subTextType: .phoneNumber),
-        TitleSubtitleViewModel(title: "Whatsapp", subtitle: "+996 990 506 014", subTextType: .phoneNumber),
-        TitleSubtitleViewModel(title: "Telegram", subtitle: "+996 990 506 014", subTextType: .phoneNumber),
+            TitleSubtitleViewModel(title: "Туулган жылы", subtitle: "12.02.2000", subTextType: .date),
+            //        TitleSubtitleViewModel(title: "Номер для связи", subtitle: "+996 707 70 70 70", subTextType: .phoneNumber),
+            TitleSubtitleViewModel(title: "Whatsapp", subtitle: "+996 990 506 014", subTextType: .phoneNumber),
+            TitleSubtitleViewModel(title: "Telegram", subtitle: "+996 990 506 014", subTextType: .phoneNumber),
             TitleSubtitleViewModel(title: "Репетитордук тажрыйба", subtitle: "4 жыл"),
             TitleSubtitleViewModel(title: "Жайгашкан жери", subtitle: "Бишкек"),
             TitleSubtitleViewModel(title: "Окутуу тилдери", subtitle: "Русский, Кыргызский", subTextType: .selectingSeveral),

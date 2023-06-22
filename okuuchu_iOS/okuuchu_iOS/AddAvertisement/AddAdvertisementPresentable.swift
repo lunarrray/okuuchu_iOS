@@ -12,6 +12,8 @@ class AddAdvertisementPresentable: BaseView {
 
     let navigation: Navigation = .init()
     private let addButton: PrimaryButton = .init()
+    private let rectangleImageView: RectangleImageView = .init(frame: CGRect(x: 0, y: 0, width: 120, height: 120))
+    lazy var tableView: UITableView = .init()
 
     var handleCancelButtonTapAction: (() -> Void)?
 
@@ -28,6 +30,10 @@ class AddAdvertisementPresentable: BaseView {
         navigation.addButton.setTitleTextAttributes([.font: UIFont(descriptor: fontDescriptor, size: font.pointSize)], for: .normal)
         navigation.addButton.tintColor = Asset.darkBlue.color
 
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        
+        tableView.register(LabeledTextViewCell.self, forCellReuseIdentifier: String(describing: LabeledTextViewCell.self))
         
         addButton.setTitle("Кошуу", for: .normal)
         addButton.backgroundColor = Asset.primaryButtonsBlue.color
@@ -35,15 +41,28 @@ class AddAdvertisementPresentable: BaseView {
     
     override func onAddSubviews() {
         addSubviews(
+            rectangleImageView,
+            tableView,
             addButton
         )
     }
     
     override func onSetupConstraints() {
+        rectangleImageView.snp.makeConstraints{ maker in
+            maker.top.equalTo(safeAreaLayoutGuide.snp.top)
+            maker.centerX.equalToSuperview()
+            maker.width.height.equalTo(120)
+        }
         addButton.snp.makeConstraints{ maker in
             maker.bottom.equalToSuperview().offset(-40)
             maker.horizontalEdges.equalToSuperview().inset(20)
             maker.height.equalTo(70)
+        }
+        
+        tableView.snp.makeConstraints{ maker in
+            maker.horizontalEdges.equalToSuperview()
+            maker.top.equalTo(rectangleImageView.snp.bottom).offset(20)
+            maker.bottom.equalTo(addButton.snp.top).offset(-10)
         }
     }
     

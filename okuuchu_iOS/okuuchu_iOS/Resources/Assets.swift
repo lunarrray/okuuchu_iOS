@@ -85,6 +85,7 @@ internal enum Asset {
   internal static let savedIcon = ImageAsset(name: "savedIcon")
   internal static let savedItemsIcon = ImageAsset(name: "savedItemsIcon")
   internal static let searchIcon = ImageAsset(name: "searchIcon")
+  internal static let selectIcon = ImageAsset(name: "selectIcon")
   internal static let selectedAvatarIcon = ImageAsset(name: "selectedAvatarIcon")
   internal static let selectedHomeIcon = ImageAsset(name: "selectedHomeIcon")
   internal static let selectedPlayVideo = ImageAsset(name: "selectedPlayVideo")

@@ -45,6 +45,8 @@
 		D550CFAE299A74E200CBD84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAD299A74E200CBD84F /* Assets.xcassets */; };
 		D550CFB1299A74E200CBD84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D550CFAF299A74E200CBD84F /* LaunchScreen.storyboard */; };
 		D551485A2A14E70F009374F3 /* SubsubtitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55148592A14E70F009374F3 /* SubsubtitleViewModel.swift */; };
+		D55280D32A43280000F04C45 /* RectangleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55280D22A43280000F04C45 /* RectangleImageView.swift */; };
+		D55280D62A4329E200F04C45 /* AddAdvertisementTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55280D52A4329E200F04C45 /* AddAdvertisementTableViewManager.swift */; };
 		D555C9DF2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555C9DE2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift */; };
 		D555C9E22A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555C9E12A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift */; };
 		D55A65AC29EDA267001BBDAC /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */; };
@@ -203,6 +205,8 @@
 		D550CFB0299A74E200CBD84F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D550CFB2299A74E200CBD84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D55148592A14E70F009374F3 /* SubsubtitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsubtitleViewModel.swift; sourceTree = "<group>"; };
+		D55280D22A43280000F04C45 /* RectangleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleImageView.swift; sourceTree = "<group>"; };
+		D55280D52A4329E200F04C45 /* AddAdvertisementTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdvertisementTableViewManager.swift; sourceTree = "<group>"; };
 		D555C9DE2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewManager.swift; sourceTree = "<group>"; };
 		D555C9E12A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsCollectionViewManager.swift; sourceTree = "<group>"; };
 		D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
@@ -546,6 +550,14 @@
 				D550CFB2299A74E200CBD84F /* Info.plist */,
 			);
 			path = okuuchu_iOS;
+			sourceTree = "<group>";
+		};
+		D55280D42A4329CB00F04C45 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D55280D52A4329E200F04C45 /* AddAdvertisementTableViewManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		D555C9DD2A1DC46E00FC40D4 /* Manager */ = {
@@ -1046,6 +1058,7 @@
 				D5E5E9E72A1D137400575FD2 /* AddAdvertisementPresentable.swift */,
 				D5E5E9E92A1D137B00575FD2 /* AddAdvertisementController.swift */,
 				D5E5E9EB2A1D138400575FD2 /* AddAdvertisementViewModel.swift */,
+				D55280D42A4329CB00F04C45 /* Manager */,
 			);
 			path = AddAvertisement;
 			sourceTree = "<group>";
@@ -1140,6 +1153,7 @@
 				D5FD9CDA2A152A8900C8171C /* SearchTextField.swift */,
 				D5115A2E2A1898C0008EEEFD /* PullDownOverlayView.swift */,
 				D54E2E872A3749A700FEDD0E /* CellButton.swift */,
+				D55280D22A43280000F04C45 /* RectangleImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1292,6 +1306,7 @@
 				D5ECB2282A1679A5005A2CC9 /* TitleSubtitleCell.swift in Sources */,
 				D549082F29F12C34007CA37A /* RatingView.swift in Sources */,
 				D567815B29E99EA90035EB11 /* TabBarController.swift in Sources */,
+				D55280D62A4329E200F04C45 /* AddAdvertisementTableViewManager.swift in Sources */,
 				D567815F29E9A00E0035EB11 /* LoginCoordinator.swift in Sources */,
 				D59AF72B29F12763004FA0A7 /* TeacherProfilePresentable.swift in Sources */,
 				D50FB3882A1A8ECF0093513A /* AddVideoViewModel.swift in Sources */,
@@ -1399,6 +1414,7 @@
 				D567814029E995AB0035EB11 /* BaseController.swift in Sources */,
 				D551485A2A14E70F009374F3 /* SubsubtitleViewModel.swift in Sources */,
 				D5B7D0A529F7ABB5000FB288 /* UpdateTeacherInfoController.swift in Sources */,
+				D55280D32A43280000F04C45 /* RectangleImageView.swift in Sources */,
 				D595C58129ED9E1600CED84D /* MainTextField.swift in Sources */,
 				D54D2C5429FBF76A00ACE864 /* AboutAppViewModel.swift in Sources */,
 				D561CDB22A39DE8C00B6DA4C /* RegistrationTwoCoordinator.swift in Sources */,

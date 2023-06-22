@@ -9,13 +9,13 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
     
     private let labeledView: LabeledTextView = .init()
     private var textViewHeightConstraint: Constraint?
-    private let addButton: UIButton = .init()
-    private var withAddButton: Bool = false {
+    private let button: UIButton = .init()
+    private var withButton: Bool = false {
         didSet {
-            if withAddButton {
-                addButton.isHidden = false
+            if withButton {
+                button.isHidden = false
             } else {
-                addButton.isHidden = true
+                button.isHidden = true
             }
         }
     }
@@ -33,8 +33,8 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
 //        labeledView.textView.delegate = self
         labeledView.configureTextView(insets: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5), cornerRadius: 5)
         
-        addButton.setImage(Asset.addIcon.image.withTintColor(Asset.lightBlue.color, renderingMode: .alwaysOriginal), for: .normal)
-        addButton.isHidden = true
+//        button.setImage(Asset.addIcon.image.withTintColor(Asset.lightBlue.color, renderingMode: .alwaysOriginal), for: .normal)
+        button.isHidden = true
         
         toolBar.setItems([doneButton], animated: false)
         datePickerView.preferredDatePickerStyle = .wheels
@@ -44,7 +44,7 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
     }
     
     override func onAddSubviews() {
-        contentView.addSubviews(labeledView, addButton)
+        contentView.addSubviews(labeledView, button)
     }
     
     override func onSetupConstraints() {
@@ -55,16 +55,21 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
             maker.bottom.equalToSuperview()
         }
         
-        addButton.snp.makeConstraints{ maker in
+        button.snp.makeConstraints{ maker in
             maker.right.equalToSuperview().offset(-25)
             maker.bottom.equalTo(labeledView.snp.bottom)
             maker.width.height.equalTo(30)
         }
     }
     
+
+    override func onSetupTargets() {
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
-        withAddButton = false
+        withButton = false
         contentView.backgroundColor = .clear
     }
     
@@ -74,12 +79,20 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
         
         switch cellData.subTextType {
         case .selectingSeveral:
-            activateAddButton()
+            button.setImage(Asset.addIcon.image.withTintColor(Asset.lightBlue.color, renderingMode: .alwaysOriginal), for: .normal)
+            labeledView.nonEditableTextView()
+            activateButton()
+        case .selectingOne:
+            button.setImage(Asset.selectIcon.image.withTintColor(Asset.lightBlue.color, renderingMode: .alwaysOriginal), for: .normal)
+            labeledView.nonEditableTextView()
+            activateButton()
         case .phoneNumber:
             labeledView.textView.keyboardType = .phonePad
         case .date:
             labeledView.textView.inputView = datePickerView
             labeledView.textView.inputAccessoryView = toolBar
+        case .decimal:
+            labeledView.textView.keyboardType = .decimalPad
         default: break
         }
         
@@ -92,7 +105,13 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
 
         switch cellData.subTextType {
         case .selectingSeveral:
-            activateAddButton()
+            button.setImage(Asset.addIcon.image.withTintColor(Asset.lightBlue.color, renderingMode: .alwaysOriginal), for: .normal)
+            labeledView.nonEditableTextView()
+            activateButton()
+        case .selectingOne:
+            button.setImage(Asset.selectIcon.image.withTintColor(Asset.lightBlue.color, renderingMode: .alwaysOriginal), for: .normal)
+            labeledView.nonEditableTextView()
+            activateButton()
         case .phoneNumber:
             labeledView.textView.keyboardType = .phonePad
         case .date:
@@ -110,13 +129,13 @@ class LabeledTextViewCell: BaseCell<TitleSubtitleViewModel> {
 //MARK: - Extension
 
 extension LabeledTextViewCell {
-    func activateAddButton(){
-        addButton.isHidden = false
+    func activateButton(){
+        button.isHidden = false
         
         labeledView.snp.remakeConstraints{ maker in
             maker.top.equalToSuperview().offset(20)
             maker.left.equalToSuperview().offset(25)
-            maker.right.equalTo(addButton.snp.left).offset(-10)
+            maker.right.equalTo(button.snp.left).offset(-10)
             maker.bottom.equalToSuperview()
         }
     }
@@ -125,8 +144,12 @@ extension LabeledTextViewCell {
         labeledView.setTextViewDelegate(delegate: delegate)
     }
     
-    @objc func doneButtonTapped(){
+    @objc private func doneButtonTapped(){
         
+    }
+    
+    @objc private func buttonTapped(){
+        viewModel?.onCellUpdate?()
     }
     
     func setHeightConstraint(newConstraint: ConstraintOffsetTarget){
