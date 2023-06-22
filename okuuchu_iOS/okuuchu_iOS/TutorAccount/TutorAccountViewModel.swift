@@ -54,7 +54,7 @@ extension TutorAccountViewModel: TutorAccountViewModelInput {
             titleAndSubtitles.append(lessons)
         }
         if let languagesSubtitle = tutorData?.convertLessonsToString() {
-            let languages: TitleSubtitleViewModel = .init(title: "Языки преподавания", subtitle: languagesSubtitle)
+            let languages: TitleSubtitleViewModel = .init(title: "Окутуу тили", subtitle: languagesSubtitle)
             titleAndSubtitles.append(languages)
         }
         if let experienceSubtitle = tutorData?.workExperience {
