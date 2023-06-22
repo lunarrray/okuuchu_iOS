@@ -6,7 +6,6 @@ class UpdateTeacherInfoPresentable: PrimaryView {
     //MARK: - Properties
     
     lazy var tableView: UITableView = .init()
-    private let dismissKeyboard: UITapGestureRecognizer = .init()
 
     
     //MARK: - Methods
@@ -43,7 +42,19 @@ class UpdateTeacherInfoPresentable: PrimaryView {
 
 
 extension UpdateTeacherInfoPresentable {
-    @objc private func viewTapped(_ recognizer: UITapGestureRecognizer){
-        endEditing(true)
+    func reduceTableView(){
+        tableView.snp.remakeConstraints{ maker in
+            maker.height.equalTo(500)
+            maker.left.right.equalToSuperview()
+            maker.bottom.equalToSuperview().offset(-20)
+        }
+    }
+    
+    func normalTableView(){
+        tableView.snp.remakeConstraints{ maker in
+            maker.top.equalToSuperview()
+            maker.left.right.equalToSuperview()
+            maker.bottom.equalToSuperview().offset(-20)
+        }
     }
 }

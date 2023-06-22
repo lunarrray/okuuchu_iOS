@@ -55,11 +55,11 @@ extension AddAdvertisementViewModel: AddAdvertisementViewModelInput{
         advertisemenTitleSubtitle =   [
             TitleSubtitleViewModel(title: "Тема", subtitle: advertisementData.title),
             TitleSubtitleViewModel(title: "Маалымат", subtitle: advertisementData.description),
+            TitleSubtitleViewModel(title: "Баасы", subtitle: advertisementData.price, subTextType: .decimal),
             TitleSubtitleViewModel(title: "Сабактар", subtitle: advertisementData.convertLessonsToString(), subTextType: .selectingSeveral, onCellUpdate: selectSubjects),
             TitleSubtitleViewModel(title: "Окутуу тили", subtitle: advertisementData.convertLanguagesToString(), subTextType: .selectingSeveral, onCellUpdate: selectLanguages),
             TitleSubtitleViewModel(title: "Окутуу түрү", subtitle: advertisementData.convertTeachingTypesToString(), subTextType: .selectingSeveral, onCellUpdate: selectTeachingType),
-            TitleSubtitleViewModel(title: "Жайгашкан жери", subtitle: advertisementData.location?.title, subTextType: .selectingOne, onCellUpdate: selectLocation),
-            TitleSubtitleViewModel(title: "Баасы", subtitle: advertisementData.price, subTextType: .decimal)
+            TitleSubtitleViewModel(title: "Жайгашкан жери", subtitle: advertisementData.location?.title, subTextType: .selectingOne, onCellUpdate: selectLocation)
         ]
         
         guard let isInTabBar = isInTabBar else { return }
@@ -140,7 +140,7 @@ extension AddAdvertisementViewModel: AddAdvertisementViewModelInput{
             advertisementData.title = subtitle
         } else if index == 1 {
             advertisementData.description = subtitle
-        } else if index == advertisemenTitleSubtitle.count - 1 {
+        } else if index == 2 {
             advertisementData.price = subtitle
         }        
     }

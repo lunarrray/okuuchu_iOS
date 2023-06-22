@@ -28,7 +28,7 @@ extension VideoInfoTableViewManager: UITableViewDataSource, UITableViewDelegate 
         
         let currentData = data[indexPath.row]
         cell.configureCell(with: currentData)
-        cell.enableTextViewEditing()
+        cell.nonEditableTextView()
         cell.setTextViewColor(color: Asset.normalTextColor.color)
         cell.selectionStyle = .none
 

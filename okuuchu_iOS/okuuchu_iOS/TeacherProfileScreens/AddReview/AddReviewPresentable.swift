@@ -15,6 +15,9 @@ class AddReviewPresentable: PrimaryView {
     var logo: UIImageView = .init()
     let reviewTextView: LabeledTextView = .init()
     private let addButton: PrimaryButton = .init()
+    
+    private let dismissKeyboardTap: UITapGestureRecognizer = .init()
+
 
     var handleCancelButtonTapAction: (() -> Void)?
     var handleStarButtonTapAction: ((_: String) -> Void)?
@@ -63,8 +66,10 @@ class AddReviewPresentable: PrimaryView {
         for button in buttons {
             starsStackView.addArrangedSubview(button)
             button.setContentCompressionResistancePriority(.required, for: .horizontal)
-
         }
+        
+        addGestureRecognizer(dismissKeyboardTap)
+
     }
     
     override func onSetupConstraints() {
@@ -103,6 +108,8 @@ class AddReviewPresentable: PrimaryView {
         
         addButton.addTarget(self, action: #selector(addButtonTapAction), for: .touchUpInside)
         
+        dismissKeyboardTap.addTarget(self, action: #selector(viewTapped(_: )))
+
     }
     
 }
@@ -133,4 +140,9 @@ extension AddReviewPresentable {
             }
         }
     }
+    
+    @objc private func viewTapped(_ recognizer: UITapGestureRecognizer) {
+        endEditing(true)
+    }
+    
 }

@@ -13,6 +13,9 @@ class AddVideoPresentable: BaseView {
     lazy var tableView: UITableView = .init()
     private let addButton: PrimaryButton = .init()
     
+    private let dismissKeyboardTap: UITapGestureRecognizer = .init()
+
+    
     var handleCancelButtonTapAction: (() -> Void)?
     var handleAddButtonTapAction: (() -> Void)?
     
@@ -40,6 +43,9 @@ class AddVideoPresentable: BaseView {
             tableView,
             addButton
         )
+        
+        addGestureRecognizer(dismissKeyboardTap)
+
     }
     
     override func onSetupConstraints() {
@@ -62,6 +68,9 @@ class AddVideoPresentable: BaseView {
         navigation.cancelButton.action = #selector(cancelButtonTapAction)
         
         addButton.addTarget(self, action: #selector(addButtonTapAction), for: .touchUpInside)
+        
+        dismissKeyboardTap.addTarget(self, action: #selector(viewTapped(_: )))
+
     }
 
 }
@@ -75,5 +84,9 @@ extension AddVideoPresentable {
     
     @objc private func addButtonTapAction(){
         handleAddButtonTapAction?()
+    }
+    
+    @objc private func viewTapped(_ recognizer: UITapGestureRecognizer) {
+        endEditing(true)
     }
 }

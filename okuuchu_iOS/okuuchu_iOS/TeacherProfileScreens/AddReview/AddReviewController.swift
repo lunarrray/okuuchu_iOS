@@ -14,6 +14,7 @@ final class AddReviewController: VMController<AddReviewPresentable, AddReviewVie
         if isMovingFromParent {
             viewModel.viewDidDisappear()
         }
+        
     }
     
     //MARK: - Override methods
@@ -60,3 +61,5 @@ extension AddReviewController: UITextViewDelegate {
         return true
     }
 }
+extension AddReviewController { }
+
