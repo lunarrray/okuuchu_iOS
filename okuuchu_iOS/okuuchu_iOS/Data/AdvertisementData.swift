@@ -13,10 +13,10 @@ class AdvertisementData {
     var image: UIImage?
     var whatsappNumber: String?
     var telegramNic: String?
-    var price: Int?
+    var price: String?
     var status: ActiveStatus?
     
-    init(id: Int? = nil, tutor: TutorData? = nil, title: String? = nil, lessons: [Lesson]? = nil, teachingLanguages: [TeachingLanguage]? = nil, teachingTypes: [TeachingType]? = nil, location: Location? = nil, description: String? = nil, image: UIImage? = nil, whatsappNumber: String? = nil, telegramNic: String? = nil, price: Int? = nil, status: ActiveStatus? = nil) {
+    init(id: Int? = nil, tutor: TutorData? = nil, title: String? = nil, lessons: [Lesson]? = nil, teachingLanguages: [TeachingLanguage]? = nil, teachingTypes: [TeachingType]? = nil, location: Location? = nil, description: String? = nil, image: UIImage? = nil, whatsappNumber: String? = nil, telegramNic: String? = nil, price: String? = nil, status: ActiveStatus? = nil) {
         self.id = id
         self.tutor = tutor
         self.title = title
@@ -74,7 +74,7 @@ class AdvertisementData {
     
     func getPrice() -> String? {
         if let price = price {
-            return "\(price) сом"
+            return price + " сом"
         }
         return nil
     }

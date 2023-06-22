@@ -16,7 +16,7 @@ class AddAdvertisementPresentable: BaseView {
     lazy var tableView: UITableView = .init()
 
     var handleCancelButtonTapAction: (() -> Void)?
-
+    var handleAddButtonTapAction: (() -> Void)?
     
     //MARK: - Override Methods
     
@@ -49,7 +49,7 @@ class AddAdvertisementPresentable: BaseView {
     
     override func onSetupConstraints() {
         rectangleImageView.snp.makeConstraints{ maker in
-            maker.top.equalTo(safeAreaLayoutGuide.snp.top)
+            maker.top.equalTo(safeAreaLayoutGuide.snp.top).offset(10)
             maker.centerX.equalToSuperview()
             maker.width.height.equalTo(120)
         }
@@ -61,7 +61,7 @@ class AddAdvertisementPresentable: BaseView {
         
         tableView.snp.makeConstraints{ maker in
             maker.horizontalEdges.equalToSuperview()
-            maker.top.equalTo(rectangleImageView.snp.bottom).offset(20)
+            maker.top.equalTo(rectangleImageView.snp.bottom)
             maker.bottom.equalTo(addButton.snp.top).offset(-10)
         }
     }
@@ -69,8 +69,10 @@ class AddAdvertisementPresentable: BaseView {
     override func onSetupTargets() {
         navigation.cancelButton.target = self
         navigation.cancelButton.action = #selector(cancelButtonTapAction)
-//        navigation
+        navigation.addButton.target = self
+        navigation.addButton.action = #selector(addButtonTapAction)
 
+        addButton.addTarget(self, action: #selector(addButtonTapAction), for: .touchUpInside)
     }
 
 }
@@ -80,5 +82,25 @@ class AddAdvertisementPresentable: BaseView {
 extension AddAdvertisementPresentable {
     @objc func cancelButtonTapAction(){
         handleCancelButtonTapAction?()
+    }
+    
+    @objc private func addButtonTapAction() {
+        handleAddButtonTapAction?()
+    }
+    
+    func setImage(with imageViewModel: TitleSubtitleViewModel){
+        rectangleImageView.configureWith(viewModel: imageViewModel)
+    }
+    
+    func tabBarMode(isActive: Bool){
+        if isActive {
+            navigation.cancelButton.isHidden = true
+            navigation.addButton.isHidden = false
+            addButton.isHidden = true
+        } else {
+            navigation.cancelButton.isHidden = false
+            navigation.addButton.isHidden = true
+            addButton.isHidden = false
+        }
     }
 }

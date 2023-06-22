@@ -70,6 +70,10 @@ extension LabeledTextView {
         textView.isEditable = false
     }
     
+    func editableTextView() {
+        textView.isEditable = true
+    }
+    
     func configureTextView(insets: UIEdgeInsets, cornerRadius: CGFloat){
         textView.textContainerInset = insets
         textView.layer.cornerRadius = cornerRadius
@@ -80,10 +84,3 @@ extension LabeledTextView {
     }
 }
 
-//extension LabeledTextView: UITextViewDelegate {
-//    func textViewDidChange(_ textView: UITextView) {
-//        let fixedWidth = textView.frame.width
-//        let newSize =  textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-//        textView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
-//    }
-//}

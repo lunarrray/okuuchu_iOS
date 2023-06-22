@@ -41,10 +41,7 @@ class TitleSubtitleViewModel{
     
     func update(_ image: UIImage){
         self.image = image
-        
-        if let onCellUpdate = onCellUpdate {
-            onCellUpdate()
-        }
+
     }
     
 }

@@ -2,7 +2,7 @@
 import UIKit
 
 protocol AddAdvertisementTableViewDelegate: AnyObject {
-    
+    func updateCell(for indexPath: IndexPath, subtitle: String)
 }
 
 final class AddAdvertisementTableViewManager: NSObject {
@@ -56,6 +56,18 @@ extension AddAdvertisementTableViewManager: UITextViewDelegate {
             tableView?.endUpdates()
             tableView?.scrollToRow(at: indexPath, at: .bottom, animated: false)
         }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        guard let currentText = textView.text else { return false }
+        let text = currentText + text
+        
+        let point = textView.convert(textView.bounds.origin, to: tableView)
+        if let indexPath = tableView?.indexPathForRow(at: point) {
+            delegate?.updateCell(for: indexPath, subtitle: text)
+        }
+        return true
     }
 }
 

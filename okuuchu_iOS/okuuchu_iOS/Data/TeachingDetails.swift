@@ -1,7 +1,7 @@
 
 import UIKit
 
-enum TeachingLanguage {
+enum TeachingLanguage: CaseIterable {
     case russian
     case turkish
     case kyrgyz
@@ -21,7 +21,7 @@ enum TeachingLanguage {
     }
 }
 
-enum Lesson {
+enum Lesson: CaseIterable {
     case math
     case programming
     case chemistry
@@ -109,7 +109,7 @@ enum Lesson {
     }
 }
 
-enum TeachingType{
+enum TeachingType: CaseIterable{
     case online
     case offline
     case group
@@ -129,7 +129,7 @@ enum TeachingType{
     }
 }
 
-enum Location {
+enum Location: CaseIterable {
     case chui
     case naryn
     case osh

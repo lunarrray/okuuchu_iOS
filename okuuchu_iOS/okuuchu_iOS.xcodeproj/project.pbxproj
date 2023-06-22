@@ -47,6 +47,7 @@
 		D551485A2A14E70F009374F3 /* SubsubtitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55148592A14E70F009374F3 /* SubsubtitleViewModel.swift */; };
 		D55280D32A43280000F04C45 /* RectangleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55280D22A43280000F04C45 /* RectangleImageView.swift */; };
 		D55280D62A4329E200F04C45 /* AddAdvertisementTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55280D52A4329E200F04C45 /* AddAdvertisementTableViewManager.swift */; };
+		D55280D82A4477E600F04C45 /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55280D72A4477E600F04C45 /* ImagePickerCoordinator.swift */; };
 		D555C9DF2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555C9DE2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift */; };
 		D555C9E22A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555C9E12A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift */; };
 		D55A65AC29EDA267001BBDAC /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */; };
@@ -207,6 +208,7 @@
 		D55148592A14E70F009374F3 /* SubsubtitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsubtitleViewModel.swift; sourceTree = "<group>"; };
 		D55280D22A43280000F04C45 /* RectangleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleImageView.swift; sourceTree = "<group>"; };
 		D55280D52A4329E200F04C45 /* AddAdvertisementTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAdvertisementTableViewManager.swift; sourceTree = "<group>"; };
+		D55280D72A4477E600F04C45 /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
 		D555C9DE2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewManager.swift; sourceTree = "<group>"; };
 		D555C9E12A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedAdsCollectionViewManager.swift; sourceTree = "<group>"; };
 		D55A65AB29EDA267001BBDAC /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
@@ -761,6 +763,7 @@
 				D5E5E9ED2A1D1DAC00575FD2 /* Coordinator */,
 				D567815529E99E010035EB11 /* MainCoordinator.swift */,
 				D567815329E99C6C0035EB11 /* AppCoordinator.swift */,
+				D55280D72A4477E600F04C45 /* ImagePickerCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -1324,6 +1327,7 @@
 				D5F6262C2A139153005746D0 /* TeachingDetails.swift in Sources */,
 				D5B7D0AA29F7AC19000FB288 /* UpdateTeacherInfoCoordinator.swift in Sources */,
 				D555C9DF2A1DC48500FC40D4 /* MainScreenCollectionViewManager.swift in Sources */,
+				D55280D82A4477E600F04C45 /* ImagePickerCoordinator.swift in Sources */,
 				D56A757229EE92CD0072BB29 /* RegistrationTwoViewModel.swift in Sources */,
 				D5E5E9E82A1D137400575FD2 /* AddAdvertisementPresentable.swift in Sources */,
 				D555C9E22A1DD60300FC40D4 /* SavedAdsCollectionViewManager.swift in Sources */,

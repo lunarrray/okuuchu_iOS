@@ -2,42 +2,48 @@
 import UIKit
 
 class RectangleImageView: UIView {
-    let imageView: UIImageView = .init()
-    let button: UIButton = .init()
+    private let imageView: UIImageView = .init()
+    private let button: UIButton = .init()
+    private var viewModel: TitleSubtitleViewModel?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         onSetupSubviews()
+        onAddSubviews()
         onSetupConstraints()
+        onSetupTargets()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func onSetupSubviews(){
-//        backgroundColor = .white
-//        imageView.image = Asset.neutralAvatarIcon.image.withTintColor(Asset.white.color, renderingMode: .alwaysOriginal)
+    private func onSetupSubviews(){
+
         imageView.backgroundColor = Asset.white.color
         imageView.layer.borderColor = Asset.darkBlue.color.cgColor
         imageView.layer.borderWidth = 1.0
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
-        addSubview(imageView)
         
         button.setImage(Asset.cameraIcon.image, for: .normal)
-//        button.isHidden = true
         button.addShadow()
-
-        addSubview(button)
     }
     
-    func onSetupConstraints(){
+    private func onAddSubviews() {
+        addSubviews(
+            imageView,
+            button
+        )
+    }
+    
+    private func onSetupConstraints(){
         imageView.snp.makeConstraints { maker in
             maker.horizontalEdges.equalToSuperview().inset(10)
             maker.verticalEdges.equalToSuperview().inset(10)
         }
+        
         let size = bounds.size.width / 3
         button.snp.makeConstraints{ maker in
             maker.right.equalToSuperview()
@@ -46,14 +52,23 @@ class RectangleImageView: UIView {
             maker.height.equalTo(size)
         }
     }
-
-//    func activateCameraButton(){
-//        button.isHidden = false
-//    }
     
-    func configureWith(_ image: UIImage) {
+    private func onSetupTargets() {
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+    }
+    
+    func configureWith(viewModel: TitleSubtitleViewModel) {
+        self.viewModel = viewModel
+        guard let image = viewModel.image else { return }
         imageView.image = image
         imageView.layer.borderWidth = 0
         imageView.backgroundColor = .clear
+    }
+    
+    @objc private func buttonTapped()  {
+        guard let viewModel = viewModel else {
+            return
+        }
+        viewModel.onCellUpdate?()
     }
 }

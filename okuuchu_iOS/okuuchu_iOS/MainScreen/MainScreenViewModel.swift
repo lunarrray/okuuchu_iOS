@@ -163,10 +163,10 @@ extension MainScreenViewModel {
         ])
         
         let ads: [AdvertisementData] = [
-            AdvertisementData(id: 11, tutor: tutor, title: "Башталгыч класстар үчүн англис тили", lessons: [.english], teachingLanguages: [.russian, .english], teachingTypes: [.online, .offline], location: .chui, description: "Англис тили сабагында студенттер окуу жана угуп түшүнүү жөндөмүн өнүктүрүү үчүн макалалар, кыска аңгемелер жана аудио/видео ресурстар сыяктуу ар кандай оригиналдуу материалдардын кеңири спектрине туш болушат.", image: Asset.mathImage.image, whatsappNumber: "+996704304786", telegramNic: "Kerimkullova", price: 300, status: .active),
-            AdvertisementData(id: 12, title: "Программалоо", lessons: [.programming], teachingTypes: [.online], image: Asset.menAvatar.image, price: 400, status: .active),
-            AdvertisementData(id: 13, title: "Немис тили", lessons: [.german], teachingTypes: [.online, .offline, .group], image: Asset.womenAvatar.image, price: 370, status: .inactive),
-            AdvertisementData(id: 14, title: "Программалоо", lessons: [.programming, .math], teachingTypes: [.online], image: Asset.lessonImage2.image, price: 300, status: .active),
+            AdvertisementData(id: 11, tutor: tutor, title: "Башталгыч класстар үчүн англис тили", lessons: [.english], teachingLanguages: [.russian, .english], teachingTypes: [.online, .offline], location: .chui, description: "Англис тили сабагында студенттер окуу жана угуп түшүнүү жөндөмүн өнүктүрүү үчүн макалалар, кыска аңгемелер жана аудио/видео ресурстар сыяктуу ар кандай оригиналдуу материалдардын кеңири спектрине туш болушат.", image: Asset.mathImage.image, whatsappNumber: "+996704304786", telegramNic: "Kerimkullova", price: "300", status: .active),
+            AdvertisementData(id: 12, title: "Программалоо", lessons: [.programming], teachingTypes: [.online], image: Asset.menAvatar.image, price: "400", status: .active),
+            AdvertisementData(id: 13, title: "Немис тили", lessons: [.german], teachingTypes: [.online, .offline, .group], image: Asset.womenAvatar.image, price: "370", status: .inactive),
+            AdvertisementData(id: 14, title: "Программалоо", lessons: [.programming, .math], teachingTypes: [.online], image: Asset.lessonImage2.image, price: "300", status: .active),
             //            AdvertisementData(id: 15, lessons: [.math, .programming], teachingTypes: [.online], image: Asset.lessonImage2.image, price: 340, status: .active),
             //            AdvertisementData(id: 16, lessons: [.programming], teachingTypes: [.online], image: Asset.lessonImage2.image, price: 400, status: .inactive),
             //            AdvertisementData(id: 17, lessons: [.history], teachingTypes: [.offline, .group], image: Asset.lessonImage1.image, price: 900, status: .active),
